@@ -1,0 +1,249 @@
+#!/bin/sh
+
+#Maros Cocula
+#IOS-Projekt1
+
+#-------------------pomocne premenne--------------------------------
+export LC_ALL=C
+DATE=`date +%Y-%m-%d'\'%T`
+#-------------------program----------------------------------------        
+#-------------------test EDITOR a VISUAL a WEDI_RC-----------------
+test -z $WEDI_RC
+if [ $? = 0 ] ; then
+    echo "Variable WEDI_RC does not exist" >&2
+    exit 1
+fi
+test -z $EDITOR
+if [ $? = 1 ] ; then
+    mEDITOR=$EDITOR
+  else
+    test -z $VISUAL
+    if [ $? = 1 ] ; then
+        mEDITOR=$VISUAL
+    else
+        echo "EDITOR or VISUAL does not exist" >&2
+        exit 1;
+    fi    
+fi
+
+if [ $# != 0 ] ; then
+#-------------------------------parameter -a------------------------
+        if  [ $# -le 3 -a "$1" = "-a" ] ; then 
+                echo $2 | grep '^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$' -q
+                if [ $? = 0 ] ; then
+                    if [ -d $3 ]; then
+                        if [ -z $3 ]; then
+                            znak=`pwd`
+                        else    
+                            znak=`readlink -f $3`
+                        fi
+                        datumarg=$(date -d $2 +"%Y%m%d")
+                        zoznam=`cat $WEDI_RC`
+                        datumy=`cat $WEDI_RC | cut -d '\' -f1 | rev | cut -d ':' -f1 | rev`
+                        pocitadlo1=0
+                        pocet=0
+                        for polozka in $datumy; do
+                            pocitadlo2=0
+                            datumlog=$(date -d $polozka +"%Y%m%d")
+                            pocitadlo1=`expr $pocitadlo1 + 1`
+                            if [ $datumarg -le $datumlog ]; then
+                                for polozka2 in $zoznam; do
+                                    pocitadlo2=`expr $pocitadlo2 + 1`
+                                    if [ $pocitadlo1 = $pocitadlo2 ]; then
+                                        nazov=`echo $polozka2 | cut -d ':' -f1`
+                                        if [ -f "$znak/$nazov" ]; then
+                                         premenna=`echo "$polozka2" | grep $znak/$nazov: | cut -d ':' -f1`
+                                                                    
+                                         vypis="$vypis"$'\n'"$premenna"
+                                         test -z $vypis
+                                         if [ $? = 1 ]; then
+                                            pocet=`expr $pocet + 1` 
+                                         fi   
+                                        fi
+                                        
+                                    fi
+                                done
+                            fi    
+                        done
+                        if [ $pocet = 0 ]; then
+                            echo "No match found" >&2
+                            exit 0
+                        else
+                            echo "$vypis" | sort | uniq | sed '/^$/d'
+                        fi    
+                        exit 0
+                    else    
+                        echo "$3 is not directory" >&2
+                        exit 1
+                    fi    
+                else
+                    echo "Incorrect format of date" >&2
+                    exit 1
+                
+                fi 
+#------------------------------parameter -b-------------------------                
+        else   
+            if  [ $# -le 3 -a "$1" = "-b" ] ; then 
+                echo $2 | grep '^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$' -q
+                if [ $? = 0 ] ; then
+                    if [ -d $3 ]; then
+                        if [ -z $3 ]; then
+                            znak=`pwd`
+                        else    
+                            znak=`readlink -f $3`
+                        fi
+                        datumarg=$(date -d $2 +"%Y%m%d")
+                        zoznam=`cat $WEDI_RC`
+                        datumy=`cat $WEDI_RC | cut -d '\' -f1 | rev | cut -d ':' -f1 | rev`
+                        pocitadlo1=0
+                        pocet=0
+                        for polozka in $datumy; do
+                            pocitadlo2=0
+                            datumlog=$(date -d $polozka +"%Y%m%d")
+                            pocitadlo1=`expr $pocitadlo1 + 1`
+                            if [ $datumarg -ge $datumlog ]; then
+                                for polozka2 in $zoznam; do
+                                    pocitadlo2=`expr $pocitadlo2 + 1`
+                                    if [ $pocitadlo1 = $pocitadlo2 ]; then
+                                         nazov=`echo $polozka2 | cut -d ':' -f1`
+                                        if [ -f "$znak/$nazov" ]; then
+                                          premenna=`echo "$polozka2" | grep $znak/$nazov: | cut -d ':' -f1`
+                                         pocet=`expr $pocet + 1`
+                                         vypis="$vypis"$'\n'"$premenna"
+                                         test -z $vypis
+                                         if [ $? = 1 ]; then
+                                            pocet=`expr $pocet + 1` 
+                                         fi 
+
+                                        fi
+                                    fi
+                                done
+                            fi    
+                                
+                        done
+                        
+                        if [ $pocet = 0 ]; then
+                            echo "No match found" >&2
+                            exit 0
+                        else
+                            echo "$vypis" | sort | uniq | sed '/^$/d'
+                        fi    
+                        exit 0
+                    else    
+                        echo "$3 is not directory" >&2
+                        exit 1
+                    fi    
+                else
+                    echo "Incorrect format of date" >&2
+                    exit 1
+                
+                fi 
+#--------------------parameter -l-----------------------------------                
+            else
+                if [ $# -le 2 -a "$1" = "-l" ]; then 
+                    if [ -d $2 ]; then
+                            if [ -z $2 ]; then
+                                znak=`pwd`
+                            else    
+                                znak=`readlink -f $2`
+                            fi 
+                        zoznam=`cat "$WEDI_RC" | grep $znak | sort | cut -d ':' -f2 | rev | cut -d '/' -f1 | rev | uniq`
+                        pocet=0
+                        for polozka in $zoznam; do
+                            if [ -f "$znak/$polozka" ]; then
+                                pocet=`expr $pocet + 1`
+                                echo "$polozka"
+                            fi
+                        done
+                            if [ $pocet -eq 0 ]; then
+                                echo "Wedi does not already used in directory $znak" >&2
+                                exit 1
+                            fi    
+                else
+                            echo "Argument is not directory" >&2
+                            exit 1
+                fi    
+                        exit 0
+#----------------------------parameter -m---------------------------                        
+                else                  
+                    if [ $# -le 2 -a "$1" = "-m" ]; then 
+                        if [ -d $2 ]; then
+                            if [ -z $2 ]; then
+                                znak=`pwd`
+                            else    
+                                znak=`readlink -f $2`
+                            fi 
+                        zoznam=`cat $WEDI_RC | grep $znak | sort | cut -d ':' -f2 | rev | cut -d '/' -f1 | rev | uniq -c | sort -rn | rev | cut -d ' ' -f1 | rev`
+                        pocet=0
+                        for polozka in $zoznam; do
+                            if [ -f "$znak/$polozka" ]; then
+                                pocet=`expr $pocet + 1`
+                                echo "$polozka":"$znak/$polozka":"$DATE" >>$WEDI_RC
+                                $mEDITOR $polozka
+                                exit 0
+                            fi
+                        done
+                            if [ $pocet -eq 0 ]; then
+                                echo "Wedi does not already used in directory $znak" >&2
+                                exit 1
+                            fi    
+                        else
+                            echo "Argument is not directory" >&2
+                            exit 1
+                        fi
+                       
+                       exit 0
+                    fi
+                fi
+            fi
+        
+        fi
+#------------------------------bez parametra------------------------
+        if [ $# = 1 -a "$1" != "-m" -a "$1" != "-l" ] ; then
+        test -d "$1"
+            if [ $? = 1 ]; then
+                mPATH=`readlink -f $1`
+                nazov=`echo $1 | rev | cut -d "/" -f1 | rev`
+                echo "$nazov":"$mPATH/$nazov":"$DATE" >>$WEDI_RC
+                $mEDITOR $1
+            else
+                znak=`readlink -f $1`
+                zoznam=`tac $WEDI_RC | grep $znak | cut -d ':' -f1`
+                pocet=0
+                for polozka in $zoznam; do
+                    if [ -f "$znak/$polozka" ]; then
+                        pocet=`expr $pocet + 1`
+                        echo "$polozka":"$znak/$polozka":"$DATE" >>$WEDI_RC
+                        $mEDITOR $polozka
+                        exit 0
+                    fi
+                done
+                if [ $pocet -eq 0 ]; then
+                    echo "Wedi does not already used in directory $znak" >&2
+                    exit 1
+                fi 
+            fi
+        else
+            echo "Incorrect format of arguments" >&2
+            exit 1
+        fi
+        
+else
+    znak=`pwd`
+    zoznam=`tac $WEDI_RC | grep $znak | cut -d ':' -f1`
+    pocet=0
+    for polozka in $zoznam; do
+        if [ -f "$znak/$polozka" ]; then
+            pocet=`expr $pocet + 1`
+            echo "$polozka":"$znak/$polozka":"$DATE" >>$WEDI_RC
+            $mEDITOR $polozka
+            exit 0
+        fi
+    done
+    if [ $pocet -eq 0 ]; then
+        echo "Wedi does not already used in directory $znak" >&2
+        exit 1
+    fi
+    
+fi
+     exit 0

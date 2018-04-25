@@ -1,0 +1,5469 @@
+version 2
+run General-0-20170510-14:40:56-7324
+attr configname General
+attr datetime 20170510-14:40:56
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network Test1babel
+attr processid 7324
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.*.networkLayer.enableANSAConfig true
+param **.PC1.configData "xmldoc(\"config.xml\", \"Devices/Host[@id='0.0.1.1']/\")"
+param **.PC2.configData "xmldoc(\"config.xml\", \"Devices/Host[@id='0.0.1.2']/\")"
+param **.PC3.configData "xmldoc(\"config.xml\", \"Devices/Host[@id='0.0.1.3']/\")"
+param **.PC4.configData "xmldoc(\"config.xml\", \"Devices/Host[@id='0.0.1.4']/\")"
+param **.R1.configData "xmldoc(\"config.xml\", \"Devices/Router[@id='0.0.0.1']/\")"
+param **.R2.configData "xmldoc(\"config.xml\", \"Devices/Router[@id='0.0.0.2']/\")"
+param **.R3.configData "xmldoc(\"config.xml\", \"Devices/Router[@id='0.0.0.3']/\")"
+param **.R4.configData "xmldoc(\"config.xml\", \"Devices/Router[@id='0.0.0.4']/\")"
+param **.R5.configData "xmldoc(\"config.xml\", \"Devices/Router[@id='0.0.0.5']/\")"
+param **.scenarioManager.script "xml(\"<scenario/>\")"
+
+scalar Test1babel.R1.networkLayer.ipv4.arp 	sentReply:count 	3
+attr title  "ARP replies sent, count"
+scalar Test1babel.R1.networkLayer.ipv4.arp 	sentReq:count 	3
+attr title  "ARP request sent, count"
+scalar Test1babel.R1.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1babel.R1.networkLayer.ipv4.arp 	completedARPResolution:count 	6
+attr title  "ARP completed resolutions, count"
+scalar Test1babel.R1.networkLayer.ipv4.arp 	initiatedARPResolution:count 	3
+attr title  "ARP initiated resolutions, count"
+scalar Test1babel.R1.networkLayer.ipv6.neighbourDiscovery 	startDAD:count 	4
+attr title  "DAD started, count"
+scalar Test1babel.R1.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R1.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R1.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1babel.R1.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1babel.R1.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R1.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R1.eth[0].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.R1.eth[0].mac 	full-duplex 	1
+scalar Test1babel.R1.eth[0].mac 	"frames/sec sent" 	0.10585314985226
+scalar Test1babel.R1.eth[0].mac 	"frames/sec rcvd" 	0.047045844378783
+scalar Test1babel.R1.eth[0].mac 	"bits/sec sent" 	74.520617495993
+scalar Test1babel.R1.eth[0].mac 	"bits/sec rcvd" 	28.6038733823
+scalar Test1babel.R1.eth[0].mac 	"rx channel idle (%)" 	99.999968385193
+scalar Test1babel.R1.eth[0].mac 	"rx channel utilization (%)" 	3.1614807422542e-005
+scalar Test1babel.R1.eth[0].mac 	rxPkFromHL:count 	9
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.R1.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	792
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.R1.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.R1.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.R1.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.R1.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.R1.eth[0].mac 	txPk:count 	9
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.R1.eth[0].mac 	txPk:sum(packetBytes) 	792
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.R1.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.R1.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.R1.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R1.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R1.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.R1.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.R1.eth[0].mac 	rxPkOk:count 	4
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.R1.eth[0].mac 	rxPkOk:sum(packetBytes) 	304
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.R1.eth[0].mac 	passedUpPk:count 	4
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R1.eth[0].mac 	passedUpPk:sum(packetBytes) 	304
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R1.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.R1.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.R1.eth[0].encap 	decapPk:count 	4
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.R1.eth[0].encap 	decapPk:sum(packetBytes) 	232
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.R1.eth[0].encap 	encapPk:count 	9
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.R1.eth[0].encap 	encapPk:sum(packetBytes) 	610
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1babel.R1.eth[1].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.R1.eth[1].mac 	full-duplex 	1
+scalar Test1babel.R1.eth[1].mac 	"frames/sec sent" 	0.14113753313635
+scalar Test1babel.R1.eth[1].mac 	"frames/sec rcvd" 	0.15289899423105
+scalar Test1babel.R1.eth[1].mac 	"bits/sec sent" 	100.39583190432
+scalar Test1babel.R1.eth[1].mac 	"bits/sec rcvd" 	103.12449087829
+scalar Test1babel.R1.eth[1].mac 	"rx channel idle (%)" 	99.999887089973
+scalar Test1babel.R1.eth[1].mac 	"rx channel utilization (%)" 	0.00011291002650908
+scalar Test1babel.R1.eth[1].mac 	rxPkFromHL:count 	12
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.R1.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	1067
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.R1.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.R1.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.R1.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.R1.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.R1.eth[1].mac 	txPk:count 	12
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.R1.eth[1].mac 	txPk:sum(packetBytes) 	1067
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.R1.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.R1.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.R1.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R1.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R1.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.R1.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.R1.eth[1].mac 	rxPkOk:count 	13
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.R1.eth[1].mac 	rxPkOk:sum(packetBytes) 	1096
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.R1.eth[1].mac 	passedUpPk:count 	13
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R1.eth[1].mac 	passedUpPk:sum(packetBytes) 	1096
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R1.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.R1.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.R1.eth[1].encap 	decapPk:count 	13
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.R1.eth[1].encap 	decapPk:sum(packetBytes) 	802
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.R1.eth[1].encap 	encapPk:count 	12
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.R1.eth[1].encap 	encapPk:sum(packetBytes) 	791
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1babel.R1.eth[2].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.R1.eth[2].mac 	full-duplex 	1
+scalar Test1babel.R1.eth[2].mac 	"frames/sec sent" 	0.14113753313635
+scalar Test1babel.R1.eth[2].mac 	"frames/sec rcvd" 	0.14113753313635
+scalar Test1babel.R1.eth[2].mac 	"bits/sec sent" 	104.72404958717
+scalar Test1babel.R1.eth[2].mac 	"bits/sec rcvd" 	100.86629034811
+scalar Test1babel.R1.eth[2].mac 	"rx channel idle (%)" 	99.999890100908
+scalar Test1babel.R1.eth[2].mac 	"rx channel utilization (%)" 	0.00010989909246884
+scalar Test1babel.R1.eth[2].mac 	rxPkFromHL:count 	12
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.R1.eth[2].mac 	rxPkFromHL:sum(packetBytes) 	1113
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.R1.eth[2].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.R1.eth[2].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.R1.eth[2].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.R1.eth[2].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.R1.eth[2].mac 	txPk:count 	12
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.R1.eth[2].mac 	txPk:sum(packetBytes) 	1113
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.R1.eth[2].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.R1.eth[2].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.R1.eth[2].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R1.eth[2].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R1.eth[2].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.R1.eth[2].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.R1.eth[2].mac 	rxPkOk:count 	12
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.R1.eth[2].mac 	rxPkOk:sum(packetBytes) 	1072
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.R1.eth[2].mac 	passedUpPk:count 	12
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R1.eth[2].mac 	passedUpPk:sum(packetBytes) 	1072
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R1.eth[2].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.R1.eth[2].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.R1.eth[2].encap 	decapPk:count 	12
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.R1.eth[2].encap 	decapPk:sum(packetBytes) 	796
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.R1.eth[2].encap 	encapPk:count 	12
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.R1.eth[2].encap 	encapPk:sum(packetBytes) 	837
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1babel.R1.eth[3].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.R1.eth[3].mac 	full-duplex 	1
+scalar Test1babel.R1.eth[3].mac 	"frames/sec sent" 	0.15289899423105
+scalar Test1babel.R1.eth[3].mac 	"frames/sec rcvd" 	0.12937607204165
+scalar Test1babel.R1.eth[3].mac 	"bits/sec sent" 	116.29732730435
+scalar Test1babel.R1.eth[3].mac 	"bits/sec rcvd" 	99.925373460535
+scalar Test1babel.R1.eth[3].mac 	"rx channel idle (%)" 	99.999891794558
+scalar Test1babel.R1.eth[3].mac 	"rx channel utilization (%)" 	0.0001082054420712
+scalar Test1babel.R1.eth[3].mac 	rxPkFromHL:count 	13
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.R1.eth[3].mac 	rxPkFromHL:sum(packetBytes) 	1236
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.R1.eth[3].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.R1.eth[3].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.R1.eth[3].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.R1.eth[3].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.R1.eth[3].mac 	txPk:count 	13
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.R1.eth[3].mac 	txPk:sum(packetBytes) 	1236
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.R1.eth[3].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.R1.eth[3].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.R1.eth[3].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R1.eth[3].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R1.eth[3].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.R1.eth[3].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.R1.eth[3].mac 	rxPkOk:count 	11
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.R1.eth[3].mac 	rxPkOk:sum(packetBytes) 	1062
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.R1.eth[3].mac 	passedUpPk:count 	11
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R1.eth[3].mac 	passedUpPk:sum(packetBytes) 	1062
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R1.eth[3].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.R1.eth[3].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.R1.eth[3].encap 	decapPk:count 	11
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.R1.eth[3].encap 	decapPk:sum(packetBytes) 	804
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.R1.eth[3].encap 	encapPk:count 	13
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.R1.eth[3].encap 	encapPk:sum(packetBytes) 	942
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+statistic Test1babel.R1.babel.babelMain 	eth0-rx
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-tx
+field count 5
+field mean 52.4
+field stddev 88.118102566953
+field sum 262
+field sqrsum 44788
+field min 12
+field max 210
+statistic Test1babel.R1.babel.babelMain 	eth0-rx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-tx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-rx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-tx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-rx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-tx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-rx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-tx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-rx-HELLO
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-tx-HELLO
+field count 5
+field mean 8
+field stddev 0
+field sum 40
+field sqrsum 320
+field min 8
+field max 8
+statistic Test1babel.R1.babel.babelMain 	eth0-rx-IHU
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-tx-IHU
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-rx-ROUTERID
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-tx-ROUTERID
+field count 5
+field mean 12
+field stddev 0
+field sum 60
+field sqrsum 720
+field min 12
+field max 12
+statistic Test1babel.R1.babel.babelMain 	eth0-rx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-tx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-rx-UPDATE
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-tx-UPDATE
+field count 10
+field mean 13.8
+field stddev 0.63245553203367
+field sum 138
+field sqrsum 1908
+field min 13
+field max 15
+statistic Test1babel.R1.babel.babelMain 	eth0-rx-ROUTEREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-tx-ROUTEREQ
+field count 1
+field mean 4
+field stddev nan
+field sum 4
+field sqrsum 16
+field min 4
+field max 4
+statistic Test1babel.R1.babel.babelMain 	eth0-rx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth0-tx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth1-rx
+field count 10
+field mean 40.2
+field stddev 43.38407285834
+field sum 402
+field sqrsum 33100
+field min 8
+field max 146
+statistic Test1babel.R1.babel.babelMain 	eth1-tx
+field count 9
+field mean 46.555555555556
+field stddev 51.088430958269
+field sum 419
+field sqrsum 40387
+field min 8
+field max 157
+statistic Test1babel.R1.babel.babelMain 	eth1-rx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth1-tx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth1-rx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth1-tx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth1-rx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth1-tx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth1-rx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth1-tx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth1-rx-HELLO
+field count 7
+field mean 8
+field stddev 0
+field sum 56
+field sqrsum 448
+field min 8
+field max 8
+statistic Test1babel.R1.babel.babelMain 	eth1-tx-HELLO
+field count 7
+field mean 8
+field stddev 0
+field sum 56
+field sqrsum 448
+field min 8
+field max 8
+statistic Test1babel.R1.babel.babelMain 	eth1-rx-IHU
+field count 4
+field mean 12
+field stddev 0
+field sum 48
+field sqrsum 576
+field min 12
+field max 12
+statistic Test1babel.R1.babel.babelMain 	eth1-tx-IHU
+field count 4
+field mean 12
+field stddev 0
+field sum 48
+field sqrsum 576
+field min 12
+field max 12
+statistic Test1babel.R1.babel.babelMain 	eth1-rx-ROUTERID
+field count 6
+field mean 12
+field stddev 0
+field sum 72
+field sqrsum 864
+field min 12
+field max 12
+statistic Test1babel.R1.babel.babelMain 	eth1-tx-ROUTERID
+field count 5
+field mean 12
+field stddev 0
+field sum 60
+field sqrsum 720
+field min 12
+field max 12
+statistic Test1babel.R1.babel.babelMain 	eth1-rx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth1-tx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth1-rx-UPDATE
+field count 13
+field mean 13.692307692308
+field stddev 1.3155870289605
+field sum 178
+field sqrsum 2458
+field min 13
+field max 16
+statistic Test1babel.R1.babel.babelMain 	eth1-tx-UPDATE
+field count 15
+field mean 14.066666666667
+field stddev 0.59361683970467
+field sum 211
+field sqrsum 2973
+field min 13
+field max 15
+statistic Test1babel.R1.babel.babelMain 	eth1-rx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R1.babel.babelMain 	eth1-tx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R1.babel.babelMain 	eth1-rx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth1-tx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth2-rx
+field count 9
+field mean 47.111111111111
+field stddev 49.166666666667
+field sum 424
+field sqrsum 39314
+field min 8
+field max 137
+statistic Test1babel.R1.babel.babelMain 	eth2-tx
+field count 9
+field mean 51.666666666667
+field stddev 56.703174514307
+field sum 465
+field sqrsum 49747
+field min 8
+field max 163
+statistic Test1babel.R1.babel.babelMain 	eth2-rx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth2-tx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth2-rx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth2-tx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth2-rx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth2-tx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth2-rx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth2-tx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth2-rx-HELLO
+field count 6
+field mean 8
+field stddev 0
+field sum 48
+field sqrsum 384
+field min 8
+field max 8
+statistic Test1babel.R1.babel.babelMain 	eth2-tx-HELLO
+field count 6
+field mean 8
+field stddev 0
+field sum 48
+field sqrsum 384
+field min 8
+field max 8
+statistic Test1babel.R1.babel.babelMain 	eth2-rx-IHU
+field count 3
+field mean 12
+field stddev 0
+field sum 36
+field sqrsum 432
+field min 12
+field max 12
+statistic Test1babel.R1.babel.babelMain 	eth2-tx-IHU
+field count 3
+field mean 12
+field stddev 0
+field sum 36
+field sqrsum 432
+field min 12
+field max 12
+statistic Test1babel.R1.babel.babelMain 	eth2-rx-ROUTERID
+field count 6
+field mean 12
+field stddev 0
+field sum 72
+field sqrsum 864
+field min 12
+field max 12
+statistic Test1babel.R1.babel.babelMain 	eth2-tx-ROUTERID
+field count 7
+field mean 12
+field stddev 0
+field sum 84
+field sqrsum 1008
+field min 12
+field max 12
+statistic Test1babel.R1.babel.babelMain 	eth2-rx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth2-tx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth2-rx-UPDATE
+field count 16
+field mean 14
+field stddev 0.63245553203368
+field sum 224
+field sqrsum 3142
+field min 13
+field max 15
+statistic Test1babel.R1.babel.babelMain 	eth2-tx-UPDATE
+field count 18
+field mean 14.055555555556
+field stddev 0.53930480546961
+field sum 253
+field sqrsum 3561
+field min 13
+field max 15
+statistic Test1babel.R1.babel.babelMain 	eth2-rx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R1.babel.babelMain 	eth2-tx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R1.babel.babelMain 	eth2-rx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth2-tx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth3-rx
+field count 8
+field mean 57.5
+field stddev 64.825039254024
+field sum 460
+field sqrsum 55866
+field min 8
+field max 183
+statistic Test1babel.R1.babel.babelMain 	eth3-tx
+field count 10
+field mean 54.2
+field stddev 63.282084528105
+field sum 542
+field sqrsum 65418
+field min 8
+field max 177
+statistic Test1babel.R1.babel.babelMain 	eth3-rx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth3-tx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth3-rx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth3-tx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth3-rx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth3-tx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth3-rx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth3-tx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth3-rx-HELLO
+field count 6
+field mean 8
+field stddev 0
+field sum 48
+field sqrsum 384
+field min 8
+field max 8
+statistic Test1babel.R1.babel.babelMain 	eth3-tx-HELLO
+field count 7
+field mean 8
+field stddev 0
+field sum 56
+field sqrsum 448
+field min 8
+field max 8
+statistic Test1babel.R1.babel.babelMain 	eth3-rx-IHU
+field count 3
+field mean 12
+field stddev 0
+field sum 36
+field sqrsum 432
+field min 12
+field max 12
+statistic Test1babel.R1.babel.babelMain 	eth3-tx-IHU
+field count 4
+field mean 12
+field stddev 0
+field sum 48
+field sqrsum 576
+field min 12
+field max 12
+statistic Test1babel.R1.babel.babelMain 	eth3-rx-ROUTERID
+field count 7
+field mean 12
+field stddev 0
+field sum 84
+field sqrsum 1008
+field min 12
+field max 12
+statistic Test1babel.R1.babel.babelMain 	eth3-tx-ROUTERID
+field count 8
+field mean 12
+field stddev 0
+field sum 96
+field sqrsum 1152
+field min 12
+field max 12
+statistic Test1babel.R1.babel.babelMain 	eth3-rx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth3-tx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth3-rx-UPDATE
+field count 18
+field mean 14
+field stddev 0.594088525786
+field sum 252
+field sqrsum 3534
+field min 13
+field max 15
+statistic Test1babel.R1.babel.babelMain 	eth3-tx-UPDATE
+field count 21
+field mean 14
+field stddev 0.54772255750517
+field sum 294
+field sqrsum 4122
+field min 13
+field max 15
+statistic Test1babel.R1.babel.babelMain 	eth3-rx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R1.babel.babelMain 	eth3-tx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R1.babel.babelMain 	eth3-rx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R1.babel.babelMain 	eth3-tx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar Test1babel.R1.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar Test1babel.R1.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar Test1babel.R1.udp 	passedUpPk:count 	27
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar Test1babel.R1.udp 	sentPk:count 	33
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Test1babel.R1.udp 	sentPk:sum(packetBytes) 	1952
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar Test1babel.R1.udp 	rcvdPk:count 	27
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Test1babel.R1.udp 	rcvdPk:sum(packetBytes) 	1502
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar Test1babel.R2.networkLayer.ipv4.arp 	sentReply:count 	3
+attr title  "ARP replies sent, count"
+scalar Test1babel.R2.networkLayer.ipv4.arp 	sentReq:count 	3
+attr title  "ARP request sent, count"
+scalar Test1babel.R2.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1babel.R2.networkLayer.ipv4.arp 	completedARPResolution:count 	6
+attr title  "ARP completed resolutions, count"
+scalar Test1babel.R2.networkLayer.ipv4.arp 	initiatedARPResolution:count 	3
+attr title  "ARP initiated resolutions, count"
+scalar Test1babel.R2.networkLayer.ipv6.neighbourDiscovery 	startDAD:count 	3
+attr title  "DAD started, count"
+scalar Test1babel.R2.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R2.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R2.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1babel.R2.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1babel.R2.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R2.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R2.eth[0].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.R2.eth[0].mac 	full-duplex 	1
+scalar Test1babel.R2.eth[0].mac 	"frames/sec sent" 	0.15289899423105
+scalar Test1babel.R2.eth[0].mac 	"frames/sec rcvd" 	0.14113753313635
+scalar Test1babel.R2.eth[0].mac 	"bits/sec sent" 	103.12449087829
+scalar Test1babel.R2.eth[0].mac 	"bits/sec rcvd" 	100.39583190432
+scalar Test1babel.R2.eth[0].mac 	"rx channel idle (%)" 	99.999890571366
+scalar Test1babel.R2.eth[0].mac 	"rx channel utilization (%)" 	0.00010942863402505
+scalar Test1babel.R2.eth[0].mac 	rxPkFromHL:count 	13
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.R2.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	1096
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.R2.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.R2.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.R2.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.R2.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.R2.eth[0].mac 	txPk:count 	13
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.R2.eth[0].mac 	txPk:sum(packetBytes) 	1096
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.R2.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.R2.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.R2.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R2.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R2.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.R2.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.R2.eth[0].mac 	rxPkOk:count 	12
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.R2.eth[0].mac 	rxPkOk:sum(packetBytes) 	1067
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.R2.eth[0].mac 	passedUpPk:count 	12
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R2.eth[0].mac 	passedUpPk:sum(packetBytes) 	1067
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R2.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.R2.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.R2.eth[0].encap 	decapPk:count 	11
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.R2.eth[0].encap 	decapPk:sum(packetBytes) 	606
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.R2.eth[0].encap 	encapPk:count 	13
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.R2.eth[0].encap 	encapPk:sum(packetBytes) 	802
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1babel.R2.eth[1].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.R2.eth[1].mac 	full-duplex 	1
+scalar Test1babel.R2.eth[1].mac 	"frames/sec sent" 	0.14113753313635
+scalar Test1babel.R2.eth[1].mac 	"frames/sec rcvd" 	0.14113753313635
+scalar Test1babel.R2.eth[1].mac 	"bits/sec sent" 	104.4417745209
+scalar Test1babel.R2.eth[1].mac 	"bits/sec rcvd" 	107.17043349487
+scalar Test1babel.R2.eth[1].mac 	"rx channel idle (%)" 	99.999883796764
+scalar Test1babel.R2.eth[1].mac 	"rx channel utilization (%)" 	0.00011620323561559
+scalar Test1babel.R2.eth[1].mac 	rxPkFromHL:count 	12
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.R2.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	1110
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.R2.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.R2.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.R2.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.R2.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.R2.eth[1].mac 	txPk:count 	12
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.R2.eth[1].mac 	txPk:sum(packetBytes) 	1110
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.R2.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.R2.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.R2.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R2.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R2.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.R2.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.R2.eth[1].mac 	rxPkOk:count 	12
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.R2.eth[1].mac 	rxPkOk:sum(packetBytes) 	1139
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.R2.eth[1].mac 	passedUpPk:count 	12
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R2.eth[1].mac 	passedUpPk:sum(packetBytes) 	1139
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R2.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.R2.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.R2.eth[1].encap 	decapPk:count 	12
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.R2.eth[1].encap 	decapPk:sum(packetBytes) 	863
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.R2.eth[1].encap 	encapPk:count 	12
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.R2.eth[1].encap 	encapPk:sum(packetBytes) 	834
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1babel.R2.eth[2].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.R2.eth[2].mac 	full-duplex 	1
+scalar Test1babel.R2.eth[2].mac 	"frames/sec sent" 	0.14113753313635
+scalar Test1babel.R2.eth[2].mac 	"frames/sec rcvd" 	0.14113753313635
+scalar Test1babel.R2.eth[2].mac 	"bits/sec sent" 	118.74371121205
+scalar Test1babel.R2.eth[2].mac 	"bits/sec rcvd" 	85.905711835658
+scalar Test1babel.R2.eth[2].mac 	"rx channel idle (%)" 	99.999905061486
+scalar Test1babel.R2.eth[2].mac 	"rx channel utilization (%)" 	9.4938513956384e-005
+scalar Test1babel.R2.eth[2].mac 	rxPkFromHL:count 	12
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.R2.eth[2].mac 	rxPkFromHL:sum(packetBytes) 	1262
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.R2.eth[2].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.R2.eth[2].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.R2.eth[2].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.R2.eth[2].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.R2.eth[2].mac 	txPk:count 	12
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.R2.eth[2].mac 	txPk:sum(packetBytes) 	1262
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.R2.eth[2].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.R2.eth[2].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.R2.eth[2].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R2.eth[2].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R2.eth[2].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.R2.eth[2].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.R2.eth[2].mac 	rxPkOk:count 	12
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.R2.eth[2].mac 	rxPkOk:sum(packetBytes) 	913
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.R2.eth[2].mac 	passedUpPk:count 	12
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R2.eth[2].mac 	passedUpPk:sum(packetBytes) 	913
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R2.eth[2].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.R2.eth[2].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.R2.eth[2].encap 	decapPk:count 	12
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.R2.eth[2].encap 	decapPk:sum(packetBytes) 	643
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.R2.eth[2].encap 	encapPk:count 	12
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.R2.eth[2].encap 	encapPk:sum(packetBytes) 	986
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+statistic Test1babel.R2.babel.babelMain 	eth0-rx
+field count 8
+field mean 32.75
+field stddev 31.976553910639
+field sum 262
+field sqrsum 15738
+field min 8
+field max 93
+statistic Test1babel.R2.babel.babelMain 	eth0-tx
+field count 10
+field mean 40.2
+field stddev 43.38407285834
+field sum 402
+field sqrsum 33100
+field min 8
+field max 146
+statistic Test1babel.R2.babel.babelMain 	eth0-rx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth0-tx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth0-rx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth0-tx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth0-rx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth0-tx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth0-rx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth0-tx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth0-rx-HELLO
+field count 6
+field mean 8
+field stddev 0
+field sum 48
+field sqrsum 384
+field min 8
+field max 8
+statistic Test1babel.R2.babel.babelMain 	eth0-tx-HELLO
+field count 7
+field mean 8
+field stddev 0
+field sum 56
+field sqrsum 448
+field min 8
+field max 8
+statistic Test1babel.R2.babel.babelMain 	eth0-rx-IHU
+field count 3
+field mean 12
+field stddev 0
+field sum 36
+field sqrsum 432
+field min 12
+field max 12
+statistic Test1babel.R2.babel.babelMain 	eth0-tx-IHU
+field count 4
+field mean 12
+field stddev 0
+field sum 48
+field sqrsum 576
+field min 12
+field max 12
+statistic Test1babel.R2.babel.babelMain 	eth0-rx-ROUTERID
+field count 2
+field mean 12
+field stddev 0
+field sum 24
+field sqrsum 288
+field min 12
+field max 12
+statistic Test1babel.R2.babel.babelMain 	eth0-tx-ROUTERID
+field count 6
+field mean 12
+field stddev 0
+field sum 72
+field sqrsum 864
+field min 12
+field max 12
+statistic Test1babel.R2.babel.babelMain 	eth0-rx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth0-tx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth0-rx-UPDATE
+field count 8
+field mean 14.25
+field stddev 0.46291004988628
+field sum 114
+field sqrsum 1626
+field min 14
+field max 15
+statistic Test1babel.R2.babel.babelMain 	eth0-tx-UPDATE
+field count 13
+field mean 13.692307692308
+field stddev 1.3155870289605
+field sum 178
+field sqrsum 2458
+field min 13
+field max 16
+statistic Test1babel.R2.babel.babelMain 	eth0-rx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R2.babel.babelMain 	eth0-tx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R2.babel.babelMain 	eth0-rx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth0-tx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth1-rx
+field count 9
+field mean 54.555555555556
+field stddev 60.440282740717
+field sum 491
+field sqrsum 56011
+field min 8
+field max 151
+statistic Test1babel.R2.babel.babelMain 	eth1-tx
+field count 9
+field mean 51.333333333333
+field stddev 56.789083458003
+field sum 462
+field sqrsum 49516
+field min 8
+field max 154
+statistic Test1babel.R2.babel.babelMain 	eth1-rx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth1-tx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth1-rx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth1-tx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth1-rx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth1-tx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth1-rx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth1-tx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth1-rx-HELLO
+field count 6
+field mean 8
+field stddev 0
+field sum 48
+field sqrsum 384
+field min 8
+field max 8
+statistic Test1babel.R2.babel.babelMain 	eth1-tx-HELLO
+field count 7
+field mean 8
+field stddev 0
+field sum 56
+field sqrsum 448
+field min 8
+field max 8
+statistic Test1babel.R2.babel.babelMain 	eth1-rx-IHU
+field count 3
+field mean 12
+field stddev 0
+field sum 36
+field sqrsum 432
+field min 12
+field max 12
+statistic Test1babel.R2.babel.babelMain 	eth1-tx-IHU
+field count 4
+field mean 12
+field stddev 0
+field sum 48
+field sqrsum 576
+field min 12
+field max 12
+statistic Test1babel.R2.babel.babelMain 	eth1-rx-ROUTERID
+field count 7
+field mean 12
+field stddev 0
+field sum 84
+field sqrsum 1008
+field min 12
+field max 12
+statistic Test1babel.R2.babel.babelMain 	eth1-tx-ROUTERID
+field count 7
+field mean 12
+field stddev 0
+field sum 84
+field sqrsum 1008
+field min 12
+field max 12
+statistic Test1babel.R2.babel.babelMain 	eth1-rx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth1-tx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth1-rx-UPDATE
+field count 20
+field mean 13.95
+field stddev 0.60480531882929
+field sum 279
+field sqrsum 3899
+field min 13
+field max 15
+statistic Test1babel.R2.babel.babelMain 	eth1-tx-UPDATE
+field count 17
+field mean 13.529411764706
+field stddev 1.1788578719901
+field sum 230
+field sqrsum 3134
+field min 13
+field max 16
+statistic Test1babel.R2.babel.babelMain 	eth1-rx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R2.babel.babelMain 	eth1-tx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R2.babel.babelMain 	eth1-rx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth1-tx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth2-rx
+field count 9
+field mean 30.111111111111
+field stddev 19.656070591833
+field sum 271
+field sqrsum 11251
+field min 8
+field max 65
+statistic Test1babel.R2.babel.babelMain 	eth2-tx
+field count 9
+field mean 68.222222222222
+field stddev 89.668525383461
+field sum 614
+field sqrsum 106212
+field min 8
+field max 248
+statistic Test1babel.R2.babel.babelMain 	eth2-rx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth2-tx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth2-rx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth2-tx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth2-rx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth2-tx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth2-rx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth2-tx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth2-rx-HELLO
+field count 7
+field mean 8
+field stddev 0
+field sum 56
+field sqrsum 448
+field min 8
+field max 8
+statistic Test1babel.R2.babel.babelMain 	eth2-tx-HELLO
+field count 7
+field mean 8
+field stddev 0
+field sum 56
+field sqrsum 448
+field min 8
+field max 8
+statistic Test1babel.R2.babel.babelMain 	eth2-rx-IHU
+field count 4
+field mean 12
+field stddev 0
+field sum 48
+field sqrsum 576
+field min 12
+field max 12
+statistic Test1babel.R2.babel.babelMain 	eth2-tx-IHU
+field count 4
+field mean 12
+field stddev 0
+field sum 48
+field sqrsum 576
+field min 12
+field max 12
+statistic Test1babel.R2.babel.babelMain 	eth2-rx-ROUTERID
+field count 3
+field mean 12
+field stddev 0
+field sum 36
+field sqrsum 432
+field min 12
+field max 12
+statistic Test1babel.R2.babel.babelMain 	eth2-tx-ROUTERID
+field count 10
+field mean 12
+field stddev 0
+field sum 120
+field sqrsum 1440
+field min 12
+field max 12
+statistic Test1babel.R2.babel.babelMain 	eth2-rx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth2-tx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth2-rx-UPDATE
+field count 6
+field mean 14.5
+field stddev 0.54772255750517
+field sum 87
+field sqrsum 1263
+field min 14
+field max 15
+statistic Test1babel.R2.babel.babelMain 	eth2-tx-UPDATE
+field count 26
+field mean 13.307692307692
+field stddev 1.0107118588097
+field sum 346
+field sqrsum 4630
+field min 12
+field max 16
+statistic Test1babel.R2.babel.babelMain 	eth2-rx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R2.babel.babelMain 	eth2-tx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R2.babel.babelMain 	eth2-rx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R2.babel.babelMain 	eth2-tx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar Test1babel.R2.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar Test1babel.R2.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar Test1babel.R2.udp 	passedUpPk:count 	26
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar Test1babel.R2.udp 	sentPk:count 	28
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Test1babel.R2.udp 	sentPk:sum(packetBytes) 	1702
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar Test1babel.R2.udp 	rcvdPk:count 	26
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Test1babel.R2.udp 	rcvdPk:sum(packetBytes) 	1232
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar Test1babel.R3.networkLayer.ipv4.arp 	sentReply:count 	1
+attr title  "ARP replies sent, count"
+scalar Test1babel.R3.networkLayer.ipv4.arp 	sentReq:count 	1
+attr title  "ARP request sent, count"
+scalar Test1babel.R3.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1babel.R3.networkLayer.ipv4.arp 	completedARPResolution:count 	2
+attr title  "ARP completed resolutions, count"
+scalar Test1babel.R3.networkLayer.ipv4.arp 	initiatedARPResolution:count 	1
+attr title  "ARP initiated resolutions, count"
+scalar Test1babel.R3.networkLayer.ipv6.neighbourDiscovery 	startDAD:count 	2
+attr title  "DAD started, count"
+scalar Test1babel.R3.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R3.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R3.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1babel.R3.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1babel.R3.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R3.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R3.eth[0].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.R3.eth[0].mac 	full-duplex 	1
+scalar Test1babel.R3.eth[0].mac 	"frames/sec sent" 	0.11761461094696
+scalar Test1babel.R3.eth[0].mac 	"frames/sec rcvd" 	0.047045844378783
+scalar Test1babel.R3.eth[0].mac 	"bits/sec sent" 	77.437459847477
+scalar Test1babel.R3.eth[0].mac 	"bits/sec rcvd" 	28.6038733823
+scalar Test1babel.R3.eth[0].mac 	"rx channel idle (%)" 	99.999968385193
+scalar Test1babel.R3.eth[0].mac 	"rx channel utilization (%)" 	3.1614807422542e-005
+scalar Test1babel.R3.eth[0].mac 	rxPkFromHL:count 	10
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.R3.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	823
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.R3.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.R3.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.R3.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.R3.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.R3.eth[0].mac 	txPk:count 	10
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.R3.eth[0].mac 	txPk:sum(packetBytes) 	823
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.R3.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.R3.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.R3.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R3.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R3.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.R3.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.R3.eth[0].mac 	rxPkOk:count 	4
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.R3.eth[0].mac 	rxPkOk:sum(packetBytes) 	304
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.R3.eth[0].mac 	passedUpPk:count 	4
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R3.eth[0].mac 	passedUpPk:sum(packetBytes) 	304
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R3.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.R3.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.R3.eth[0].encap 	decapPk:count 	4
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.R3.eth[0].encap 	decapPk:sum(packetBytes) 	232
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.R3.eth[0].encap 	encapPk:count 	10
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.R3.eth[0].encap 	encapPk:sum(packetBytes) 	617
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1babel.R3.eth[1].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.R3.eth[1].mac 	full-duplex 	1
+scalar Test1babel.R3.eth[1].mac 	"frames/sec sent" 	0.14113753313635
+scalar Test1babel.R3.eth[1].mac 	"frames/sec rcvd" 	0.14113753313635
+scalar Test1babel.R3.eth[1].mac 	"bits/sec sent" 	85.905711835658
+scalar Test1babel.R3.eth[1].mac 	"bits/sec rcvd" 	118.74371121205
+scalar Test1babel.R3.eth[1].mac 	"rx channel idle (%)" 	99.999872223487
+scalar Test1babel.R3.eth[1].mac 	"rx channel utilization (%)" 	0.00012777651333278
+scalar Test1babel.R3.eth[1].mac 	rxPkFromHL:count 	12
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.R3.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	913
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.R3.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.R3.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.R3.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.R3.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.R3.eth[1].mac 	txPk:count 	12
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.R3.eth[1].mac 	txPk:sum(packetBytes) 	913
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.R3.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.R3.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.R3.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R3.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R3.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.R3.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.R3.eth[1].mac 	rxPkOk:count 	12
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.R3.eth[1].mac 	rxPkOk:sum(packetBytes) 	1262
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.R3.eth[1].mac 	passedUpPk:count 	12
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R3.eth[1].mac 	passedUpPk:sum(packetBytes) 	1262
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R3.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.R3.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.R3.eth[1].encap 	decapPk:count 	12
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.R3.eth[1].encap 	decapPk:sum(packetBytes) 	986
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.R3.eth[1].encap 	encapPk:count 	12
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.R3.eth[1].encap 	encapPk:sum(packetBytes) 	643
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+statistic Test1babel.R3.babel.babelMain 	eth0-rx
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-tx
+field count 6
+field mean 40.166666666667
+field stddev 67.053461257915
+field sum 241
+field sqrsum 32161
+field min 12
+field max 177
+statistic Test1babel.R3.babel.babelMain 	eth0-rx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-tx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-rx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-tx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-rx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-tx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-rx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-tx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-rx-HELLO
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-tx-HELLO
+field count 5
+field mean 8
+field stddev 0
+field sum 40
+field sqrsum 320
+field min 8
+field max 8
+statistic Test1babel.R3.babel.babelMain 	eth0-rx-IHU
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-tx-IHU
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-rx-ROUTERID
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-tx-ROUTERID
+field count 4
+field mean 12
+field stddev 0
+field sum 48
+field sqrsum 576
+field min 12
+field max 12
+statistic Test1babel.R3.babel.babelMain 	eth0-rx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-tx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-rx-UPDATE
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-tx-UPDATE
+field count 9
+field mean 13.888888888889
+field stddev 0.60092521257733
+field sum 125
+field sqrsum 1739
+field min 13
+field max 15
+statistic Test1babel.R3.babel.babelMain 	eth0-rx-ROUTEREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-tx-ROUTEREQ
+field count 1
+field mean 4
+field stddev nan
+field sum 4
+field sqrsum 16
+field min 4
+field max 4
+statistic Test1babel.R3.babel.babelMain 	eth0-rx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth0-tx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth1-rx
+field count 9
+field mean 68.222222222222
+field stddev 89.668525383461
+field sum 614
+field sqrsum 106212
+field min 8
+field max 248
+statistic Test1babel.R3.babel.babelMain 	eth1-tx
+field count 9
+field mean 30.111111111111
+field stddev 19.656070591833
+field sum 271
+field sqrsum 11251
+field min 8
+field max 65
+statistic Test1babel.R3.babel.babelMain 	eth1-rx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth1-tx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth1-rx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth1-tx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth1-rx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth1-tx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth1-rx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth1-tx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth1-rx-HELLO
+field count 7
+field mean 8
+field stddev 0
+field sum 56
+field sqrsum 448
+field min 8
+field max 8
+statistic Test1babel.R3.babel.babelMain 	eth1-tx-HELLO
+field count 7
+field mean 8
+field stddev 0
+field sum 56
+field sqrsum 448
+field min 8
+field max 8
+statistic Test1babel.R3.babel.babelMain 	eth1-rx-IHU
+field count 4
+field mean 12
+field stddev 0
+field sum 48
+field sqrsum 576
+field min 12
+field max 12
+statistic Test1babel.R3.babel.babelMain 	eth1-tx-IHU
+field count 4
+field mean 12
+field stddev 0
+field sum 48
+field sqrsum 576
+field min 12
+field max 12
+statistic Test1babel.R3.babel.babelMain 	eth1-rx-ROUTERID
+field count 10
+field mean 12
+field stddev 0
+field sum 120
+field sqrsum 1440
+field min 12
+field max 12
+statistic Test1babel.R3.babel.babelMain 	eth1-tx-ROUTERID
+field count 3
+field mean 12
+field stddev 0
+field sum 36
+field sqrsum 432
+field min 12
+field max 12
+statistic Test1babel.R3.babel.babelMain 	eth1-rx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth1-tx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth1-rx-UPDATE
+field count 26
+field mean 13.307692307692
+field stddev 1.0107118588097
+field sum 346
+field sqrsum 4630
+field min 12
+field max 16
+statistic Test1babel.R3.babel.babelMain 	eth1-tx-UPDATE
+field count 6
+field mean 14.5
+field stddev 0.54772255750517
+field sum 87
+field sqrsum 1263
+field min 14
+field max 15
+statistic Test1babel.R3.babel.babelMain 	eth1-rx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R3.babel.babelMain 	eth1-tx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R3.babel.babelMain 	eth1-rx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R3.babel.babelMain 	eth1-tx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar Test1babel.R3.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar Test1babel.R3.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar Test1babel.R3.udp 	passedUpPk:count 	9
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar Test1babel.R3.udp 	sentPk:count 	15
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Test1babel.R3.udp 	sentPk:sum(packetBytes) 	632
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar Test1babel.R3.udp 	rcvdPk:count 	9
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Test1babel.R3.udp 	rcvdPk:sum(packetBytes) 	686
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar Test1babel.R4.networkLayer.ipv4.arp 	sentReply:count 	2
+attr title  "ARP replies sent, count"
+scalar Test1babel.R4.networkLayer.ipv4.arp 	sentReq:count 	2
+attr title  "ARP request sent, count"
+scalar Test1babel.R4.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1babel.R4.networkLayer.ipv4.arp 	completedARPResolution:count 	4
+attr title  "ARP completed resolutions, count"
+scalar Test1babel.R4.networkLayer.ipv4.arp 	initiatedARPResolution:count 	2
+attr title  "ARP initiated resolutions, count"
+scalar Test1babel.R4.networkLayer.ipv6.neighbourDiscovery 	startDAD:count 	3
+attr title  "DAD started, count"
+scalar Test1babel.R4.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R4.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R4.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1babel.R4.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1babel.R4.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R4.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R4.eth[0].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.R4.eth[0].mac 	full-duplex 	1
+scalar Test1babel.R4.eth[0].mac 	"frames/sec sent" 	0.10585314985226
+scalar Test1babel.R4.eth[0].mac 	"frames/sec rcvd" 	0.047045844378783
+scalar Test1babel.R4.eth[0].mac 	"bits/sec sent" 	74.520617495993
+scalar Test1babel.R4.eth[0].mac 	"bits/sec rcvd" 	28.6038733823
+scalar Test1babel.R4.eth[0].mac 	"rx channel idle (%)" 	99.999968385193
+scalar Test1babel.R4.eth[0].mac 	"rx channel utilization (%)" 	3.1614807422542e-005
+scalar Test1babel.R4.eth[0].mac 	rxPkFromHL:count 	9
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.R4.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	792
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.R4.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.R4.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.R4.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.R4.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.R4.eth[0].mac 	txPk:count 	9
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.R4.eth[0].mac 	txPk:sum(packetBytes) 	792
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.R4.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.R4.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.R4.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R4.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R4.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.R4.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.R4.eth[0].mac 	rxPkOk:count 	4
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.R4.eth[0].mac 	rxPkOk:sum(packetBytes) 	304
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.R4.eth[0].mac 	passedUpPk:count 	4
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R4.eth[0].mac 	passedUpPk:sum(packetBytes) 	304
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R4.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.R4.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.R4.eth[0].encap 	decapPk:count 	4
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.R4.eth[0].encap 	decapPk:sum(packetBytes) 	232
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.R4.eth[0].encap 	encapPk:count 	9
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.R4.eth[0].encap 	encapPk:sum(packetBytes) 	610
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1babel.R4.eth[1].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.R4.eth[1].mac 	full-duplex 	1
+scalar Test1babel.R4.eth[1].mac 	"frames/sec sent" 	0.12937607204165
+scalar Test1babel.R4.eth[1].mac 	"frames/sec rcvd" 	0.15289899423105
+scalar Test1babel.R4.eth[1].mac 	"bits/sec sent" 	92.303946671173
+scalar Test1babel.R4.eth[1].mac 	"bits/sec rcvd" 	107.5468002499
+scalar Test1babel.R4.eth[1].mac 	"rx channel idle (%)" 	99.999882667664
+scalar Test1babel.R4.eth[1].mac 	"rx channel utilization (%)" 	0.00011733233588069
+scalar Test1babel.R4.eth[1].mac 	rxPkFromHL:count 	11
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.R4.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	981
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.R4.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.R4.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.R4.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.R4.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.R4.eth[1].mac 	txPk:count 	11
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.R4.eth[1].mac 	txPk:sum(packetBytes) 	981
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.R4.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.R4.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.R4.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R4.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R4.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.R4.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.R4.eth[1].mac 	rxPkOk:count 	13
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.R4.eth[1].mac 	rxPkOk:sum(packetBytes) 	1143
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.R4.eth[1].mac 	passedUpPk:count 	13
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R4.eth[1].mac 	passedUpPk:sum(packetBytes) 	1143
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R4.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.R4.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.R4.eth[1].encap 	decapPk:count 	13
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.R4.eth[1].encap 	decapPk:sum(packetBytes) 	849
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.R4.eth[1].encap 	encapPk:count 	11
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.R4.eth[1].encap 	encapPk:sum(packetBytes) 	735
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1babel.R4.eth[2].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.R4.eth[2].mac 	full-duplex 	1
+scalar Test1babel.R4.eth[2].mac 	"frames/sec sent" 	0.14113753313635
+scalar Test1babel.R4.eth[2].mac 	"frames/sec rcvd" 	0.14113753313635
+scalar Test1babel.R4.eth[2].mac 	"bits/sec sent" 	100.86629034811
+scalar Test1babel.R4.eth[2].mac 	"bits/sec rcvd" 	104.72404958717
+scalar Test1babel.R4.eth[2].mac 	"rx channel idle (%)" 	99.999886243148
+scalar Test1babel.R4.eth[2].mac 	"rx channel utilization (%)" 	0.0001137568517079
+scalar Test1babel.R4.eth[2].mac 	rxPkFromHL:count 	12
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.R4.eth[2].mac 	rxPkFromHL:sum(packetBytes) 	1072
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.R4.eth[2].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.R4.eth[2].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.R4.eth[2].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.R4.eth[2].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.R4.eth[2].mac 	txPk:count 	12
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.R4.eth[2].mac 	txPk:sum(packetBytes) 	1072
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.R4.eth[2].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.R4.eth[2].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.R4.eth[2].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R4.eth[2].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R4.eth[2].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.R4.eth[2].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.R4.eth[2].mac 	rxPkOk:count 	12
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.R4.eth[2].mac 	rxPkOk:sum(packetBytes) 	1113
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.R4.eth[2].mac 	passedUpPk:count 	12
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R4.eth[2].mac 	passedUpPk:sum(packetBytes) 	1113
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R4.eth[2].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.R4.eth[2].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.R4.eth[2].encap 	decapPk:count 	12
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.R4.eth[2].encap 	decapPk:sum(packetBytes) 	837
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.R4.eth[2].encap 	encapPk:count 	12
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.R4.eth[2].encap 	encapPk:sum(packetBytes) 	796
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+statistic Test1babel.R4.babel.babelMain 	eth0-rx
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-tx
+field count 5
+field mean 52.4
+field stddev 88.118102566953
+field sum 262
+field sqrsum 44788
+field min 12
+field max 210
+statistic Test1babel.R4.babel.babelMain 	eth0-rx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-tx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-rx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-tx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-rx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-tx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-rx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-tx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-rx-HELLO
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-tx-HELLO
+field count 5
+field mean 8
+field stddev 0
+field sum 40
+field sqrsum 320
+field min 8
+field max 8
+statistic Test1babel.R4.babel.babelMain 	eth0-rx-IHU
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-tx-IHU
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-rx-ROUTERID
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-tx-ROUTERID
+field count 5
+field mean 12
+field stddev 0
+field sum 60
+field sqrsum 720
+field min 12
+field max 12
+statistic Test1babel.R4.babel.babelMain 	eth0-rx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-tx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-rx-UPDATE
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-tx-UPDATE
+field count 10
+field mean 13.8
+field stddev 0.63245553203367
+field sum 138
+field sqrsum 1908
+field min 13
+field max 15
+statistic Test1babel.R4.babel.babelMain 	eth0-rx-ROUTEREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-tx-ROUTEREQ
+field count 1
+field mean 4
+field stddev nan
+field sum 4
+field sqrsum 16
+field min 4
+field max 4
+statistic Test1babel.R4.babel.babelMain 	eth0-rx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth0-tx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth1-rx
+field count 10
+field mean 44.9
+field stddev 50.24705629852
+field sum 449
+field sqrsum 42883
+field min 8
+field max 163
+statistic Test1babel.R4.babel.babelMain 	eth1-tx
+field count 8
+field mean 48.875
+field stddev 49.726214701819
+field sum 391
+field sqrsum 36419
+field min 8
+field max 157
+statistic Test1babel.R4.babel.babelMain 	eth1-rx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth1-tx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth1-rx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth1-tx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth1-rx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth1-tx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth1-rx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth1-tx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth1-rx-HELLO
+field count 7
+field mean 8
+field stddev 0
+field sum 56
+field sqrsum 448
+field min 8
+field max 8
+statistic Test1babel.R4.babel.babelMain 	eth1-tx-HELLO
+field count 6
+field mean 8
+field stddev 0
+field sum 48
+field sqrsum 384
+field min 8
+field max 8
+statistic Test1babel.R4.babel.babelMain 	eth1-rx-IHU
+field count 4
+field mean 12
+field stddev 0
+field sum 48
+field sqrsum 576
+field min 12
+field max 12
+statistic Test1babel.R4.babel.babelMain 	eth1-tx-IHU
+field count 4
+field mean 12
+field stddev 0
+field sum 48
+field sqrsum 576
+field min 12
+field max 12
+statistic Test1babel.R4.babel.babelMain 	eth1-rx-ROUTERID
+field count 6
+field mean 12
+field stddev 0
+field sum 72
+field sqrsum 864
+field min 12
+field max 12
+statistic Test1babel.R4.babel.babelMain 	eth1-tx-ROUTERID
+field count 6
+field mean 12
+field stddev 0
+field sum 72
+field sqrsum 864
+field min 12
+field max 12
+statistic Test1babel.R4.babel.babelMain 	eth1-rx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth1-tx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth1-rx-UPDATE
+field count 16
+field mean 14.0625
+field stddev 0.57373048260195
+field sum 225
+field sqrsum 3169
+field min 13
+field max 15
+statistic Test1babel.R4.babel.babelMain 	eth1-tx-UPDATE
+field count 13
+field mean 14.076923076923
+field stddev 0.64051261522036
+field sum 183
+field sqrsum 2581
+field min 13
+field max 15
+statistic Test1babel.R4.babel.babelMain 	eth1-rx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R4.babel.babelMain 	eth1-tx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R4.babel.babelMain 	eth1-rx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth1-tx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth2-rx
+field count 9
+field mean 51.666666666667
+field stddev 56.703174514307
+field sum 465
+field sqrsum 49747
+field min 8
+field max 163
+statistic Test1babel.R4.babel.babelMain 	eth2-tx
+field count 9
+field mean 47.111111111111
+field stddev 49.166666666667
+field sum 424
+field sqrsum 39314
+field min 8
+field max 137
+statistic Test1babel.R4.babel.babelMain 	eth2-rx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth2-tx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth2-rx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth2-tx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth2-rx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth2-tx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth2-rx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth2-tx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth2-rx-HELLO
+field count 6
+field mean 8
+field stddev 0
+field sum 48
+field sqrsum 384
+field min 8
+field max 8
+statistic Test1babel.R4.babel.babelMain 	eth2-tx-HELLO
+field count 6
+field mean 8
+field stddev 0
+field sum 48
+field sqrsum 384
+field min 8
+field max 8
+statistic Test1babel.R4.babel.babelMain 	eth2-rx-IHU
+field count 3
+field mean 12
+field stddev 0
+field sum 36
+field sqrsum 432
+field min 12
+field max 12
+statistic Test1babel.R4.babel.babelMain 	eth2-tx-IHU
+field count 3
+field mean 12
+field stddev 0
+field sum 36
+field sqrsum 432
+field min 12
+field max 12
+statistic Test1babel.R4.babel.babelMain 	eth2-rx-ROUTERID
+field count 7
+field mean 12
+field stddev 0
+field sum 84
+field sqrsum 1008
+field min 12
+field max 12
+statistic Test1babel.R4.babel.babelMain 	eth2-tx-ROUTERID
+field count 6
+field mean 12
+field stddev 0
+field sum 72
+field sqrsum 864
+field min 12
+field max 12
+statistic Test1babel.R4.babel.babelMain 	eth2-rx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth2-tx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth2-rx-UPDATE
+field count 18
+field mean 14.055555555556
+field stddev 0.53930480546961
+field sum 253
+field sqrsum 3561
+field min 13
+field max 15
+statistic Test1babel.R4.babel.babelMain 	eth2-tx-UPDATE
+field count 16
+field mean 14
+field stddev 0.63245553203368
+field sum 224
+field sqrsum 3142
+field min 13
+field max 15
+statistic Test1babel.R4.babel.babelMain 	eth2-rx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R4.babel.babelMain 	eth2-tx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R4.babel.babelMain 	eth2-rx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R4.babel.babelMain 	eth2-tx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar Test1babel.R4.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar Test1babel.R4.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar Test1babel.R4.udp 	passedUpPk:count 	19
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar Test1babel.R4.udp 	sentPk:count 	22
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Test1babel.R4.udp 	sentPk:sum(packetBytes) 	1253
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar Test1babel.R4.udp 	rcvdPk:count 	19
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Test1babel.R4.udp 	rcvdPk:sum(packetBytes) 	1066
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar Test1babel.R5.networkLayer.ipv4.arp 	sentReply:count 	3
+attr title  "ARP replies sent, count"
+scalar Test1babel.R5.networkLayer.ipv4.arp 	sentReq:count 	3
+attr title  "ARP request sent, count"
+scalar Test1babel.R5.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1babel.R5.networkLayer.ipv4.arp 	completedARPResolution:count 	6
+attr title  "ARP completed resolutions, count"
+scalar Test1babel.R5.networkLayer.ipv4.arp 	initiatedARPResolution:count 	3
+attr title  "ARP initiated resolutions, count"
+scalar Test1babel.R5.networkLayer.ipv6.neighbourDiscovery 	startDAD:count 	4
+attr title  "DAD started, count"
+scalar Test1babel.R5.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R5.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R5.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1babel.R5.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1babel.R5.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R5.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R5.eth[0].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.R5.eth[0].mac 	full-duplex 	1
+scalar Test1babel.R5.eth[0].mac 	"frames/sec sent" 	0.10585314985226
+scalar Test1babel.R5.eth[0].mac 	"frames/sec rcvd" 	0.047045844378783
+scalar Test1babel.R5.eth[0].mac 	"bits/sec sent" 	74.520617495993
+scalar Test1babel.R5.eth[0].mac 	"bits/sec rcvd" 	28.6038733823
+scalar Test1babel.R5.eth[0].mac 	"rx channel idle (%)" 	99.999968385193
+scalar Test1babel.R5.eth[0].mac 	"rx channel utilization (%)" 	3.1614807422542e-005
+scalar Test1babel.R5.eth[0].mac 	rxPkFromHL:count 	9
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.R5.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	792
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.R5.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.R5.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.R5.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.R5.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.R5.eth[0].mac 	txPk:count 	9
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.R5.eth[0].mac 	txPk:sum(packetBytes) 	792
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.R5.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.R5.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.R5.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R5.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R5.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.R5.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.R5.eth[0].mac 	rxPkOk:count 	4
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.R5.eth[0].mac 	rxPkOk:sum(packetBytes) 	304
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.R5.eth[0].mac 	passedUpPk:count 	4
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R5.eth[0].mac 	passedUpPk:sum(packetBytes) 	304
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R5.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.R5.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.R5.eth[0].encap 	decapPk:count 	4
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.R5.eth[0].encap 	decapPk:sum(packetBytes) 	232
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.R5.eth[0].encap 	encapPk:count 	9
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.R5.eth[0].encap 	encapPk:sum(packetBytes) 	610
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1babel.R5.eth[1].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.R5.eth[1].mac 	full-duplex 	1
+scalar Test1babel.R5.eth[1].mac 	"frames/sec sent" 	0.15289899423105
+scalar Test1babel.R5.eth[1].mac 	"frames/sec rcvd" 	0.12937607204165
+scalar Test1babel.R5.eth[1].mac 	"bits/sec sent" 	107.5468002499
+scalar Test1babel.R5.eth[1].mac 	"bits/sec rcvd" 	92.303946671173
+scalar Test1babel.R5.eth[1].mac 	"rx channel idle (%)" 	99.999899415985
+scalar Test1babel.R5.eth[1].mac 	"rx channel utilization (%)" 	0.00010058401528184
+scalar Test1babel.R5.eth[1].mac 	rxPkFromHL:count 	13
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.R5.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	1143
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.R5.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.R5.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.R5.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.R5.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.R5.eth[1].mac 	txPk:count 	13
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.R5.eth[1].mac 	txPk:sum(packetBytes) 	1143
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.R5.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.R5.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.R5.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R5.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R5.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.R5.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.R5.eth[1].mac 	rxPkOk:count 	11
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.R5.eth[1].mac 	rxPkOk:sum(packetBytes) 	981
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.R5.eth[1].mac 	passedUpPk:count 	11
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R5.eth[1].mac 	passedUpPk:sum(packetBytes) 	981
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R5.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.R5.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.R5.eth[1].encap 	decapPk:count 	11
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.R5.eth[1].encap 	decapPk:sum(packetBytes) 	735
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.R5.eth[1].encap 	encapPk:count 	13
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.R5.eth[1].encap 	encapPk:sum(packetBytes) 	849
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1babel.R5.eth[2].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.R5.eth[2].mac 	full-duplex 	1
+scalar Test1babel.R5.eth[2].mac 	"frames/sec sent" 	0.14113753313635
+scalar Test1babel.R5.eth[2].mac 	"frames/sec rcvd" 	0.14113753313635
+scalar Test1babel.R5.eth[2].mac 	"bits/sec sent" 	107.17043349487
+scalar Test1babel.R5.eth[2].mac 	"bits/sec rcvd" 	104.4417745209
+scalar Test1babel.R5.eth[2].mac 	"rx channel idle (%)" 	99.999886525423
+scalar Test1babel.R5.eth[2].mac 	"rx channel utilization (%)" 	0.00011347457664163
+scalar Test1babel.R5.eth[2].mac 	rxPkFromHL:count 	12
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.R5.eth[2].mac 	rxPkFromHL:sum(packetBytes) 	1139
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.R5.eth[2].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.R5.eth[2].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.R5.eth[2].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.R5.eth[2].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.R5.eth[2].mac 	txPk:count 	12
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.R5.eth[2].mac 	txPk:sum(packetBytes) 	1139
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.R5.eth[2].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.R5.eth[2].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.R5.eth[2].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R5.eth[2].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R5.eth[2].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.R5.eth[2].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.R5.eth[2].mac 	rxPkOk:count 	12
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.R5.eth[2].mac 	rxPkOk:sum(packetBytes) 	1110
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.R5.eth[2].mac 	passedUpPk:count 	12
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R5.eth[2].mac 	passedUpPk:sum(packetBytes) 	1110
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R5.eth[2].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.R5.eth[2].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.R5.eth[2].encap 	decapPk:count 	12
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.R5.eth[2].encap 	decapPk:sum(packetBytes) 	834
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.R5.eth[2].encap 	encapPk:count 	12
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.R5.eth[2].encap 	encapPk:sum(packetBytes) 	863
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1babel.R5.eth[3].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.R5.eth[3].mac 	full-duplex 	1
+scalar Test1babel.R5.eth[3].mac 	"frames/sec sent" 	0.12937607204165
+scalar Test1babel.R5.eth[3].mac 	"frames/sec rcvd" 	0.15289899423105
+scalar Test1babel.R5.eth[3].mac 	"bits/sec sent" 	99.925373460535
+scalar Test1babel.R5.eth[3].mac 	"bits/sec rcvd" 	116.29732730435
+scalar Test1babel.R5.eth[3].mac 	"rx channel idle (%)" 	99.999873917137
+scalar Test1babel.R5.eth[3].mac 	"rx channel utilization (%)" 	0.00012608286293514
+scalar Test1babel.R5.eth[3].mac 	rxPkFromHL:count 	11
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.R5.eth[3].mac 	rxPkFromHL:sum(packetBytes) 	1062
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.R5.eth[3].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.R5.eth[3].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.R5.eth[3].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.R5.eth[3].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.R5.eth[3].mac 	txPk:count 	11
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.R5.eth[3].mac 	txPk:sum(packetBytes) 	1062
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.R5.eth[3].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.R5.eth[3].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.R5.eth[3].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.R5.eth[3].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.R5.eth[3].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.R5.eth[3].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.R5.eth[3].mac 	rxPkOk:count 	13
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.R5.eth[3].mac 	rxPkOk:sum(packetBytes) 	1236
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.R5.eth[3].mac 	passedUpPk:count 	13
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.R5.eth[3].mac 	passedUpPk:sum(packetBytes) 	1236
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.R5.eth[3].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.R5.eth[3].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.R5.eth[3].encap 	decapPk:count 	13
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.R5.eth[3].encap 	decapPk:sum(packetBytes) 	942
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.R5.eth[3].encap 	encapPk:count 	11
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.R5.eth[3].encap 	encapPk:sum(packetBytes) 	804
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+statistic Test1babel.R5.babel.babelMain 	eth0-rx
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-tx
+field count 5
+field mean 52.4
+field stddev 88.118102566953
+field sum 262
+field sqrsum 44788
+field min 12
+field max 210
+statistic Test1babel.R5.babel.babelMain 	eth0-rx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-tx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-rx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-tx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-rx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-tx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-rx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-tx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-rx-HELLO
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-tx-HELLO
+field count 5
+field mean 8
+field stddev 0
+field sum 40
+field sqrsum 320
+field min 8
+field max 8
+statistic Test1babel.R5.babel.babelMain 	eth0-rx-IHU
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-tx-IHU
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-rx-ROUTERID
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-tx-ROUTERID
+field count 5
+field mean 12
+field stddev 0
+field sum 60
+field sqrsum 720
+field min 12
+field max 12
+statistic Test1babel.R5.babel.babelMain 	eth0-rx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-tx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-rx-UPDATE
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-tx-UPDATE
+field count 10
+field mean 13.8
+field stddev 0.63245553203367
+field sum 138
+field sqrsum 1908
+field min 13
+field max 15
+statistic Test1babel.R5.babel.babelMain 	eth0-rx-ROUTEREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-tx-ROUTEREQ
+field count 1
+field mean 4
+field stddev nan
+field sum 4
+field sqrsum 16
+field min 4
+field max 4
+statistic Test1babel.R5.babel.babelMain 	eth0-rx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth0-tx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth1-rx
+field count 8
+field mean 48.875
+field stddev 49.726214701819
+field sum 391
+field sqrsum 36419
+field min 8
+field max 157
+statistic Test1babel.R5.babel.babelMain 	eth1-tx
+field count 10
+field mean 44.9
+field stddev 50.24705629852
+field sum 449
+field sqrsum 42883
+field min 8
+field max 163
+statistic Test1babel.R5.babel.babelMain 	eth1-rx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth1-tx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth1-rx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth1-tx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth1-rx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth1-tx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth1-rx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth1-tx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth1-rx-HELLO
+field count 6
+field mean 8
+field stddev 0
+field sum 48
+field sqrsum 384
+field min 8
+field max 8
+statistic Test1babel.R5.babel.babelMain 	eth1-tx-HELLO
+field count 7
+field mean 8
+field stddev 0
+field sum 56
+field sqrsum 448
+field min 8
+field max 8
+statistic Test1babel.R5.babel.babelMain 	eth1-rx-IHU
+field count 4
+field mean 12
+field stddev 0
+field sum 48
+field sqrsum 576
+field min 12
+field max 12
+statistic Test1babel.R5.babel.babelMain 	eth1-tx-IHU
+field count 4
+field mean 12
+field stddev 0
+field sum 48
+field sqrsum 576
+field min 12
+field max 12
+statistic Test1babel.R5.babel.babelMain 	eth1-rx-ROUTERID
+field count 6
+field mean 12
+field stddev 0
+field sum 72
+field sqrsum 864
+field min 12
+field max 12
+statistic Test1babel.R5.babel.babelMain 	eth1-tx-ROUTERID
+field count 6
+field mean 12
+field stddev 0
+field sum 72
+field sqrsum 864
+field min 12
+field max 12
+statistic Test1babel.R5.babel.babelMain 	eth1-rx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth1-tx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth1-rx-UPDATE
+field count 13
+field mean 14.076923076923
+field stddev 0.64051261522036
+field sum 183
+field sqrsum 2581
+field min 13
+field max 15
+statistic Test1babel.R5.babel.babelMain 	eth1-tx-UPDATE
+field count 16
+field mean 14.0625
+field stddev 0.57373048260195
+field sum 225
+field sqrsum 3169
+field min 13
+field max 15
+statistic Test1babel.R5.babel.babelMain 	eth1-rx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R5.babel.babelMain 	eth1-tx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R5.babel.babelMain 	eth1-rx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth1-tx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth2-rx
+field count 9
+field mean 51.333333333333
+field stddev 56.789083458003
+field sum 462
+field sqrsum 49516
+field min 8
+field max 154
+statistic Test1babel.R5.babel.babelMain 	eth2-tx
+field count 9
+field mean 54.555555555556
+field stddev 60.440282740717
+field sum 491
+field sqrsum 56011
+field min 8
+field max 151
+statistic Test1babel.R5.babel.babelMain 	eth2-rx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth2-tx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth2-rx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth2-tx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth2-rx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth2-tx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth2-rx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth2-tx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth2-rx-HELLO
+field count 7
+field mean 8
+field stddev 0
+field sum 56
+field sqrsum 448
+field min 8
+field max 8
+statistic Test1babel.R5.babel.babelMain 	eth2-tx-HELLO
+field count 6
+field mean 8
+field stddev 0
+field sum 48
+field sqrsum 384
+field min 8
+field max 8
+statistic Test1babel.R5.babel.babelMain 	eth2-rx-IHU
+field count 4
+field mean 12
+field stddev 0
+field sum 48
+field sqrsum 576
+field min 12
+field max 12
+statistic Test1babel.R5.babel.babelMain 	eth2-tx-IHU
+field count 3
+field mean 12
+field stddev 0
+field sum 36
+field sqrsum 432
+field min 12
+field max 12
+statistic Test1babel.R5.babel.babelMain 	eth2-rx-ROUTERID
+field count 7
+field mean 12
+field stddev 0
+field sum 84
+field sqrsum 1008
+field min 12
+field max 12
+statistic Test1babel.R5.babel.babelMain 	eth2-tx-ROUTERID
+field count 7
+field mean 12
+field stddev 0
+field sum 84
+field sqrsum 1008
+field min 12
+field max 12
+statistic Test1babel.R5.babel.babelMain 	eth2-rx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth2-tx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth2-rx-UPDATE
+field count 17
+field mean 13.529411764706
+field stddev 1.1788578719901
+field sum 230
+field sqrsum 3134
+field min 13
+field max 16
+statistic Test1babel.R5.babel.babelMain 	eth2-tx-UPDATE
+field count 20
+field mean 13.95
+field stddev 0.60480531882929
+field sum 279
+field sqrsum 3899
+field min 13
+field max 15
+statistic Test1babel.R5.babel.babelMain 	eth2-rx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R5.babel.babelMain 	eth2-tx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R5.babel.babelMain 	eth2-rx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth2-tx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth3-rx
+field count 10
+field mean 54.2
+field stddev 63.282084528105
+field sum 542
+field sqrsum 65418
+field min 8
+field max 177
+statistic Test1babel.R5.babel.babelMain 	eth3-tx
+field count 8
+field mean 57.5
+field stddev 64.825039254024
+field sum 460
+field sqrsum 55866
+field min 8
+field max 183
+statistic Test1babel.R5.babel.babelMain 	eth3-rx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth3-tx-PAD1
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth3-rx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth3-tx-PADN
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth3-rx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth3-tx-ACKREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth3-rx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth3-tx-ACK
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth3-rx-HELLO
+field count 7
+field mean 8
+field stddev 0
+field sum 56
+field sqrsum 448
+field min 8
+field max 8
+statistic Test1babel.R5.babel.babelMain 	eth3-tx-HELLO
+field count 6
+field mean 8
+field stddev 0
+field sum 48
+field sqrsum 384
+field min 8
+field max 8
+statistic Test1babel.R5.babel.babelMain 	eth3-rx-IHU
+field count 4
+field mean 12
+field stddev 0
+field sum 48
+field sqrsum 576
+field min 12
+field max 12
+statistic Test1babel.R5.babel.babelMain 	eth3-tx-IHU
+field count 3
+field mean 12
+field stddev 0
+field sum 36
+field sqrsum 432
+field min 12
+field max 12
+statistic Test1babel.R5.babel.babelMain 	eth3-rx-ROUTERID
+field count 8
+field mean 12
+field stddev 0
+field sum 96
+field sqrsum 1152
+field min 12
+field max 12
+statistic Test1babel.R5.babel.babelMain 	eth3-tx-ROUTERID
+field count 7
+field mean 12
+field stddev 0
+field sum 84
+field sqrsum 1008
+field min 12
+field max 12
+statistic Test1babel.R5.babel.babelMain 	eth3-rx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth3-tx-NEXTHOP
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth3-rx-UPDATE
+field count 21
+field mean 14
+field stddev 0.54772255750517
+field sum 294
+field sqrsum 4122
+field min 13
+field max 15
+statistic Test1babel.R5.babel.babelMain 	eth3-tx-UPDATE
+field count 18
+field mean 14
+field stddev 0.594088525786
+field sum 252
+field sqrsum 3534
+field min 13
+field max 15
+statistic Test1babel.R5.babel.babelMain 	eth3-rx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R5.babel.babelMain 	eth3-tx-ROUTEREQ
+field count 2
+field mean 4
+field stddev 0
+field sum 8
+field sqrsum 32
+field min 4
+field max 4
+statistic Test1babel.R5.babel.babelMain 	eth3-rx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+statistic Test1babel.R5.babel.babelMain 	eth3-tx-SEQNOREQ
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar Test1babel.R5.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar Test1babel.R5.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar Test1babel.R5.udp 	passedUpPk:count 	27
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar Test1babel.R5.udp 	sentPk:count 	32
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Test1babel.R5.udp 	sentPk:sum(packetBytes) 	1918
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar Test1babel.R5.udp 	rcvdPk:count 	27
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Test1babel.R5.udp 	rcvdPk:sum(packetBytes) 	1611
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar Test1babel.PC1.networkLayer.ipv4.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar Test1babel.PC1.networkLayer.ipv4.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar Test1babel.PC1.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1babel.PC1.networkLayer.ipv4.arp 	completedARPResolution:count 	0
+attr title  "ARP completed resolutions, count"
+scalar Test1babel.PC1.networkLayer.ipv4.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar Test1babel.PC1.networkLayer.ipv6.neighbourDiscovery 	startDAD:count 	1
+attr title  "DAD started, count"
+scalar Test1babel.PC1.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.PC1.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.PC1.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1babel.PC1.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1babel.PC1.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.PC1.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.PC1.eth[0].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.PC1.eth[0].mac 	full-duplex 	1
+scalar Test1babel.PC1.eth[0].mac 	"frames/sec sent" 	0.047045844378783
+scalar Test1babel.PC1.eth[0].mac 	"frames/sec rcvd" 	0.10585314985226
+scalar Test1babel.PC1.eth[0].mac 	"bits/sec sent" 	28.6038733823
+scalar Test1babel.PC1.eth[0].mac 	"bits/sec rcvd" 	74.520617495993
+scalar Test1babel.PC1.eth[0].mac 	"rx channel idle (%)" 	99.999918704781
+scalar Test1babel.PC1.eth[0].mac 	"rx channel utilization (%)" 	8.1295219086537e-005
+scalar Test1babel.PC1.eth[0].mac 	rxPkFromHL:count 	4
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.PC1.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	304
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.PC1.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.PC1.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.PC1.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.PC1.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.PC1.eth[0].mac 	txPk:count 	4
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.PC1.eth[0].mac 	txPk:sum(packetBytes) 	304
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.PC1.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.PC1.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.PC1.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.PC1.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.PC1.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.PC1.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.PC1.eth[0].mac 	rxPkOk:count 	9
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.PC1.eth[0].mac 	rxPkOk:sum(packetBytes) 	792
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.PC1.eth[0].mac 	passedUpPk:count 	9
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.PC1.eth[0].mac 	passedUpPk:sum(packetBytes) 	792
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.PC1.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.PC1.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.PC1.eth[0].encap 	decapPk:count 	9
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.PC1.eth[0].encap 	decapPk:sum(packetBytes) 	610
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.PC1.eth[0].encap 	encapPk:count 	4
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.PC1.eth[0].encap 	encapPk:sum(packetBytes) 	232
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1babel.PC2.networkLayer.ipv4.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar Test1babel.PC2.networkLayer.ipv4.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar Test1babel.PC2.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1babel.PC2.networkLayer.ipv4.arp 	completedARPResolution:count 	0
+attr title  "ARP completed resolutions, count"
+scalar Test1babel.PC2.networkLayer.ipv4.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar Test1babel.PC2.networkLayer.ipv6.neighbourDiscovery 	startDAD:count 	1
+attr title  "DAD started, count"
+scalar Test1babel.PC2.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.PC2.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.PC2.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1babel.PC2.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1babel.PC2.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.PC2.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.PC2.eth[0].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.PC2.eth[0].mac 	full-duplex 	1
+scalar Test1babel.PC2.eth[0].mac 	"frames/sec sent" 	0.047045844378783
+scalar Test1babel.PC2.eth[0].mac 	"frames/sec rcvd" 	0.10585314985226
+scalar Test1babel.PC2.eth[0].mac 	"bits/sec sent" 	28.6038733823
+scalar Test1babel.PC2.eth[0].mac 	"bits/sec rcvd" 	74.520617495993
+scalar Test1babel.PC2.eth[0].mac 	"rx channel idle (%)" 	99.999918704781
+scalar Test1babel.PC2.eth[0].mac 	"rx channel utilization (%)" 	8.1295219086537e-005
+scalar Test1babel.PC2.eth[0].mac 	rxPkFromHL:count 	4
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.PC2.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	304
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.PC2.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.PC2.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.PC2.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.PC2.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.PC2.eth[0].mac 	txPk:count 	4
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.PC2.eth[0].mac 	txPk:sum(packetBytes) 	304
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.PC2.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.PC2.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.PC2.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.PC2.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.PC2.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.PC2.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.PC2.eth[0].mac 	rxPkOk:count 	9
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.PC2.eth[0].mac 	rxPkOk:sum(packetBytes) 	792
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.PC2.eth[0].mac 	passedUpPk:count 	9
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.PC2.eth[0].mac 	passedUpPk:sum(packetBytes) 	792
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.PC2.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.PC2.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.PC2.eth[0].encap 	decapPk:count 	9
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.PC2.eth[0].encap 	decapPk:sum(packetBytes) 	610
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.PC2.eth[0].encap 	encapPk:count 	4
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.PC2.eth[0].encap 	encapPk:sum(packetBytes) 	232
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1babel.PC3.networkLayer.ipv4.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar Test1babel.PC3.networkLayer.ipv4.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar Test1babel.PC3.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1babel.PC3.networkLayer.ipv4.arp 	completedARPResolution:count 	0
+attr title  "ARP completed resolutions, count"
+scalar Test1babel.PC3.networkLayer.ipv4.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar Test1babel.PC3.networkLayer.ipv6.neighbourDiscovery 	startDAD:count 	1
+attr title  "DAD started, count"
+scalar Test1babel.PC3.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.PC3.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.PC3.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1babel.PC3.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1babel.PC3.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.PC3.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.PC3.eth[0].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.PC3.eth[0].mac 	full-duplex 	1
+scalar Test1babel.PC3.eth[0].mac 	"frames/sec sent" 	0.047045844378783
+scalar Test1babel.PC3.eth[0].mac 	"frames/sec rcvd" 	0.10585314985226
+scalar Test1babel.PC3.eth[0].mac 	"bits/sec sent" 	28.6038733823
+scalar Test1babel.PC3.eth[0].mac 	"bits/sec rcvd" 	74.520617495993
+scalar Test1babel.PC3.eth[0].mac 	"rx channel idle (%)" 	99.999918704781
+scalar Test1babel.PC3.eth[0].mac 	"rx channel utilization (%)" 	8.1295219086537e-005
+scalar Test1babel.PC3.eth[0].mac 	rxPkFromHL:count 	4
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.PC3.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	304
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.PC3.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.PC3.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.PC3.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.PC3.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.PC3.eth[0].mac 	txPk:count 	4
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.PC3.eth[0].mac 	txPk:sum(packetBytes) 	304
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.PC3.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.PC3.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.PC3.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.PC3.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.PC3.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.PC3.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.PC3.eth[0].mac 	rxPkOk:count 	9
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.PC3.eth[0].mac 	rxPkOk:sum(packetBytes) 	792
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.PC3.eth[0].mac 	passedUpPk:count 	9
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.PC3.eth[0].mac 	passedUpPk:sum(packetBytes) 	792
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.PC3.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.PC3.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.PC3.eth[0].encap 	decapPk:count 	9
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.PC3.eth[0].encap 	decapPk:sum(packetBytes) 	610
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.PC3.eth[0].encap 	encapPk:count 	4
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.PC3.eth[0].encap 	encapPk:sum(packetBytes) 	232
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1babel.PC4.networkLayer.ipv4.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar Test1babel.PC4.networkLayer.ipv4.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar Test1babel.PC4.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1babel.PC4.networkLayer.ipv4.arp 	completedARPResolution:count 	0
+attr title  "ARP completed resolutions, count"
+scalar Test1babel.PC4.networkLayer.ipv4.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar Test1babel.PC4.networkLayer.ipv6.neighbourDiscovery 	startDAD:count 	1
+attr title  "DAD started, count"
+scalar Test1babel.PC4.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.PC4.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.PC4.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1babel.PC4.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1babel.PC4.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.PC4.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.PC4.eth[0].mac 	"simulated time" 	85.023450058512
+scalar Test1babel.PC4.eth[0].mac 	full-duplex 	1
+scalar Test1babel.PC4.eth[0].mac 	"frames/sec sent" 	0.047045844378783
+scalar Test1babel.PC4.eth[0].mac 	"frames/sec rcvd" 	0.11761461094696
+scalar Test1babel.PC4.eth[0].mac 	"bits/sec sent" 	28.6038733823
+scalar Test1babel.PC4.eth[0].mac 	"bits/sec rcvd" 	77.437459847477
+scalar Test1babel.PC4.eth[0].mac 	"rx channel idle (%)" 	99.999915035205
+scalar Test1babel.PC4.eth[0].mac 	"rx channel utilization (%)" 	8.4964794948082e-005
+scalar Test1babel.PC4.eth[0].mac 	rxPkFromHL:count 	4
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1babel.PC4.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	304
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1babel.PC4.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1babel.PC4.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1babel.PC4.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1babel.PC4.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1babel.PC4.eth[0].mac 	txPk:count 	4
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1babel.PC4.eth[0].mac 	txPk:sum(packetBytes) 	304
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1babel.PC4.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1babel.PC4.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1babel.PC4.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1babel.PC4.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1babel.PC4.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1babel.PC4.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1babel.PC4.eth[0].mac 	rxPkOk:count 	10
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1babel.PC4.eth[0].mac 	rxPkOk:sum(packetBytes) 	823
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1babel.PC4.eth[0].mac 	passedUpPk:count 	10
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1babel.PC4.eth[0].mac 	passedUpPk:sum(packetBytes) 	823
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1babel.PC4.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1babel.PC4.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1babel.PC4.eth[0].encap 	decapPk:count 	10
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1babel.PC4.eth[0].encap 	decapPk:sum(packetBytes) 	617
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1babel.PC4.eth[0].encap 	encapPk:count 	4
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1babel.PC4.eth[0].encap 	encapPk:sum(packetBytes) 	232
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"

@@ -1,0 +1,677 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	position: relative;
+	height: 100%;
+}
+
+footer, .container{
+	max-width: 1024px;
+	min-width: 800px;
+	margin: auto;
+
+}
+
+
+.global_header{
+	height: 200px;
+	overflow: visible;
+}
+
+.global_logo{
+	height: 149px;
+	overflow: visible;
+}
+
+.global_menu{
+	height: 51px;
+	background-color: #00B2EB;
+}
+
+.global_menu2{
+	height: 51px;
+	background-color: #A8B3C8;
+}
+.global_footer{
+   
+   width:100%;
+}
+.global_container{
+	min-height:  750px;
+}
+
+.global_container, .global_header, .global_footer {
+	margin: auto;
+	
+}
+
+.container{
+	padding-top: 15px,
+	height: 100%;
+}
+
+/** vrch hlavicky -- logo **/
+.logo{
+	max-width: 1024px;
+	min-width: 800px;
+	height: 149px;
+	margin: auto;
+	position: relative;
+}
+
+._logo{
+	width: 174px;
+	height: 140px;
+	background-image: url("../pic/logo.png");
+	float: left;
+}
+
+._logo_login{
+	width: 174px;
+	height: 140px;
+	background-image: url("../pic/logo.png");
+	margin: auto;
+	margin-top: 40px; 
+}
+
+/** uzivatelsky panel -- logout :D :D **/
+.info_box{
+	height: 50px;
+	margin-top: 65px;
+	margin-right: 15px;
+	float: right;
+}
+
+.info_box p{
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+	font-size: 15px;
+	float: right;
+	clear:right;
+	color: #00B2EB;
+}
+
+.info_box a{
+	font-family: "Roboto", sans-serif;
+	text-decoration: none;
+	margin-top: 5px;
+	font-size: 13px;
+	clear:right;
+	float: right;
+	color: #005D8E;
+}
+
+.info_box a:hover{
+	text-decoration:underline;
+}
+
+/** login a register formular **/
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.welcome{
+	position: relative;
+	text-align: center;
+	margin: auto;
+	padding-top: 40px;
+	padding-bottom: 50px;
+	font-family: "Roboto", sans-serif;	
+	color: gray;
+	font-size: 25px;
+}
+
+.login_msg{
+	font-family: "Roboto", sans-serif;
+	color: #b3b3b3;
+  	font-size: 12px;
+	margin: auto;
+	text-align: center;
+}
+
+.register_form table{
+
+	width: 500px;
+	padding: 25px;
+}
+
+.register_form table tbody tr:last-child td{
+	margin: auto;
+}
+
+
+.register_form small{
+	float: left;
+  	padding-left: 50px;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+.register_form table th{
+
+	width: 140px;
+	text-align: left;
+	padding-left: 25px;
+	font-family: "Roboto", sans-serif;
+	color: grey;
+}
+
+.register_form table tbody tr:last-child th{
+
+	visibility: hidden;
+}
+
+.register_form ul{
+	list-style: none;
+	padding: 0;
+	margin: auto;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	font-family: "Roboto", sans-serif;
+	color: grey;
+
+}
+
+.register_form input[type="text"]{
+	width: 230px;
+	color: grey;
+}
+
+.register_form input[type="password"]{
+	width: 230px;
+	color: grey;
+}
+
+.register_form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  width: 500px;
+  padding-bottom: 10px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.24);
+  margin-top: 25px;
+}
+
+.register_form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 90%;
+  border: 0;
+  margin: 10px 0 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+
+.register_form .button {
+	#float: left;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background-color: #00B2EB;
+  width: 130px;
+  border: 0;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.register_form .button:hover,.form button:active,.form button:focus {
+  background: #005D8E;
+}
+
+.login_form table{
+
+	width: 300px;
+	padding: 25px;
+}
+
+.login_form ul{
+	list-style: none;
+	padding: 0;
+	margin: auto;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	font-family: "Roboto", sans-serif;
+	color: grey;
+
+}
+
+.login_form input[type="text"]{
+	width: 230px;
+	color: grey;
+}
+
+.login_form input[type="password"]{
+	width: 230px;
+	color: grey;
+}
+
+.login_form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  width: 300px;
+  padding-bottom: 10px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.24);
+  margin-top: 25px;	 
+}
+
+.login_form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 90%;
+  border: 0;
+  margin: 10px 0 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.login_form .button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background-color: #00B2EB;
+  width: 130px;
+  border: 0;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.login_form .button:hover,.form button:active,.form button:focus {
+  background: #005D8E;
+}
+
+.message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.message a {
+  color: #005D8E;
+  text-decoration: none;
+}
+
+/** menu **/
+.menu{
+	margin: 0;
+	max-width: 1024px;
+	min-width: 800px;
+	margin: auto;
+	padding: 0;
+	height: 50px;
+	list-style: none;
+}
+
+.menu li{
+	margin: 0;
+	padding: 0;
+	padding-right: 25px;
+	padding-left: 25px;
+	padding-top: 12px;
+	padding-bottom: 14px;
+	color: #005D8E;
+	font: 20px Arial;
+	font-weight: bold;
+	float: left;
+	text-decoration: none;
+}
+
+.menu ul>a{
+	text-decoration: none;
+}
+
+.menu1 li:hover{
+	background-color: White;
+}
+
+.menu2 li:hover{
+	text-decoration: underline;
+}
+
+.pshow_info, .pshow_text{
+	margin-left: 15px;
+	margin-right: 15px;
+	font-family: "Roboto", sans-serif;
+	font-size: 17px;
+	color: #444;
+}
+.pshow_text{
+	margin-top: 15px
+ }
+
+ .pshow_text div{
+ 	margin: 12px;
+ 	margin-left: 35px;
+ }
+
+.pshow_info div{
+	padding-bottom: 3px;
+}
+
+.pshow_info h1, .pshow_text h1, .pshow_users h1{
+	width: 150px;
+	margin: 0;
+	display: inline;
+	font-family: "Roboto", sans-serif;
+	color: #005D8E;
+	font-weight: normal;
+	font-size: 23px; 
+}
+
+.pshow_users{
+	margin: 15px;
+}
+
+.pshow_worker{
+	padding-top: 3px;
+	padding-bottom: 3px;
+	height: 26px;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 5px;
+	font-family: "Roboto", sans-serif;
+	color: #444;
+	*border-left: 6px solid;
+	*border-right: 6px solid;
+	*border-color:  #005D8E;
+	*border-radius: 16px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background: rgba(0,93,142,1);
+	#background-color: #eaffff;
+background: -moz-linear-gradient(left, rgba(247,251,253,1) 0%, rgba(234,246,250,1) 22%, rgba(78,197,233,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247,251,253,1)), color-stop(22%, rgba(234,246,250,1)), color-stop(100%, rgba(78,197,233,1)));
+background: -webkit-linear-gradient(left, rgba(247,251,253,1) 0%, rgba(234,246,250,1) 22%, rgba(78,197,233,1) 100%);
+background: -o-linear-gradient(left, rgba(247,251,253,1) 0%, rgba(234,246,250,1) 22%, rgba(78,197,233,1) 100%);
+background: -ms-linear-gradient(left, rgba(247,251,253,1) 0%, rgba(234,246,250,1) 22%, rgba(78,197,233,1) 100%);
+background: linear-gradient(to right, rgba(247,251,253,1) 0%, rgba(234,246,250,1) 22%, rgba(78,197,233,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfd', endColorstr='#4ec5e9', GradientType=1 );
+padding-top: 10px;
+}
+
+.pshow_users .hide{
+	display: none
+}
+
+.pshow_worker a{
+	float: right;
+	text-decoration: none;
+	color: #005D8E;
+}
+
+.pshow_worker div{
+	max-width: 500px;
+	display: inline;
+
+}
+
+.pshow_worker a:hover, .pshow_commit a:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.pshow_commit{
+	background-color: #eaffff;
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	min-width: 500px;
+	max-width: 916px;
+	margin-left: 32px;
+	/border-left: 6px solid;
+	/border-right: 6px solid;
+	border-radius: 16px;
+	/border-color: #00B2EB;
+	padding: 10px;
+	margin-top: 3px; 
+	height: 18px;
+	background: -moz-linear-gradient(left, rgba(247,251,253,1) 0%, rgba(234,246,250,1) 22%, rgba(78,197,233,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247,251,253,1)), color-stop(22%, rgba(234,246,250,1)), color-stop(100%, rgba(78,197,233,1)));
+background: -webkit-linear-gradient(left, rgba(247,251,253,1) 0%, rgba(234,246,250,1) 22%, rgba(78,197,233,1) 100%);
+background: -o-linear-gradient(left, rgba(247,251,253,1) 0%, rgba(234,246,250,1) 22%, rgba(78,197,233,1) 100%);
+background: -ms-linear-gradient(left, rgba(247,251,253,1) 0%, rgba(234,246,250,1) 22%, rgba(78,197,233,1) 100%);
+background: linear-gradient(to right, rgba(247,251,253,1) 0%, rgba(234,246,250,1) 22%, rgba(78,197,233,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfd', endColorstr='#4ec5e9', GradientType=1 );
+}
+
+.pshow_commit .left{
+	float: left;
+}
+
+.pshow_commit a{
+	float: right;
+	text-decoration: none;
+	color: white;
+}
+
+.tabulka{
+	margin-top: 20px;
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	width: 100%;
+	line-height: 30px;
+	border-collapse: collapse;
+	border : 3px solid;
+	border-color: #00B2EB;
+}
+ .tabulka th{
+   
+   padding-left: 10px;
+
+}
+
+.table_data{
+	background-color: #eaffff;
+}
+
+.table_header{
+	background-color: #005D8E;
+	color: white;
+}
+.table_row{
+	text-align: left;
+}
+
+.pshow_bkg{
+	margin-top: 10px;
+	background: #f4f7f8;
+
+	border: 5px double #f0f7f8;;
+}
+
+.pshow_commits #t1{
+	min-width: 250px;
+	margin-left: 
+}
+
+.pshow_commits #t2{
+	margin-right: 30px;
+}
+
+.pshow_commits #t4{
+	display: inline;
+}
+
+
+.create_commit {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+  max-width: 1024px;
+  min-width: 800px;
+  margin: auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  margin-top: 15px; 
+  border-radius: 8px;
+}
+
+.create_commit input[type="text"],
+.create_commit input[type="password"],
+.create_commit input[type="date"],
+.create_commit input[type="datetime"],
+.create_commit input[type="email"],
+.create_commit input[type="number"],
+.create_commit input[type="search"],
+.create_commit input[type="tel"],
+.create_commit input[type="time"],
+.create_commit input[type="url"],
+.create_commit textarea,
+.create_commit select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  
+  background-color: #e8eeef;
+  color: #9a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-top: 10px;
+}
+
+.create_commit #dont_resize{
+	resize: none;
+}
+
+.create_commit textarea{
+	min-width: 800px;
+	max-width: 800px;
+	
+}
+.create_commit #name{
+	min-width: 300px;
+	resize: none;
+}
+
+.create_commit .max_height{
+	max-height: 20px;
+}
+
+.create_commit #msg{
+	min-height: 200px;
+	resize: auto;
+}
+
+.number {
+  background-color: #5fcf80;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 100%;
+}
+
+.create_commit input[type="submit"], #worker input[type="submit"] {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #00B2EB;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #00B0EB;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-top: 10px;
+}
+
+.create_commit label{
+	position: relative;
+	top: 4px;
+}
+
+
+input[type="submit"]:hover{
+	cursor: pointer;
+}
+
+#worker{
+
+	min-width: 300px;
+	max-width: 300px;
+	margin: auto;
+	font-family: 'Nunito', sans-serif;
+  	color: #384047;
+  	
+	background: #f4f7f8;
+	margin-top: 15px; 
+	border-radius: 8px;
+	padding: 15px;
+}
+
+#worker select{
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin-left: 40px;
+  outline: 0;
+  padding: 15px;
+  width: 200px;
+  background-color: #e8eeef;
+  color: #9a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-top: 10px;
+
+}
+#worker input[type="submit"]{width: 200px; margin-left:40px;}
+
+.comment{
+	border-top: 1px solid #00B2EB;
+	padding-top: 10px;
+	min-width: 800px;
+	max-width: 1024px;
+	min-height: 30px;
+	margin-bottom: 35px;
+}
+
+.comment .date{float:right;}
+
+.comment .name{
+
+	width: 200px;
+	display: inline;
+}
+
+.comment .text{
+	padding-top: 3px;
+	font-size: 15px;
+	padding-left: 15px;
+}
+
+.comment .name div,.comment .date div{
+	color:#005D8E;
+	margin:0;
+	display: inline;
+	padding:0;
+
+}
+
+.crate_comment table{
+	margin: auto
+}
+
+.crate_comment textarea{
+	min-height: 100px;
+}

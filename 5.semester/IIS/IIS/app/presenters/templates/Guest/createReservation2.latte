@@ -1,0 +1,42 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+<div class="global_container">
+  <div class="container">
+    <div class="main">
+      
+      <div class="heading">
+        <h1>Vytvoriť rezerváciu </h1>
+      </div>
+
+      <div class="host">
+        <h2>Dátum</h2>
+          <div>{$start_date}-{$end_date}</div>
+
+        <h2>Hosť:</h2>
+          <div>Meno: <p>{$guest->Meno} {$guest->Priezvisko}</p></div>
+          <div>Číslo OP: <p>{$guest->Cislo_dokladu_totoznosti}</p></div>
+          <div>e-mail: <p>{$guest->email}</p></div>
+          <div>Login: <p>{$guest->Login}</p></div>
+        <h2>Výber izieb:</h2>
+          <div class="accom_create_left" >
+              <div class = "info1">dvoj-lozkova izba standard &nbsp;&nbsp;</div>
+              <div class = "info2">troj-lozkova izba standard &nbsp;&nbsp;</div>
+              <div class = "info3">dvoj-lozkova izba super &nbsp;&nbsp;</div>
+              <div class = "info4">Apartman &nbsp;&nbsp;</div>
+
+              <div class="services"></div>
+              {foreach $services as $service}
+                <div class='S'>{$service->Popis_sluzby},<br>Cena: {$service->Cena_sluzby} €/deň</div>
+              {/foreach}
+              <div class="komentar">Komentár</div>
+          </div>
+
+          <div class="accom_create_right">
+            {control roomSelect}
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

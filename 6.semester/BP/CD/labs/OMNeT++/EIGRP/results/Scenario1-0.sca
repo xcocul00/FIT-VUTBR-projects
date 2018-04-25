@@ -1,0 +1,2256 @@
+version 2
+run Scenario1-0-20170514-17:32:56-7292
+attr configname Scenario1
+attr datetime 20170514-17:32:56
+attr experiment Scenario1
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network Test1eigrp
+attr processid 7292
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.*.networkLayer.enableANSAConfig true
+param **.PC1.configData "xmldoc(\"config.xml\", \"Devices/Host[@id='0.0.1.1']/\")"
+param **.PC2.configData "xmldoc(\"config.xml\", \"Devices/Host[@id='0.0.1.2']/\")"
+param **.PC3.configData "xmldoc(\"config.xml\", \"Devices/Host[@id='0.0.1.3']/\")"
+param **.PC4.configData "xmldoc(\"config.xml\", \"Devices/Host[@id='0.0.1.4']/\")"
+param **.R1.configData "xmldoc(\"config.xml\", \"Devices/Router[@id='0.0.0.1']/\")"
+param **.R2.configData "xmldoc(\"config.xml\", \"Devices/Router[@id='0.0.0.2']/\")"
+param **.R3.configData "xmldoc(\"config.xml\", \"Devices/Router[@id='0.0.0.3']/\")"
+param **.R4.configData "xmldoc(\"config.xml\", \"Devices/Router[@id='0.0.0.4']/\")"
+param **.R5.configData "xmldoc(\"config.xml\", \"Devices/Router[@id='0.0.0.5']/\")"
+param **.enableCLNS false
+param **.enableIPv6 false
+param **.scenarioManager.script "xml(\"<scenario/>\")"
+
+scalar Test1eigrp.R1.networkLayer.ipv4.arp 	sentReply:count 	3
+attr title  "ARP replies sent, count"
+scalar Test1eigrp.R1.networkLayer.ipv4.arp 	sentReq:count 	3
+attr title  "ARP request sent, count"
+scalar Test1eigrp.R1.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1eigrp.R1.networkLayer.ipv4.arp 	completedARPResolution:count 	6
+attr title  "ARP completed resolutions, count"
+scalar Test1eigrp.R1.networkLayer.ipv4.arp 	initiatedARPResolution:count 	3
+attr title  "ARP initiated resolutions, count"
+scalar Test1eigrp.R1.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R1.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R1.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1eigrp.R1.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R1.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R1.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[0].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.R1.eth[0].mac 	full-duplex 	1
+scalar Test1eigrp.R1.eth[0].mac 	"frames/sec sent" 	0
+scalar Test1eigrp.R1.eth[0].mac 	"frames/sec rcvd" 	0
+scalar Test1eigrp.R1.eth[0].mac 	"bits/sec sent" 	0
+scalar Test1eigrp.R1.eth[0].mac 	"bits/sec rcvd" 	0
+scalar Test1eigrp.R1.eth[0].mac 	"rx channel idle (%)" 	100
+scalar Test1eigrp.R1.eth[0].mac 	"rx channel utilization (%)" 	0
+scalar Test1eigrp.R1.eth[0].mac 	rxPkFromHL:count 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.R1.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.R1.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.R1.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.R1.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.R1.eth[0].mac 	txPk:count 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.R1.eth[0].mac 	txPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.R1.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R1.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.R1.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[0].mac 	rxPkOk:count 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.R1.eth[0].mac 	rxPkOk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[0].mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R1.eth[0].mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.R1.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.R1.eth[0].encap 	decapPk:count 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.R1.eth[0].encap 	decapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[0].encap 	encapPk:count 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.R1.eth[0].encap 	encapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[1].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.R1.eth[1].mac 	full-duplex 	1
+scalar Test1eigrp.R1.eth[1].mac 	"frames/sec sent" 	1.2307647167029
+scalar Test1eigrp.R1.eth[1].mac 	"frames/sec rcvd" 	1.2307647167029
+scalar Test1eigrp.R1.eth[1].mac 	"bits/sec sent" 	1058.4576563645
+scalar Test1eigrp.R1.eth[1].mac 	"bits/sec rcvd" 	991.17585185144
+scalar Test1eigrp.R1.eth[1].mac 	"rx channel idle (%)" 	99.998930055206
+scalar Test1eigrp.R1.eth[1].mac 	"rx channel utilization (%)" 	0.0010699447937204
+scalar Test1eigrp.R1.eth[1].mac 	rxPkFromHL:count 	24
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.R1.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	2580
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.R1.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.R1.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.R1.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.R1.eth[1].mac 	txPk:count 	24
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.R1.eth[1].mac 	txPk:sum(packetBytes) 	2580
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.R1.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R1.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.R1.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[1].mac 	rxPkOk:count 	24
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.R1.eth[1].mac 	rxPkOk:sum(packetBytes) 	2416
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[1].mac 	passedUpPk:count 	24
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R1.eth[1].mac 	passedUpPk:sum(packetBytes) 	2416
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.R1.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.R1.eth[1].encap 	decapPk:count 	24
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.R1.eth[1].encap 	decapPk:sum(packetBytes) 	1888
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[1].encap 	encapPk:count 	24
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.R1.eth[1].encap 	encapPk:sum(packetBytes) 	2052
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[2].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.R1.eth[2].mac 	full-duplex 	1
+scalar Test1eigrp.R1.eth[2].mac 	"frames/sec sent" 	1.128200990311
+scalar Test1eigrp.R1.eth[2].mac 	"frames/sec rcvd" 	1.179482853507
+scalar Test1eigrp.R1.eth[2].mac 	"bits/sec sent" 	969.84259676192
+scalar Test1eigrp.R1.eth[2].mac 	"bits/sec rcvd" 	964.91953789511
+scalar Test1eigrp.R1.eth[2].mac 	"rx channel idle (%)" 	99.998959593559
+scalar Test1eigrp.R1.eth[2].mac 	"rx channel utilization (%)" 	0.0010404064405196
+scalar Test1eigrp.R1.eth[2].mac 	rxPkFromHL:count 	23
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.R1.eth[2].mac 	rxPkFromHL:sum(packetBytes) 	2554
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[2].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.R1.eth[2].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.R1.eth[2].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.R1.eth[2].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.R1.eth[2].mac 	txPk:count 	22
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.R1.eth[2].mac 	txPk:sum(packetBytes) 	2364
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[2].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.R1.eth[2].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[2].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R1.eth[2].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[2].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.R1.eth[2].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[2].mac 	rxPkOk:count 	23
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.R1.eth[2].mac 	rxPkOk:sum(packetBytes) 	2352
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[2].mac 	passedUpPk:count 	23
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R1.eth[2].mac 	passedUpPk:sum(packetBytes) 	2352
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[2].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.R1.eth[2].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.R1.eth[2].encap 	decapPk:count 	23
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.R1.eth[2].encap 	decapPk:sum(packetBytes) 	1848
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[2].encap 	encapPk:count 	23
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.R1.eth[2].encap 	encapPk:sum(packetBytes) 	2056
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[3].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.R1.eth[3].mac 	full-duplex 	1
+scalar Test1eigrp.R1.eth[3].mac 	"frames/sec sent" 	1.179482853507
+scalar Test1eigrp.R1.eth[3].mac 	"frames/sec rcvd" 	1.2307647167029
+scalar Test1eigrp.R1.eth[3].mac 	"bits/sec sent" 	959.9964790283
+scalar Test1eigrp.R1.eth[3].mac 	"bits/sec rcvd" 	970.66310657306
+scalar Test1eigrp.R1.eth[3].mac 	"rx channel idle (%)" 	99.998950567952
+scalar Test1eigrp.R1.eth[3].mac 	"rx channel utilization (%)" 	0.001049432048442
+scalar Test1eigrp.R1.eth[3].mac 	rxPkFromHL:count 	24
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.R1.eth[3].mac 	rxPkFromHL:sum(packetBytes) 	2530
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[3].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.R1.eth[3].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.R1.eth[3].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.R1.eth[3].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.R1.eth[3].mac 	txPk:count 	23
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.R1.eth[3].mac 	txPk:sum(packetBytes) 	2340
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[3].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.R1.eth[3].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[3].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R1.eth[3].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[3].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.R1.eth[3].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[3].mac 	rxPkOk:count 	24
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.R1.eth[3].mac 	rxPkOk:sum(packetBytes) 	2366
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[3].mac 	passedUpPk:count 	24
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R1.eth[3].mac 	passedUpPk:sum(packetBytes) 	2366
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[3].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.R1.eth[3].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.R1.eth[3].encap 	decapPk:count 	24
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.R1.eth[3].encap 	decapPk:sum(packetBytes) 	1844
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.R1.eth[3].encap 	encapPk:count 	24
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.R1.eth[3].encap 	encapPk:sum(packetBytes) 	2008
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.R2.networkLayer.ipv4.arp 	sentReply:count 	3
+attr title  "ARP replies sent, count"
+scalar Test1eigrp.R2.networkLayer.ipv4.arp 	sentReq:count 	3
+attr title  "ARP request sent, count"
+scalar Test1eigrp.R2.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1eigrp.R2.networkLayer.ipv4.arp 	completedARPResolution:count 	6
+attr title  "ARP completed resolutions, count"
+scalar Test1eigrp.R2.networkLayer.ipv4.arp 	initiatedARPResolution:count 	3
+attr title  "ARP initiated resolutions, count"
+scalar Test1eigrp.R2.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R2.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R2.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1eigrp.R2.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R2.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R2.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[0].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.R2.eth[0].mac 	full-duplex 	1
+scalar Test1eigrp.R2.eth[0].mac 	"frames/sec sent" 	1.2820465798989
+scalar Test1eigrp.R2.eth[0].mac 	"frames/sec rcvd" 	1.179482853507
+scalar Test1eigrp.R2.eth[0].mac 	"bits/sec sent" 	1017.4321658078
+scalar Test1eigrp.R2.eth[0].mac 	"bits/sec rcvd" 	1032.2013424082
+scalar Test1eigrp.R2.eth[0].mac 	"rx channel idle (%)" 	99.998892311755
+scalar Test1eigrp.R2.eth[0].mac 	"rx channel utilization (%)" 	0.0011076882450327
+scalar Test1eigrp.R2.eth[0].mac 	rxPkFromHL:count 	25
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.R2.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	2480
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.R2.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.R2.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.R2.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.R2.eth[0].mac 	txPk:count 	25
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.R2.eth[0].mac 	txPk:sum(packetBytes) 	2480
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.R2.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R2.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.R2.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[0].mac 	rxPkOk:count 	23
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.R2.eth[0].mac 	rxPkOk:sum(packetBytes) 	2516
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[0].mac 	passedUpPk:count 	23
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R2.eth[0].mac 	passedUpPk:sum(packetBytes) 	2516
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.R2.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.R2.eth[0].encap 	decapPk:count 	23
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.R2.eth[0].encap 	decapPk:sum(packetBytes) 	2012
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[0].encap 	encapPk:count 	25
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.R2.eth[0].encap 	encapPk:sum(packetBytes) 	1928
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[1].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.R2.eth[1].mac 	full-duplex 	1
+scalar Test1eigrp.R2.eth[1].mac 	"frames/sec sent" 	1.4358921694868
+scalar Test1eigrp.R2.eth[1].mac 	"frames/sec rcvd" 	1.3846103062908
+scalar Test1eigrp.R2.eth[1].mac 	"bits/sec sent" 	1073.226832965
+scalar Test1eigrp.R2.eth[1].mac 	"bits/sec rcvd" 	1039.5859307084
+scalar Test1eigrp.R2.eth[1].mac 	"rx channel idle (%)" 	99.99887179901
+scalar Test1eigrp.R2.eth[1].mac 	"rx channel utilization (%)" 	0.001128200990311
+scalar Test1eigrp.R2.eth[1].mac 	rxPkFromHL:count 	29
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.R2.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	2850
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.R2.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.R2.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.R2.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.R2.eth[1].mac 	txPk:count 	28
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.R2.eth[1].mac 	txPk:sum(packetBytes) 	2616
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.R2.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R2.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.R2.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[1].mac 	rxPkOk:count 	27
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.R2.eth[1].mac 	rxPkOk:sum(packetBytes) 	2534
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[1].mac 	passedUpPk:count 	27
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R2.eth[1].mac 	passedUpPk:sum(packetBytes) 	2534
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.R2.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.R2.eth[1].encap 	decapPk:count 	27
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.R2.eth[1].encap 	decapPk:sum(packetBytes) 	1952
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[1].encap 	encapPk:count 	29
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.R2.eth[1].encap 	encapPk:sum(packetBytes) 	2220
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[2].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.R2.eth[2].mac 	full-duplex 	1
+scalar Test1eigrp.R2.eth[2].mac 	"frames/sec sent" 	1.0769191271151
+scalar Test1eigrp.R2.eth[2].mac 	"frames/sec rcvd" 	1.128200990311
+scalar Test1eigrp.R2.eth[2].mac 	"bits/sec sent" 	871.38141942569
+scalar Test1eigrp.R2.eth[2].mac 	"bits/sec rcvd" 	850.8686741473
+scalar Test1eigrp.R2.eth[2].mac 	"rx channel idle (%)" 	99.999076926462
+scalar Test1eigrp.R2.eth[2].mac 	"rx channel utilization (%)" 	0.00092307353752721
+scalar Test1eigrp.R2.eth[2].mac 	rxPkFromHL:count 	22
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.R2.eth[2].mac 	rxPkFromHL:sum(packetBytes) 	2358
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[2].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.R2.eth[2].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.R2.eth[2].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.R2.eth[2].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.R2.eth[2].mac 	txPk:count 	21
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.R2.eth[2].mac 	txPk:sum(packetBytes) 	2124
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[2].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.R2.eth[2].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[2].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R2.eth[2].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[2].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.R2.eth[2].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[2].mac 	rxPkOk:count 	22
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.R2.eth[2].mac 	rxPkOk:sum(packetBytes) 	2074
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[2].mac 	passedUpPk:count 	22
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R2.eth[2].mac 	passedUpPk:sum(packetBytes) 	2074
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[2].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.R2.eth[2].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.R2.eth[2].encap 	decapPk:count 	22
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.R2.eth[2].encap 	decapPk:sum(packetBytes) 	1588
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.R2.eth[2].encap 	encapPk:count 	22
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.R2.eth[2].encap 	encapPk:sum(packetBytes) 	1884
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.R3.networkLayer.ipv4.arp 	sentReply:count 	1
+attr title  "ARP replies sent, count"
+scalar Test1eigrp.R3.networkLayer.ipv4.arp 	sentReq:count 	1
+attr title  "ARP request sent, count"
+scalar Test1eigrp.R3.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1eigrp.R3.networkLayer.ipv4.arp 	completedARPResolution:count 	2
+attr title  "ARP completed resolutions, count"
+scalar Test1eigrp.R3.networkLayer.ipv4.arp 	initiatedARPResolution:count 	1
+attr title  "ARP initiated resolutions, count"
+scalar Test1eigrp.R3.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R3.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R3.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1eigrp.R3.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R3.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R3.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[0].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.R3.eth[0].mac 	full-duplex 	1
+scalar Test1eigrp.R3.eth[0].mac 	"frames/sec sent" 	0
+scalar Test1eigrp.R3.eth[0].mac 	"frames/sec rcvd" 	0
+scalar Test1eigrp.R3.eth[0].mac 	"bits/sec sent" 	0
+scalar Test1eigrp.R3.eth[0].mac 	"bits/sec rcvd" 	0
+scalar Test1eigrp.R3.eth[0].mac 	"rx channel idle (%)" 	100
+scalar Test1eigrp.R3.eth[0].mac 	"rx channel utilization (%)" 	0
+scalar Test1eigrp.R3.eth[0].mac 	rxPkFromHL:count 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.R3.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.R3.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.R3.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.R3.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.R3.eth[0].mac 	txPk:count 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.R3.eth[0].mac 	txPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.R3.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R3.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.R3.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[0].mac 	rxPkOk:count 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.R3.eth[0].mac 	rxPkOk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[0].mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R3.eth[0].mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.R3.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.R3.eth[0].encap 	decapPk:count 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.R3.eth[0].encap 	decapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[0].encap 	encapPk:count 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.R3.eth[0].encap 	encapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[1].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.R3.eth[1].mac 	full-duplex 	1
+scalar Test1eigrp.R3.eth[1].mac 	"frames/sec sent" 	1.128200990311
+scalar Test1eigrp.R3.eth[1].mac 	"frames/sec rcvd" 	1.0769191271151
+scalar Test1eigrp.R3.eth[1].mac 	"bits/sec sent" 	850.8686741473
+scalar Test1eigrp.R3.eth[1].mac 	"bits/sec rcvd" 	871.38141942569
+scalar Test1eigrp.R3.eth[1].mac 	"rx channel idle (%)" 	99.999059695756
+scalar Test1eigrp.R3.eth[1].mac 	"rx channel utilization (%)" 	0.00094030424356105
+scalar Test1eigrp.R3.eth[1].mac 	rxPkFromHL:count 	22
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.R3.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	2074
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.R3.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.R3.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.R3.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.R3.eth[1].mac 	txPk:count 	22
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.R3.eth[1].mac 	txPk:sum(packetBytes) 	2074
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.R3.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R3.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.R3.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[1].mac 	rxPkOk:count 	21
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.R3.eth[1].mac 	rxPkOk:sum(packetBytes) 	2124
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[1].mac 	passedUpPk:count 	21
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R3.eth[1].mac 	passedUpPk:sum(packetBytes) 	2124
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.R3.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.R3.eth[1].encap 	decapPk:count 	21
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.R3.eth[1].encap 	decapPk:sum(packetBytes) 	1668
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.R3.eth[1].encap 	encapPk:count 	22
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.R3.eth[1].encap 	encapPk:sum(packetBytes) 	1588
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.R4.networkLayer.ipv4.arp 	sentReply:count 	2
+attr title  "ARP replies sent, count"
+scalar Test1eigrp.R4.networkLayer.ipv4.arp 	sentReq:count 	2
+attr title  "ARP request sent, count"
+scalar Test1eigrp.R4.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1eigrp.R4.networkLayer.ipv4.arp 	completedARPResolution:count 	4
+attr title  "ARP completed resolutions, count"
+scalar Test1eigrp.R4.networkLayer.ipv4.arp 	initiatedARPResolution:count 	2
+attr title  "ARP initiated resolutions, count"
+scalar Test1eigrp.R4.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R4.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R4.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1eigrp.R4.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R4.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R4.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[0].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.R4.eth[0].mac 	full-duplex 	1
+scalar Test1eigrp.R4.eth[0].mac 	"frames/sec sent" 	0
+scalar Test1eigrp.R4.eth[0].mac 	"frames/sec rcvd" 	0
+scalar Test1eigrp.R4.eth[0].mac 	"bits/sec sent" 	0
+scalar Test1eigrp.R4.eth[0].mac 	"bits/sec rcvd" 	0
+scalar Test1eigrp.R4.eth[0].mac 	"rx channel idle (%)" 	100
+scalar Test1eigrp.R4.eth[0].mac 	"rx channel utilization (%)" 	0
+scalar Test1eigrp.R4.eth[0].mac 	rxPkFromHL:count 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.R4.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.R4.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.R4.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.R4.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.R4.eth[0].mac 	txPk:count 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.R4.eth[0].mac 	txPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.R4.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R4.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.R4.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[0].mac 	rxPkOk:count 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.R4.eth[0].mac 	rxPkOk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[0].mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R4.eth[0].mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.R4.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.R4.eth[0].encap 	decapPk:count 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.R4.eth[0].encap 	decapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[0].encap 	encapPk:count 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.R4.eth[0].encap 	encapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[1].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.R4.eth[1].mac 	full-duplex 	1
+scalar Test1eigrp.R4.eth[1].mac 	"frames/sec sent" 	1.5384558958787
+scalar Test1eigrp.R4.eth[1].mac 	"frames/sec rcvd" 	1.4871740326827
+scalar Test1eigrp.R4.eth[1].mac 	"bits/sec sent" 	1123.2779314442
+scalar Test1eigrp.R4.eth[1].mac 	"bits/sec rcvd" 	1071.5858133427
+scalar Test1eigrp.R4.eth[1].mac 	"rx channel idle (%)" 	99.998833235049
+scalar Test1eigrp.R4.eth[1].mac 	"rx channel utilization (%)" 	0.0011667649514344
+scalar Test1eigrp.R4.eth[1].mac 	rxPkFromHL:count 	30
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.R4.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	2738
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.R4.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.R4.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.R4.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.R4.eth[1].mac 	txPk:count 	30
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.R4.eth[1].mac 	txPk:sum(packetBytes) 	2738
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.R4.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R4.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.R4.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[1].mac 	rxPkOk:count 	29
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.R4.eth[1].mac 	rxPkOk:sum(packetBytes) 	2612
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[1].mac 	passedUpPk:count 	29
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R4.eth[1].mac 	passedUpPk:sum(packetBytes) 	2612
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.R4.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.R4.eth[1].encap 	decapPk:count 	29
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.R4.eth[1].encap 	decapPk:sum(packetBytes) 	1988
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[1].encap 	encapPk:count 	30
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.R4.eth[1].encap 	encapPk:sum(packetBytes) 	2084
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[2].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.R4.eth[2].mac 	full-duplex 	1
+scalar Test1eigrp.R4.eth[2].mac 	"frames/sec sent" 	1.179482853507
+scalar Test1eigrp.R4.eth[2].mac 	"frames/sec rcvd" 	1.128200990311
+scalar Test1eigrp.R4.eth[2].mac 	"bits/sec sent" 	964.91953789511
+scalar Test1eigrp.R4.eth[2].mac 	"bits/sec rcvd" 	969.84259676192
+scalar Test1eigrp.R4.eth[2].mac 	"rx channel idle (%)" 	99.99895795254
+scalar Test1eigrp.R4.eth[2].mac 	"rx channel utilization (%)" 	0.0010420474601418
+scalar Test1eigrp.R4.eth[2].mac 	rxPkFromHL:count 	23
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.R4.eth[2].mac 	rxPkFromHL:sum(packetBytes) 	2352
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[2].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.R4.eth[2].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.R4.eth[2].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.R4.eth[2].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.R4.eth[2].mac 	txPk:count 	23
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.R4.eth[2].mac 	txPk:sum(packetBytes) 	2352
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[2].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.R4.eth[2].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[2].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R4.eth[2].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[2].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.R4.eth[2].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[2].mac 	rxPkOk:count 	22
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.R4.eth[2].mac 	rxPkOk:sum(packetBytes) 	2364
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[2].mac 	passedUpPk:count 	22
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R4.eth[2].mac 	passedUpPk:sum(packetBytes) 	2364
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[2].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.R4.eth[2].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.R4.eth[2].encap 	decapPk:count 	22
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.R4.eth[2].encap 	decapPk:sum(packetBytes) 	1884
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.R4.eth[2].encap 	encapPk:count 	23
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.R4.eth[2].encap 	encapPk:sum(packetBytes) 	1848
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.R5.networkLayer.ipv4.arp 	sentReply:count 	3
+attr title  "ARP replies sent, count"
+scalar Test1eigrp.R5.networkLayer.ipv4.arp 	sentReq:count 	3
+attr title  "ARP request sent, count"
+scalar Test1eigrp.R5.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1eigrp.R5.networkLayer.ipv4.arp 	completedARPResolution:count 	6
+attr title  "ARP completed resolutions, count"
+scalar Test1eigrp.R5.networkLayer.ipv4.arp 	initiatedARPResolution:count 	3
+attr title  "ARP initiated resolutions, count"
+scalar Test1eigrp.R5.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R5.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R5.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1eigrp.R5.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R5.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R5.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[0].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.R5.eth[0].mac 	full-duplex 	1
+scalar Test1eigrp.R5.eth[0].mac 	"frames/sec sent" 	0
+scalar Test1eigrp.R5.eth[0].mac 	"frames/sec rcvd" 	0
+scalar Test1eigrp.R5.eth[0].mac 	"bits/sec sent" 	0
+scalar Test1eigrp.R5.eth[0].mac 	"bits/sec rcvd" 	0
+scalar Test1eigrp.R5.eth[0].mac 	"rx channel idle (%)" 	100
+scalar Test1eigrp.R5.eth[0].mac 	"rx channel utilization (%)" 	0
+scalar Test1eigrp.R5.eth[0].mac 	rxPkFromHL:count 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.R5.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.R5.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.R5.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.R5.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.R5.eth[0].mac 	txPk:count 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.R5.eth[0].mac 	txPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.R5.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R5.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.R5.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[0].mac 	rxPkOk:count 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.R5.eth[0].mac 	rxPkOk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[0].mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R5.eth[0].mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.R5.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.R5.eth[0].encap 	decapPk:count 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.R5.eth[0].encap 	decapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[0].encap 	encapPk:count 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.R5.eth[0].encap 	encapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[1].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.R5.eth[1].mac 	full-duplex 	1
+scalar Test1eigrp.R5.eth[1].mac 	"frames/sec sent" 	1.4871740326827
+scalar Test1eigrp.R5.eth[1].mac 	"frames/sec rcvd" 	1.5384558958787
+scalar Test1eigrp.R5.eth[1].mac 	"bits/sec sent" 	1071.5858133427
+scalar Test1eigrp.R5.eth[1].mac 	"bits/sec rcvd" 	1123.2779314442
+scalar Test1eigrp.R5.eth[1].mac 	"rx channel idle (%)" 	99.998778260891
+scalar Test1eigrp.R5.eth[1].mac 	"rx channel utilization (%)" 	0.0012217391087805
+scalar Test1eigrp.R5.eth[1].mac 	rxPkFromHL:count 	29
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.R5.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	2612
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.R5.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.R5.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.R5.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.R5.eth[1].mac 	txPk:count 	29
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.R5.eth[1].mac 	txPk:sum(packetBytes) 	2612
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.R5.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R5.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.R5.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[1].mac 	rxPkOk:count 	30
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.R5.eth[1].mac 	rxPkOk:sum(packetBytes) 	2738
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[1].mac 	passedUpPk:count 	30
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R5.eth[1].mac 	passedUpPk:sum(packetBytes) 	2738
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.R5.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.R5.eth[1].encap 	decapPk:count 	30
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.R5.eth[1].encap 	decapPk:sum(packetBytes) 	2084
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[1].encap 	encapPk:count 	29
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.R5.eth[1].encap 	encapPk:sum(packetBytes) 	1988
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[2].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.R5.eth[2].mac 	full-duplex 	1
+scalar Test1eigrp.R5.eth[2].mac 	"frames/sec sent" 	1.3846103062908
+scalar Test1eigrp.R5.eth[2].mac 	"frames/sec rcvd" 	1.4358921694868
+scalar Test1eigrp.R5.eth[2].mac 	"bits/sec sent" 	1039.5859307084
+scalar Test1eigrp.R5.eth[2].mac 	"bits/sec rcvd" 	1073.226832965
+scalar Test1eigrp.R5.eth[2].mac 	"rx channel idle (%)" 	99.998834876068
+scalar Test1eigrp.R5.eth[2].mac 	"rx channel utilization (%)" 	0.0011651239318121
+scalar Test1eigrp.R5.eth[2].mac 	rxPkFromHL:count 	27
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.R5.eth[2].mac 	rxPkFromHL:sum(packetBytes) 	2534
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[2].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.R5.eth[2].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.R5.eth[2].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.R5.eth[2].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.R5.eth[2].mac 	txPk:count 	27
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.R5.eth[2].mac 	txPk:sum(packetBytes) 	2534
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[2].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.R5.eth[2].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[2].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R5.eth[2].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[2].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.R5.eth[2].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[2].mac 	rxPkOk:count 	28
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.R5.eth[2].mac 	rxPkOk:sum(packetBytes) 	2616
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[2].mac 	passedUpPk:count 	28
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R5.eth[2].mac 	passedUpPk:sum(packetBytes) 	2616
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[2].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.R5.eth[2].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.R5.eth[2].encap 	decapPk:count 	28
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.R5.eth[2].encap 	decapPk:sum(packetBytes) 	2004
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[2].encap 	encapPk:count 	27
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.R5.eth[2].encap 	encapPk:sum(packetBytes) 	1952
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[3].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.R5.eth[3].mac 	full-duplex 	1
+scalar Test1eigrp.R5.eth[3].mac 	"frames/sec sent" 	1.2307647167029
+scalar Test1eigrp.R5.eth[3].mac 	"frames/sec rcvd" 	1.179482853507
+scalar Test1eigrp.R5.eth[3].mac 	"bits/sec sent" 	970.66310657306
+scalar Test1eigrp.R5.eth[3].mac 	"bits/sec rcvd" 	959.9964790283
+scalar Test1eigrp.R5.eth[3].mac 	"rx channel idle (%)" 	99.998964516618
+scalar Test1eigrp.R5.eth[3].mac 	"rx channel utilization (%)" 	0.0010354833816527
+scalar Test1eigrp.R5.eth[3].mac 	rxPkFromHL:count 	24
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.R5.eth[3].mac 	rxPkFromHL:sum(packetBytes) 	2366
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[3].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.R5.eth[3].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.R5.eth[3].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.R5.eth[3].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.R5.eth[3].mac 	txPk:count 	24
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.R5.eth[3].mac 	txPk:sum(packetBytes) 	2366
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[3].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.R5.eth[3].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[3].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.R5.eth[3].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[3].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.R5.eth[3].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[3].mac 	rxPkOk:count 	23
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.R5.eth[3].mac 	rxPkOk:sum(packetBytes) 	2340
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[3].mac 	passedUpPk:count 	23
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.R5.eth[3].mac 	passedUpPk:sum(packetBytes) 	2340
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[3].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.R5.eth[3].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.R5.eth[3].encap 	decapPk:count 	23
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.R5.eth[3].encap 	decapPk:sum(packetBytes) 	1836
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.R5.eth[3].encap 	encapPk:count 	24
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.R5.eth[3].encap 	encapPk:sum(packetBytes) 	1844
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.PC1.networkLayer.ipv4.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar Test1eigrp.PC1.networkLayer.ipv4.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar Test1eigrp.PC1.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1eigrp.PC1.networkLayer.ipv4.arp 	completedARPResolution:count 	0
+attr title  "ARP completed resolutions, count"
+scalar Test1eigrp.PC1.networkLayer.ipv4.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar Test1eigrp.PC1.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.PC1.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.PC1.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1eigrp.PC1.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1eigrp.PC1.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.PC1.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.PC1.eth[0].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.PC1.eth[0].mac 	full-duplex 	1
+scalar Test1eigrp.PC1.eth[0].mac 	"frames/sec sent" 	0
+scalar Test1eigrp.PC1.eth[0].mac 	"frames/sec rcvd" 	0
+scalar Test1eigrp.PC1.eth[0].mac 	"bits/sec sent" 	0
+scalar Test1eigrp.PC1.eth[0].mac 	"bits/sec rcvd" 	0
+scalar Test1eigrp.PC1.eth[0].mac 	"rx channel idle (%)" 	100
+scalar Test1eigrp.PC1.eth[0].mac 	"rx channel utilization (%)" 	0
+scalar Test1eigrp.PC1.eth[0].mac 	rxPkFromHL:count 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.PC1.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.PC1.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.PC1.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.PC1.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.PC1.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.PC1.eth[0].mac 	txPk:count 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.PC1.eth[0].mac 	txPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.PC1.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.PC1.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.PC1.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.PC1.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.PC1.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.PC1.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.PC1.eth[0].mac 	rxPkOk:count 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.PC1.eth[0].mac 	rxPkOk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.PC1.eth[0].mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.PC1.eth[0].mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.PC1.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.PC1.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.PC1.eth[0].encap 	decapPk:count 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.PC1.eth[0].encap 	decapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.PC1.eth[0].encap 	encapPk:count 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.PC1.eth[0].encap 	encapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.PC2.networkLayer.ipv4.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar Test1eigrp.PC2.networkLayer.ipv4.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar Test1eigrp.PC2.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1eigrp.PC2.networkLayer.ipv4.arp 	completedARPResolution:count 	0
+attr title  "ARP completed resolutions, count"
+scalar Test1eigrp.PC2.networkLayer.ipv4.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar Test1eigrp.PC2.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.PC2.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.PC2.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1eigrp.PC2.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1eigrp.PC2.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.PC2.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.PC2.eth[0].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.PC2.eth[0].mac 	full-duplex 	1
+scalar Test1eigrp.PC2.eth[0].mac 	"frames/sec sent" 	0
+scalar Test1eigrp.PC2.eth[0].mac 	"frames/sec rcvd" 	0
+scalar Test1eigrp.PC2.eth[0].mac 	"bits/sec sent" 	0
+scalar Test1eigrp.PC2.eth[0].mac 	"bits/sec rcvd" 	0
+scalar Test1eigrp.PC2.eth[0].mac 	"rx channel idle (%)" 	100
+scalar Test1eigrp.PC2.eth[0].mac 	"rx channel utilization (%)" 	0
+scalar Test1eigrp.PC2.eth[0].mac 	rxPkFromHL:count 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.PC2.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.PC2.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.PC2.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.PC2.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.PC2.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.PC2.eth[0].mac 	txPk:count 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.PC2.eth[0].mac 	txPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.PC2.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.PC2.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.PC2.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.PC2.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.PC2.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.PC2.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.PC2.eth[0].mac 	rxPkOk:count 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.PC2.eth[0].mac 	rxPkOk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.PC2.eth[0].mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.PC2.eth[0].mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.PC2.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.PC2.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.PC2.eth[0].encap 	decapPk:count 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.PC2.eth[0].encap 	decapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.PC2.eth[0].encap 	encapPk:count 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.PC2.eth[0].encap 	encapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.PC3.networkLayer.ipv4.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar Test1eigrp.PC3.networkLayer.ipv4.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar Test1eigrp.PC3.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1eigrp.PC3.networkLayer.ipv4.arp 	completedARPResolution:count 	0
+attr title  "ARP completed resolutions, count"
+scalar Test1eigrp.PC3.networkLayer.ipv4.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar Test1eigrp.PC3.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.PC3.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.PC3.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1eigrp.PC3.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1eigrp.PC3.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.PC3.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.PC3.eth[0].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.PC3.eth[0].mac 	full-duplex 	1
+scalar Test1eigrp.PC3.eth[0].mac 	"frames/sec sent" 	0
+scalar Test1eigrp.PC3.eth[0].mac 	"frames/sec rcvd" 	0
+scalar Test1eigrp.PC3.eth[0].mac 	"bits/sec sent" 	0
+scalar Test1eigrp.PC3.eth[0].mac 	"bits/sec rcvd" 	0
+scalar Test1eigrp.PC3.eth[0].mac 	"rx channel idle (%)" 	100
+scalar Test1eigrp.PC3.eth[0].mac 	"rx channel utilization (%)" 	0
+scalar Test1eigrp.PC3.eth[0].mac 	rxPkFromHL:count 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.PC3.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.PC3.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.PC3.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.PC3.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.PC3.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.PC3.eth[0].mac 	txPk:count 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.PC3.eth[0].mac 	txPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.PC3.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.PC3.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.PC3.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.PC3.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.PC3.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.PC3.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.PC3.eth[0].mac 	rxPkOk:count 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.PC3.eth[0].mac 	rxPkOk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.PC3.eth[0].mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.PC3.eth[0].mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.PC3.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.PC3.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.PC3.eth[0].encap 	decapPk:count 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.PC3.eth[0].encap 	decapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.PC3.eth[0].encap 	encapPk:count 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.PC3.eth[0].encap 	encapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test1eigrp.PC4.networkLayer.ipv4.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar Test1eigrp.PC4.networkLayer.ipv4.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar Test1eigrp.PC4.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test1eigrp.PC4.networkLayer.ipv4.arp 	completedARPResolution:count 	0
+attr title  "ARP completed resolutions, count"
+scalar Test1eigrp.PC4.networkLayer.ipv4.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar Test1eigrp.PC4.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.PC4.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.PC4.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test1eigrp.PC4.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test1eigrp.PC4.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.PC4.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.PC4.eth[0].mac 	"simulated time" 	19.50007152
+scalar Test1eigrp.PC4.eth[0].mac 	full-duplex 	1
+scalar Test1eigrp.PC4.eth[0].mac 	"frames/sec sent" 	0
+scalar Test1eigrp.PC4.eth[0].mac 	"frames/sec rcvd" 	0
+scalar Test1eigrp.PC4.eth[0].mac 	"bits/sec sent" 	0
+scalar Test1eigrp.PC4.eth[0].mac 	"bits/sec rcvd" 	0
+scalar Test1eigrp.PC4.eth[0].mac 	"rx channel idle (%)" 	100
+scalar Test1eigrp.PC4.eth[0].mac 	"rx channel utilization (%)" 	0
+scalar Test1eigrp.PC4.eth[0].mac 	rxPkFromHL:count 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test1eigrp.PC4.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test1eigrp.PC4.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test1eigrp.PC4.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test1eigrp.PC4.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test1eigrp.PC4.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test1eigrp.PC4.eth[0].mac 	txPk:count 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test1eigrp.PC4.eth[0].mac 	txPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test1eigrp.PC4.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test1eigrp.PC4.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test1eigrp.PC4.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test1eigrp.PC4.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test1eigrp.PC4.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test1eigrp.PC4.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test1eigrp.PC4.eth[0].mac 	rxPkOk:count 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test1eigrp.PC4.eth[0].mac 	rxPkOk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test1eigrp.PC4.eth[0].mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test1eigrp.PC4.eth[0].mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test1eigrp.PC4.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test1eigrp.PC4.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test1eigrp.PC4.eth[0].encap 	decapPk:count 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test1eigrp.PC4.eth[0].encap 	decapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test1eigrp.PC4.eth[0].encap 	encapPk:count 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test1eigrp.PC4.eth[0].encap 	encapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"

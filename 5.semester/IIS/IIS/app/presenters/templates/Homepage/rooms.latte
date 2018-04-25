@@ -1,0 +1,28 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+<script>
+	$('#menu1_item2').addClass('clicked');
+</script>
+
+<div class="global_container">
+	<div class="container">
+
+	<div class="main">
+	    <div class="heading">
+	      <h1>Prehľad izieb hotela</h1>
+	    </div>
+
+  		{foreach $roomTypes as $type}
+  			<div class="host">
+  				<h2>{$type->Typ_izby}</h2>
+  				<div>
+  					Cena: {$type->Cena_izby}e/noc
+  				</div>
+  			</div>
+  		{/foreach}
+
+  	</div>
+ 	</div>
+</div>

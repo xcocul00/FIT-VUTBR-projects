@@ -1,0 +1,1 @@
+Jediný zachovalý :D 

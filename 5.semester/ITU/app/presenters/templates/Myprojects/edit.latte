@@ -1,0 +1,39 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+<div class="global_menu2">
+	<ul class="menu2 menu">
+		<a n:href="Myprojects:worker $ID"><li id="menu_item1">Pridať riešiteľa</li></a>
+	</ul>
+</div>
+
+<div class="global_container">
+	<div class="container">
+		 
+		 <div class="pshow_bkg">
+		
+		 <div class="pshow_info">
+		 	<div><h1>Projekt:</h1> {$info->Name}</div>
+		 	<div><h1>Založený:</h1> {$info->Date}</div>
+		 	<div><h1>Verejný:</h1> {if $info->Public}ano{else}nie{/if}</div>
+		 	<div><h1>Popis:</h1> {$info->Description}</div>
+		 	
+		 	<div class="pshow_text">
+		 		<h1>Kompletné zadanie:</h1><div>{$info->Text}</div>
+		 	</div>
+		 </div>
+ 		  
+ 		 </div>
+
+ 		<div class="create_commit">
+	 		{foreach $flashes as $flash}
+				<div class="flash">{$flash->message}</div>
+			{/foreach}
+			<h1>Zadajte nové informácie o projekte:</h1>
+				
+			{control longForm}
+		</div>
+		
+	</div>
+</div>

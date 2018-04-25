@@ -1,0 +1,37 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+<script>
+	$('#menu1_item3').addClass('clicked');
+</script>
+
+
+<div class="global_container">
+	<div class="container">
+
+  	<div class="main">
+	    <div class="heading">
+	      <h1>Prehľad poskytovaných služieb hotela</h1>
+	    </div>
+
+
+	      {foreach $services as $service}
+		       <div class="host">
+		        <h2>{$service->Nazov_sluzby}</h2>
+		        	<div class="hotel_guest">
+						<div>
+		      				Popis: <p>{$service->Popis_sluzby}</p>
+		      				Login: <p>{$service->Obmedzenia}</p><br>
+		    				Dátum: <p>Cena: {$service->Cena_sluzby}e/den</p>
+				    	</div>
+		        	</div>
+		      </div>   
+	      {/foreach}
+
+	        
+
+    </div>
+
+ 	</div>
+</div>

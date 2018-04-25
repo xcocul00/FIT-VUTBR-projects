@@ -1,0 +1,37 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+
+<div class="global_container">
+	<div class="container">
+			<p><a class="button" href="{link Adminp:CreateWorker}">Pridať zamestnanca</a></p>
+			<div class="main">
+			<div class="heading">
+			<h1>Zoznam všetkých zamestnancov hotela:</h1>
+			</div>
+			<table class="table_tab" > 
+				<tr class="table_head">
+					<th style="text-align: left">Meno</th>
+					<th style="text-align: left">Priezvisko</th>
+					<th style="text-align: left">Rodné číslo</th>
+					<th style="text-align: left">Pozícia</th>
+					<th>Občianstvo</th>
+					<th style="text-align: left">Login</th>
+				</tr>
+				{foreach $workers as $info}
+				<tr>
+					<th style="text-align: left">{$info->Meno}</th>
+					<th style="text-align: left">{$info->Priezvisko}</th>
+					<th style="text-align: left">{$info->Rodne_cislo}</th>
+					<th style="text-align: left">{$info->Pozicia}</th>
+					<th>{$info->Obcianstvo}</th>
+					<th style="text-align: left">{$info->Login}</th>
+					<th><a class="button" href="{link Adminp:ChangeWorker $info->Rodne_cislo}">Upraviť pozíciu</a></th>
+					<th><a class="button" href="{link Adminp:RemoveWorker $info->Rodne_cislo}">Odstrániť</a></th>
+				</tr>
+				{/foreach}
+			</table>
+			</div>
+ 	</div>
+</div>

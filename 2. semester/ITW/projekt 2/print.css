@@ -1,0 +1,9 @@
+﻿body, footer, aside {background: none !important;}
+#hlavicka em {display: none !important;}
+#hlavicka #menu { display: none !important; }
+header { height: auto;}
+#trasa{display:none !important;}
+#aktuality { display: none !important;}
+#mapa {padding-top:150px !important; width:100%;}
+#home{ padding-top:150px !important; width:100% !important;}
+footer{ display:none !important;}

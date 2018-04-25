@@ -1,0 +1,63 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+<div class="global_menu2">
+	<ul class="menu2 menu">
+		<a href="{link Project:show $projId}"><li id="menu_item4">Informácie o projekte</li></a>
+		<a href="{link Project:showcommits $projId}"><li id="menu_item5">Všetky výkazy</li></a>
+		<a href="{link Commit:create $projId}"><li id="menu_item6">Pridať výkaz</li></a>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	$('#menu_item4').css("text-decoration","underline");
+</script>
+
+<div class="global_container">
+	<div class="container">
+
+	<div class="pshow_bkg">
+	<div class="pshow_info"><br>
+	 	<div><h1>Projekt:</h1> {$proj_info['name']}</div>
+	 	<div><h1>Založený:</h1> {$proj_info['date']}</div>
+	 	<div><h1>Verejný:</h1> {if $proj_info['public']}ano{else}nie{/if}</div>
+	 	<div><h1>Zakladateľ:</h1> {$proj_info['owner_name']} {$proj_info['owner_surname']}, {$proj_info['owner']}</div>
+	 	<div><h1>Popis:</h1> {$proj_info['desc']}</div>
+ 	</div>
+
+ 	<div class="pshow_text">
+ 		<h1>Kompletné zadanie:</h1><div>{$proj_info['text']}</div>
+ 	</div>
+ 	</div>
+ 	<div class="pshow_users">
+	 	<h1>Riesitelia:</h1>
+
+	 	{foreach $workers as $worker}
+
+	 		<div class="pshow_worker"><div>{$worker['name']} {$worker['surname']}, {$worker['login']}</div><a id="showcommits{$worker['login']}">zobraziť výkazy</a></div>
+	 		<div class="pshow_hidden{$worker['login']} hide">
+	 		{foreach $worker['commits'] as $commit}	
+	 				<div class="pshow_commit"><div class="left">{$commit->Date} {$commit->Commit}</div><a href="{link Commit:show $commit->ID_info, $projId, 1}">zobraziť výkaz</a></div>
+	 		{/foreach}
+	 		</div>
+
+	 		
+	 		<script type="text/javascript">
+				{$com = "#showcommits".$worker['login']}
+				{$com2 = ".pshow_hidden".$worker['login']}
+
+				$({$com}).click(function(){
+    				$({$com2}).toggle(800);
+				});
+
+			</script>
+			
+
+	 	{/foreach}
+ 	</div>
+
+
+
+	</div>
+</div>

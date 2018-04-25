@@ -1,0 +1,62 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+<div class="global_menu">
+	<ul class="menu3 menu">
+		<a href="{link Employee:createAccomNew1}"><li id="menu_item4">Nové ubytovanie</li></a>
+		<a href="{link Employee:createAccomReservation1}"><li id="menu_item5">Vyvoriť z rezervácie</li></a>
+	</ul>
+</div>
+
+<div class="global_container">
+	<div class="container">
+
+	<div class="main">
+
+        {foreach $flashes as $flash}
+        	<div style="margin:10px;">{$flash->message}</div>
+        {/foreach}
+		<div class="heading">
+			<h1>Vytvoriť ubytovanie z rezervácie</h1>
+		</div>
+		<div class="host">
+			<h2>Dátum</h2>
+	       <div>{$reservation_info->date_from}-{$reservation_info->date_to}</div>
+
+	      <h2>Hosť:</h2>
+	        <div>Meno: <p>{$guest->Meno} {$guest->Priezvisko}</p></div>
+	        <div>Číslo OP: <p>{$guest->Cislo_dokladu_totoznosti}</p></div>
+	        <div>e-mail: <p>{$guest->email}</p></div>
+	        <div>Login: <p>{$guest->Login}</p></div>
+		
+			<h2>Izby</h2>
+			{foreach $all_room as $room}
+				{if $reservation_rooms[$room->Typ_izby_id] != 0}
+					<div>{$room->Typ_izby}: <p>{count($reservation_rooms[$room->Typ_izby_id])}x</p></div>
+					<div>Cena: <p>{$room->Cena_izby} €/noc</p></div>
+					<br>
+				{/if}
+			{/foreach}
+
+			<h2>Služby</h2>
+			
+			{foreach $services as $service}
+				{if $reservation_services[$service->Sluzby_id] == "ano"}
+					<div>{$service->Popis_sluzby}</div>
+					<div>Cena: <p>{$service->Cena_sluzby} €/deň</p></div><br>
+				{/if}
+			{/foreach}
+			
+			<h2>Celková cena</h2>
+			<div>{$reservation_info->Cena} € vrátane DPH</div></br>
+		</div>
+		
+		<div class="end_panel">
+			<a href="{link Employee:editReservation $reservation_info->Ubytovania_id}">Upraviť rezerváciu</a>
+			<a href="{link Employee:finishFromReservation $reservation_info->Ubytovania_id}">Vytvoriť ubytovanie</a>
+		</div>
+
+	</div>
+
+ 	</div>
+</div>

@@ -1,0 +1,29 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+<div class="global_menu2">
+	<ul class="menu2 menu">
+		<a href="{link Project:show $projId}"><li id="menu_item4">Informácie o projekte</li></a>
+		<a href="{link Project:showcommits $projId}"><li id="menu_item5">Všetky výkazy</li></a>
+		<a href="{link Commit:create $projId}"><li id="menu_item6">Pridať výkaz</li></a>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	$('#menu_item6').css("text-decoration","underline");
+</script>
+
+<div class="global_container">
+	<div class="container">
+
+	
+	<div class="create_commit">
+	{foreach $flashes as $flash}
+		<div class="flash">{$flash->message}</div>
+	{/foreach}
+	<h1>Zadajte nový výkaz</h1>
+	{control commitForm}
+	</div>
+	</div>
+</div>

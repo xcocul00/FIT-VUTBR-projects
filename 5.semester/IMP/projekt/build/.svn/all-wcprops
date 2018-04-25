@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/FITkit/!svn/ver/409/trunk/apps/demo_msp/free_rtos/build
+END
+free_rtos.bin
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/FITkit/!svn/ver/409/trunk/apps/demo_msp/free_rtos/build/free_rtos.bin
+END
+free_rtos_f1xx.hex
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/FITkit/!svn/ver/409/trunk/apps/demo_msp/free_rtos/build/free_rtos_f1xx.hex
+END
+free_rtos_f2xx.hex
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/FITkit/!svn/ver/409/trunk/apps/demo_msp/free_rtos/build/free_rtos_f2xx.hex
+END

@@ -1,0 +1,24 @@
+R1#sh eigrp address-family ipv4 neighbors
+EIGRP-IPv4 Neighbors for AS(1)
+H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
+                                                   (sec)         (ms)       Cnt Num
+2   192.168.5.10            Et0/1                    14 00:07:22    9   100  0  12
+1   192.168.5.6             Et0/3                    13 00:19:31  818  4908  0  11
+0   192.168.5.2             Et0/2                    10 00:19:33    1   100  0  12
+
+
+
+
+
+
+
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone,
+                  D - Remote, C - CVTA, M - Two-port Mac Relay
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R2               Eth 0/1           135              R B   Linux Uni Eth 0/1
+R4               Eth 0/2           135              R B   Linux Uni Eth 0/2
+R5               Eth 0/3           136              R B   Linux Uni Eth 0/3
+
+Total cdp entries displayed : 3

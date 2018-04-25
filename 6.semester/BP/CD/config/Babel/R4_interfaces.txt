@@ -1,0 +1,17 @@
+# interfaces(3) file used by ifup(8) and ifdown(8)
+
+auto ens3
+iface ens3 inet static
+	address 192.168.2.2
+	netmask 255.255.255.0
+
+auto ens4
+iface ens4 inet static
+	address 192.168.5.21
+	netmask 255.255.255.252
+
+auto ens5
+iface ens5 inet static
+	address 192.168.5.2
+	netmask 255.255.255.252
+

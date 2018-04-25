@@ -1,0 +1,37 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+
+<div class="global_container">
+	<div class="container">
+	<div class="main">
+	<div class="heading">
+				<h1>Typy izieb</h1>
+			</div>
+	<table class="table_tab">
+		<tr>	
+			<th style="text-align: left">Typ izby</th>
+			<th>ID izby</th>
+			
+		</tr>
+		{foreach $type as $info2}
+
+			<tr>
+				<th style="text-align: left">{$info2->Typ_izby}</th>
+				<th>{$info2->Typ_izby_id}</th>
+			</tr>
+		
+		{/foreach}
+	</table>
+	</div>
+	<div class="main" style="margin-top:-8px">
+		<div class="heading">
+				<h1>Pridať novú izbu</h1>
+			</div>
+		<div class="create_service">
+			{control add_room}
+		</div>
+	</div>
+ 	</div>
+</div>

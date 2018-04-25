@@ -1,0 +1,46 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+<script>
+	$('#menu2_item2').addClass('clicked');
+</script>
+
+
+<div class="global_container">
+	<div class="container">
+
+	<div class="main">
+    	<div class="heading">
+        	<h1>Vyberte rezerváciu</h1>
+   		</div>
+
+    <div class="host">
+          <h2>Filter:</h2>
+    </div>
+    <div class="reserv_filter">
+        {control reservationFilter}
+        <a href="{link Guest:Reservations}">Vymazať filter</a>
+    </div> 
+     <div class="host">
+        <h2>Rezervácie</h2>
+
+        {foreach $flashes as $flash}
+          <div>{$flash->message}</div>
+        {/foreach}
+    </div>
+
+		{foreach $reservations as $res}
+  			<div class="hotel_guest">
+          	<div>
+    				Login: <p>{$res[1]->Login}</p><br>
+  				  Dátum: <p>{$res[0]->date_from} - {$res[0]->date_to}</p>
+			       </div>
+  				<a href="{link Guest:EditReservation $res[0]->Ubytovania_id}">Vybrať</a><br>
+  				<br>
+  			</div>
+  		{/foreach}
+      
+      </div>
+    </div>
+</div>

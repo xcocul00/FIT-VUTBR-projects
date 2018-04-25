@@ -1,0 +1,64 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+
+<div class="global_container">
+	<div class="container">
+		<div class="main">
+
+		{foreach $flashes as $flash}
+	       	<div>{$flash->message}</div>
+	    {/foreach}
+	
+	    <div class="heading">
+	      <h1>Prehľad ubytovania</h1>
+	    </div>
+
+	    <div class="host">
+	    	<h2>Datum</h2>
+			<div>{$accomodation_info->date_from}-{$accomodation_info->date_to}</div>
+
+		    <h2>Host:</h2>
+		        <div>Meno: <p>{$guest->Meno} {$guest->Priezvisko}</p></div>
+		        <div>Číslo OP: <p>{$guest->Cislo_dokladu_totoznosti}</p></div>
+		        <div>e-mail: <p>{$guest->email}</p></div>
+		        <div>Login: <p>{$guest->Login}</p></div>
+
+			<h2>Vytvoril zamestnanec</h2>
+				<div>Meno: <p>{$employee->Meno} {$employee->Priezvisko}</p></div>
+				<div>R.C.: <p>{$employee->Rodne_cislo}</p></div>
+				<div>Občianstvo: <p>{$employee->Obcianstvo}</p></div>
+				<div>Pozícia: <p>{$employee->Pozicia}</p></div>
+
+			<h2>Izby</h2>
+			{foreach $all_room as $room}
+				{if $accomodation_rooms[$room->Typ_izby_id] != 0}
+					<div>{$room->Typ_izby}: <p>{count($accomodation_rooms[$room->Typ_izby_id])}x</p></div>
+					<div>Cena: <p>{$room->Cena_izby} €/noc</p></div>
+					<br>
+				{/if}
+			{/foreach}
+
+			<h2>Služby</h2>
+			
+			{foreach $services as $service}
+				{if $accomodation_services[$service->Sluzby_id] == "ano"}
+					<div>{$service->Popis_sluzby}</div>
+					<div>Cena: <p>{$service->Cena_sluzby} €/deň</p></div><br>
+				{/if}
+			{/foreach}
+			
+			<h2>Faktúra</h2>
+				<div>Suma faktúry: <p>{$accomodation_info->Cena}e</p></div>
+				<div>Číslo: <p>{$invoice->Cislo_faktury}</p></div>
+				<div>Adresát: <p>{$guest->Meno} {$guest->Priezvisko}</p></div>
+				{if $invoice->Platby_id_platby}
+					<div>Stav: <p>Zaplatená</p></div></br></br>
+				{else}
+					<div>Stav: <p>Nezaplatená</p></div></br></br>
+				{/if}
+			</div>
+		</div>
+ 	</div>
+</div>

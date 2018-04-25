@@ -1,0 +1,31 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+<div class="global_container">
+	<div class="container">
+
+    <div class="main">
+      <div class="heading">
+          <h1>Vyberte dátum</h1>
+      </div>
+
+	<div class="datepickers">
+      <div id="datepicker_from"></div>
+      <div id="datepicker_to"></div>
+      <div id="datepicker_from_div"></div>
+      <div id="datepicker_to_div"></div>
+    	{control getFreeRooms}
+    </div>
+
+    <div class="host">
+
+      {foreach $flashes as $flash}
+          <h2>Chyba !</h2>
+            <div style="min-width:600px;max-width:600px;">{$flash->message}</div>
+      {/foreach}
+    </div>
+
+    </div>
+ 	</div>
+</div>

@@ -1,0 +1,5 @@
+
+
+   192.168.5.6 dev ens6(eth3) lladdr 50:06:00:05:00:03 STALE
+   192.168.5.2 dev ens5(eth2) lladdr 50:06:00:04:00:02 STALE
+   192.168.5.10 dev ens4(eth1) lladdr 50:06:00:03:00:01 STALE

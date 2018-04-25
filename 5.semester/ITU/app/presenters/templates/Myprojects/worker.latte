@@ -1,0 +1,27 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+
+<div class="global_container">
+	<div class="container">
+		<div id="worker">
+ 		
+ 		<div class="pshow_info">
+ 			<div><h1>Vyberte nového riešiteľa: </h1></div>
+		</div>
+ 		
+ 		
+		</select class="max_height">
+			<div>
+			<p></p>
+			{foreach $flashes as $flash}
+				<div class="flash" style="margin-left:75px">{$flash->message}</div>
+			{/foreach}
+			{control button}
+			</div>
+		</div>
+		
+		
+	</div>
+</div>

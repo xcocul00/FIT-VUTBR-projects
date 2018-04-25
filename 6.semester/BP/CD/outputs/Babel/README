@@ -1,0 +1,4 @@
+Chýbajúci debug z protokolu Babel je spôsobený tým, že príkaz 
+babeld -d [1-3] síce debuguje ale záznamy nemajú časove značky. 
+Pomocou debugu som len kontroloval správy ale pracoval som s .pcap
+file. Preto si nemyslím že sú tieto informácie nezbytné.

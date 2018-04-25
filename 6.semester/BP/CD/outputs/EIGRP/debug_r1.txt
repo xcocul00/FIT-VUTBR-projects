@@ -1,0 +1,89 @@
+
+****************** R1 ************************************
+*Apr 29 19:43:27.470: EIGRP: Sending HELLO on Et0/1 - paklen 20
+
+
+*Apr 29 19:43:29.554: EIGRP: Received HELLO on Et0/1 - paklen 20 nbr 192.168.5.10
+*Apr 29 19:43:29.554:   AS 1, Flags 0x0:(NULL), Seq 0/0 interfaceQ 0/0
+*Apr 29 19:43:29.554: EIGRP: Add Peer: Total 1 (1/0/0/0/0)
+*Apr 29 19:43:29.554: EIGRP: Add Peer: Total 1 (1/0/1/0/0)
+*Apr 29 19:43:29.554: %DUAL-5-NBRCHANGE: EIGRP-IPv4 1: Neighbor 192.168.5.10 (Ethernet0/1) is up: new adjacency
+*Apr 29 19:43:29.554: EIGRP: Enqueueing UPDATE on Et0/1 - paklen 0 nbr 192.168.5.10 tid 0 iidbQ un/rely 0/1 peerQ un/rely 0/0
+
+*Apr 29 19:43:29.558: EIGRP: Sending TIDLIST on Ethernet0/1 - 1 items
+*Apr 29 19:43:29.558: EIGRP: Sending HELLO on Et0/1 - paklen 30
+*Apr 29 19:43:29.558:   AS 1, Flags 0x0:(NULL), Seq 0/0 interfaceQ 0/0 iidbQ un/rely 0/1
+*Apr 29 19:43:29.558: EIGRP: Requeued unicast on Ethernet0/1
+
+*Apr 29 19:43:29.559: EIGRP: Received HELLO on Et0/1 - paklen 30 nbr 192.168.5.10
+*Apr 29 19:43:29.559:   AS 1, Flags 0x0:(NULL), Seq 0/0 interfaceQ 0/0 iidbQ un/rely 0/0 peerQ un/rely 0/1
+*Apr 29 19:43:29.559: EIGRP: Sending UPDATE on Et0/1 - paklen 0 nbr 192.168.5.10
+R1# tid 0
+*Apr 29 19:43:29.559:   AS 1, Flags 0x1:(INIT), Seq 1/0 interfaceQ 0/0 iidbQ un/rely 0/0 peerQ un/rely 0/1
+
+*Apr 29 19:43:29.568: EIGRP: Received UPDATE on Et0/1 - paklen 0 nbr 192.168.5.10
+*Apr 29 19:43:29.568:   AS 1, Flags 0x1:(INIT), Seq 1/0 interfaceQ 0/0 iidbQ un/rely 0/0 peerQ un/rely 0/1
+
+*Apr 29 19:43:31.566: EIGRP: Sending UPDATE on Et0/1 - paklen 0 nbr 192.168.5.10, retry 1, RTO 3000 tid 0
+*Apr 29 19:43:31.566:   AS 1, Flags 0x1:(INIT), Seq 1/1 interfaceQ 0/0 iidbQ un/rely 0/0 peerQ un/rely 0/1
+
+*Apr 29 19:43:31.571: EIGRP: Received UPDATE on Et0/1 - paklen 90 nbr 192.168.5.10
+*Apr 29 19:43:31.571:   AS 1, Flags 0x0:(NULL), Seq 2/0 interfaceQ 0/0 iidbQ un/rely 0/0 peerQ un/rely 0/1
+
+*Apr 29 19:43:31.579: EIGRP: Received ACK on Et0/1 - paklen 0 nbr 192.168.5.10
+*Apr 29 19:43:31.579:   AS 1, Flags 0x0:(NULL), Seq 0/1 interfaceQ 0/0 iidbQ un/rely 0/0 peerQ un/rely 0/1
+*Apr 29 19:43:31.579: EIGRP: Enqueueing UPDATE on Et0/1 - paklen 0 tid 0 iidbQ un/rely 0/1 serno 1-4
+
+*Apr 29 19:43:31.587: EIGRP: Sending UPDATE on Et0/1 - paklen 134 tid 0
+*Apr 29 19:43:31.587:   AS 1, Flags 0x0:(NULL), Seq 2/0 interfaceQ 0/0 iidbQ un/rely 0/0 serno 1-4
+
+*Apr 29 19:43:31.593: EIGRP: Received ACK on Et0/1 - paklen 0 nbr 192.168.5.10
+*Apr 29 19:43:31.593:   AS 1, Flags 0x0:(NULL), Seq 0/2 interfaceQ 0/0 iidbQ un/rely 0/0 peerQ un/rely 0/1
+*Apr 29 19:43:31.593: EIGRP: Ethernet0/1 multicast flow blocking cleared
+*Apr 29 19:43:31.593: EIGRP: Enqueueing UPDATE on Et0/1 - paklen 0 tid 0 iidbQ un/rely 0/1 serno 5-6
+
+*Apr 29 19:43:31.601: EIGRP: Sending UPDATE on Et0/1 - paklen 90 tid 0
+*Apr 29 19:43:31.601:   AS 1, Flags 0x0:(NULL), Seq 3/0 interfaceQ 0/0
+R1# iidbQ un/rely 0/0 serno 5-6
+
+*Apr 29 19:43:31.602: EIGRP: Received ACK on Et0/1 - paklen 0 nbr 192.168.5.10
+*Apr 29 19:43:31.602:   AS 1, Flags 0x0:(NULL), Seq 0/3 interfaceQ 0/0 iidbQ un/rely 0/0 peerQ un/rely 0/1
+*Apr 29 19:43:31.602: EIGRP: Ethernet0/1 multicast flow blocking cleared
+R1#
+
+*Apr 29 19:43:36.576: EIGRP: Received UPDATE on Et0/1 - paklen 90 nbr 192.168.5.10
+*Apr 29 19:43:36.576:   AS 1, Flags 0x0:(NULL), Seq 2/3 interfaceQ 0/0 iidbQ un/rely 0/0 peerQ un/rely 0/0, last received seq 2, out of sequence, this seq 2
+*Apr 29 19:43:36.576: EIGRP: Enqueueing ACK on Et0/1 - paklen 0 nbr 192.168.5.10 tid 0
+*Apr 29 19:43:36.576:   Ack seq 2 iidbQ un/rely 0/0 peerQ un/rely 1/0
+*Apr 29 19:43:36.576: EIGRP: Received HELLO on Et0/1 - paklen 30 nbr 192.168.5.10
+*Apr 29 19:43:36.576:   AS 1, Flags 0x0:(NULL), Seq 0/0 interfaceQ 0/0 iidbQ un/rely 0/0 peerQ un/rely 1/0
+*Apr 29 19:43:36.576: EIGRP: Receiving TIDLIST on Ethernet0/1 - 1 items 0
+
+
+*Apr 29 19:43:36.577: EIGRP: Sending ACK on Et0/1 - paklen 0 nbr 192.168.5.10 tid 0
+*Apr 29 19:43:36.577:   AS 1, Flags 0x0:(NULL), Seq 0/2 interfaceQ 0/0 iidbQ un/rely 0/0 peerQ un/rely 1/0
+
+*Apr 29 19:43:36.585: EIGRP: Received UPDATE on Et0/1 - paklen 134 nbr 192.168.5.10
+*Apr 29 19:43:36.585:   AS 1, Flags 0x0:(NULL), Seq 3/0 interfaceQ 0/0 iidbQ un/rely 0/0 peerQ un/rely 0/0
+*Apr 29 19:43:36.585: EIGRP: Enqueueing ACK on Et0/1 - paklen 0 nbr 192.168.5.10 tid 0
+*Apr 29 19:43:36.585:   Ack seq 3 iidbQ un/rely 0/0 peerQ un/rely 1/0
+
+
+*Apr 29 19:43:36.588: EIGRP: Sending ACK on Et0/1 - paklen 0 nbr 192.168.5.10 tid 0
+R1#
+*Apr 29 19:43:36.588:   AS 1, Flags 0x0:(NULL), Seq 0/3 interfaceQ 0/0 iidbQ un/rely 0/0 peerQ un/rely 1/0
+
+
+*Apr 29 19:43:36.609: EIGRP: Sending TIDLIST on Ethernet0/1 - 1 items
+*Apr 29 19:43:36.609: EIGRP: Sending HELLO on Et0/1 - paklen 30
+*Apr 29 19:43:36.609:   AS 1, Flags 0x0:(NULL), Seq 0/0 interfaceQ 0/0 iidbQ un/rely 0/0
+
+*Apr 29 19:43:40.941: EIGRP: Sending TIDLIST on Ethernet0/1 - 1 items
+*Apr 29 19:43:40.941: EIGRP: Sending HELLO on Et0/1 - paklen 30
+*Apr 29 19:43:40.941:   AS 1, Flags 0x0:(NULL), Seq 0/0 interfaceQ 0/0 iidbQ un/rely 0/0
+
+
+
+*Apr 29 19:43:41.589: EIGRP: Received HELLO on Et0/1 - paklen 30 nbr 192.168.5.10
+*Apr 29 19:43:41.589:   AS 1, Flags 0x0:(NULL), Seq 0/0 interfaceQ 0/0 iidbQ un/rely 0/0 peerQ un/rely 0/0
+*Apr 29 19:43:41.589: EIGRP: Receiving TIDLIST on Ethernet0/1 - 1 items 0

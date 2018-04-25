@@ -1,0 +1,2471 @@
+version 2
+run General-0-20170517-20:15:39-800
+attr configname General
+attr datetime 20170517-20:15:39
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network Test_rip2
+attr processid 800
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.enableCLNS false
+param **.enableIPv6 false
+param **.rip.mode "\"RIPv2\""
+
+scalar Test_rip2.PC1.networkLayer.ipv4.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar Test_rip2.PC1.networkLayer.ipv4.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar Test_rip2.PC1.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test_rip2.PC1.networkLayer.ipv4.arp 	completedARPResolution:count 	0
+attr title  "ARP completed resolutions, count"
+scalar Test_rip2.PC1.networkLayer.ipv4.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar Test_rip2.PC1.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.PC1.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.PC1.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test_rip2.PC1.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test_rip2.PC1.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.PC1.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.PC1.eth[0].mac 	"simulated time" 	600
+scalar Test_rip2.PC1.eth[0].mac 	full-duplex 	1
+scalar Test_rip2.PC1.eth[0].mac 	"frames/sec sent" 	0
+scalar Test_rip2.PC1.eth[0].mac 	"frames/sec rcvd" 	0.036666666666667
+scalar Test_rip2.PC1.eth[0].mac 	"bits/sec sent" 	0
+scalar Test_rip2.PC1.eth[0].mac 	"bits/sec rcvd" 	68.266666666667
+scalar Test_rip2.PC1.eth[0].mac 	"rx channel idle (%)" 	99.999929386667
+scalar Test_rip2.PC1.eth[0].mac 	"rx channel utilization (%)" 	7.0613333333333e-005
+scalar Test_rip2.PC1.eth[0].mac 	rxPkFromHL:count 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.PC1.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.PC1.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.PC1.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.PC1.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.PC1.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.PC1.eth[0].mac 	txPk:count 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.PC1.eth[0].mac 	txPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.PC1.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.PC1.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.PC1.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.PC1.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.PC1.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.PC1.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.PC1.eth[0].mac 	rxPkOk:count 	22
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.PC1.eth[0].mac 	rxPkOk:sum(packetBytes) 	5120
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.PC1.eth[0].mac 	passedUpPk:count 	22
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.PC1.eth[0].mac 	passedUpPk:sum(packetBytes) 	5120
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.PC1.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.PC1.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.PC1.eth[0].encap 	decapPk:count 	22
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.PC1.eth[0].encap 	decapPk:sum(packetBytes) 	4724
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.PC1.eth[0].encap 	encapPk:count 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.PC1.eth[0].encap 	encapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.PC2.networkLayer.ipv4.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar Test_rip2.PC2.networkLayer.ipv4.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar Test_rip2.PC2.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test_rip2.PC2.networkLayer.ipv4.arp 	completedARPResolution:count 	0
+attr title  "ARP completed resolutions, count"
+scalar Test_rip2.PC2.networkLayer.ipv4.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar Test_rip2.PC2.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.PC2.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.PC2.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test_rip2.PC2.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test_rip2.PC2.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.PC2.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.PC2.eth[0].mac 	"simulated time" 	600
+scalar Test_rip2.PC2.eth[0].mac 	full-duplex 	1
+scalar Test_rip2.PC2.eth[0].mac 	"frames/sec sent" 	0
+scalar Test_rip2.PC2.eth[0].mac 	"frames/sec rcvd" 	0.036666666666667
+scalar Test_rip2.PC2.eth[0].mac 	"bits/sec sent" 	0
+scalar Test_rip2.PC2.eth[0].mac 	"bits/sec rcvd" 	68.266666666667
+scalar Test_rip2.PC2.eth[0].mac 	"rx channel idle (%)" 	99.999929386667
+scalar Test_rip2.PC2.eth[0].mac 	"rx channel utilization (%)" 	7.0613333333333e-005
+scalar Test_rip2.PC2.eth[0].mac 	rxPkFromHL:count 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.PC2.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.PC2.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.PC2.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.PC2.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.PC2.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.PC2.eth[0].mac 	txPk:count 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.PC2.eth[0].mac 	txPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.PC2.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.PC2.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.PC2.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.PC2.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.PC2.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.PC2.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.PC2.eth[0].mac 	rxPkOk:count 	22
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.PC2.eth[0].mac 	rxPkOk:sum(packetBytes) 	5120
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.PC2.eth[0].mac 	passedUpPk:count 	22
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.PC2.eth[0].mac 	passedUpPk:sum(packetBytes) 	5120
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.PC2.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.PC2.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.PC2.eth[0].encap 	decapPk:count 	22
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.PC2.eth[0].encap 	decapPk:sum(packetBytes) 	4724
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.PC2.eth[0].encap 	encapPk:count 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.PC2.eth[0].encap 	encapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.PC3.networkLayer.ipv4.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar Test_rip2.PC3.networkLayer.ipv4.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar Test_rip2.PC3.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test_rip2.PC3.networkLayer.ipv4.arp 	completedARPResolution:count 	0
+attr title  "ARP completed resolutions, count"
+scalar Test_rip2.PC3.networkLayer.ipv4.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar Test_rip2.PC3.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.PC3.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.PC3.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test_rip2.PC3.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test_rip2.PC3.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.PC3.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.PC3.eth[0].mac 	"simulated time" 	600
+scalar Test_rip2.PC3.eth[0].mac 	full-duplex 	1
+scalar Test_rip2.PC3.eth[0].mac 	"frames/sec sent" 	0
+scalar Test_rip2.PC3.eth[0].mac 	"frames/sec rcvd" 	0.036666666666667
+scalar Test_rip2.PC3.eth[0].mac 	"bits/sec sent" 	0
+scalar Test_rip2.PC3.eth[0].mac 	"bits/sec rcvd" 	68.266666666667
+scalar Test_rip2.PC3.eth[0].mac 	"rx channel idle (%)" 	99.999929386667
+scalar Test_rip2.PC3.eth[0].mac 	"rx channel utilization (%)" 	7.0613333333333e-005
+scalar Test_rip2.PC3.eth[0].mac 	rxPkFromHL:count 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.PC3.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.PC3.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.PC3.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.PC3.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.PC3.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.PC3.eth[0].mac 	txPk:count 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.PC3.eth[0].mac 	txPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.PC3.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.PC3.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.PC3.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.PC3.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.PC3.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.PC3.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.PC3.eth[0].mac 	rxPkOk:count 	22
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.PC3.eth[0].mac 	rxPkOk:sum(packetBytes) 	5120
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.PC3.eth[0].mac 	passedUpPk:count 	22
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.PC3.eth[0].mac 	passedUpPk:sum(packetBytes) 	5120
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.PC3.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.PC3.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.PC3.eth[0].encap 	decapPk:count 	22
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.PC3.eth[0].encap 	decapPk:sum(packetBytes) 	4724
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.PC3.eth[0].encap 	encapPk:count 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.PC3.eth[0].encap 	encapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.PC4.networkLayer.ipv4.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar Test_rip2.PC4.networkLayer.ipv4.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar Test_rip2.PC4.networkLayer.ipv4.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test_rip2.PC4.networkLayer.ipv4.arp 	completedARPResolution:count 	0
+attr title  "ARP completed resolutions, count"
+scalar Test_rip2.PC4.networkLayer.ipv4.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar Test_rip2.PC4.lo[0].lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.PC4.lo[0].lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.PC4.lo[0].lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test_rip2.PC4.lo[0].lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test_rip2.PC4.lo[0].lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.PC4.lo[0].lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.PC4.eth[0].mac 	"simulated time" 	600
+scalar Test_rip2.PC4.eth[0].mac 	full-duplex 	1
+scalar Test_rip2.PC4.eth[0].mac 	"frames/sec sent" 	0
+scalar Test_rip2.PC4.eth[0].mac 	"frames/sec rcvd" 	0.038333333333333
+scalar Test_rip2.PC4.eth[0].mac 	"bits/sec sent" 	0
+scalar Test_rip2.PC4.eth[0].mac 	"bits/sec rcvd" 	68.933333333333
+scalar Test_rip2.PC4.eth[0].mac 	"rx channel idle (%)" 	99.999928613333
+scalar Test_rip2.PC4.eth[0].mac 	"rx channel utilization (%)" 	7.1386666666667e-005
+scalar Test_rip2.PC4.eth[0].mac 	rxPkFromHL:count 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.PC4.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.PC4.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.PC4.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.PC4.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.PC4.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.PC4.eth[0].mac 	txPk:count 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.PC4.eth[0].mac 	txPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.PC4.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.PC4.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.PC4.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.PC4.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.PC4.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.PC4.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.PC4.eth[0].mac 	rxPkOk:count 	23
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.PC4.eth[0].mac 	rxPkOk:sum(packetBytes) 	5170
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.PC4.eth[0].mac 	passedUpPk:count 	23
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.PC4.eth[0].mac 	passedUpPk:sum(packetBytes) 	5170
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.PC4.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.PC4.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.PC4.eth[0].encap 	decapPk:count 	23
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.PC4.eth[0].encap 	decapPk:sum(packetBytes) 	4756
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.PC4.eth[0].encap 	encapPk:count 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.PC4.eth[0].encap 	encapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R1.networkLayer.arp 	sentReply:count 	0
+attr title  "ARP replies sent, count"
+scalar Test_rip2.R1.networkLayer.arp 	sentReq:count 	3
+attr title  "ARP request sent, count"
+scalar Test_rip2.R1.networkLayer.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test_rip2.R1.networkLayer.arp 	completedARPResolution:count 	3
+attr title  "ARP completed resolutions, count"
+scalar Test_rip2.R1.networkLayer.arp 	initiatedARPResolution:count 	3
+attr title  "ARP initiated resolutions, count"
+scalar Test_rip2.R1.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R1.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R1.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test_rip2.R1.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test_rip2.R1.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R1.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R1.eth[0].mac 	"simulated time" 	600
+scalar Test_rip2.R1.eth[0].mac 	full-duplex 	1
+scalar Test_rip2.R1.eth[0].mac 	"frames/sec sent" 	0.036666666666667
+scalar Test_rip2.R1.eth[0].mac 	"frames/sec rcvd" 	0
+scalar Test_rip2.R1.eth[0].mac 	"bits/sec sent" 	68.266666666667
+scalar Test_rip2.R1.eth[0].mac 	"bits/sec rcvd" 	0
+scalar Test_rip2.R1.eth[0].mac 	"rx channel idle (%)" 	100
+scalar Test_rip2.R1.eth[0].mac 	"rx channel utilization (%)" 	0
+scalar Test_rip2.R1.eth[0].mac 	rxPkFromHL:count 	22
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.R1.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	5120
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.R1.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.R1.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.R1.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.R1.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.R1.eth[0].mac 	txPk:count 	22
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.R1.eth[0].mac 	txPk:sum(packetBytes) 	5120
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.R1.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.R1.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.R1.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R1.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R1.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.R1.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.R1.eth[0].mac 	rxPkOk:count 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.R1.eth[0].mac 	rxPkOk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.R1.eth[0].mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R1.eth[0].mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R1.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.R1.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.R1.eth[0].encap 	decapPk:count 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.R1.eth[0].encap 	decapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.R1.eth[0].encap 	encapPk:count 	22
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.R1.eth[0].encap 	encapPk:sum(packetBytes) 	4724
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R1.eth[1].mac 	"simulated time" 	600
+scalar Test_rip2.R1.eth[1].mac 	full-duplex 	1
+scalar Test_rip2.R1.eth[1].mac 	"frames/sec sent" 	0.04
+scalar Test_rip2.R1.eth[1].mac 	"frames/sec rcvd" 	0.04
+scalar Test_rip2.R1.eth[1].mac 	"bits/sec sent" 	70.853333333333
+scalar Test_rip2.R1.eth[1].mac 	"bits/sec rcvd" 	69.786666666667
+scalar Test_rip2.R1.eth[1].mac 	"rx channel idle (%)" 	99.999927653333
+scalar Test_rip2.R1.eth[1].mac 	"rx channel utilization (%)" 	7.2346666666667e-005
+scalar Test_rip2.R1.eth[1].mac 	rxPkFromHL:count 	24
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.R1.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	5314
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.R1.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.R1.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.R1.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.R1.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.R1.eth[1].mac 	txPk:count 	24
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.R1.eth[1].mac 	txPk:sum(packetBytes) 	5314
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.R1.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.R1.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.R1.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R1.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R1.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.R1.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.R1.eth[1].mac 	rxPkOk:count 	24
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.R1.eth[1].mac 	rxPkOk:sum(packetBytes) 	5234
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.R1.eth[1].mac 	passedUpPk:count 	24
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R1.eth[1].mac 	passedUpPk:sum(packetBytes) 	5234
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R1.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.R1.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.R1.eth[1].encap 	decapPk:count 	24
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.R1.eth[1].encap 	decapPk:sum(packetBytes) 	4784
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.R1.eth[1].encap 	encapPk:count 	24
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.R1.eth[1].encap 	encapPk:sum(packetBytes) 	4864
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R1.eth[2].mac 	"simulated time" 	600
+scalar Test_rip2.R1.eth[2].mac 	full-duplex 	1
+scalar Test_rip2.R1.eth[2].mac 	"frames/sec sent" 	0.04
+scalar Test_rip2.R1.eth[2].mac 	"frames/sec rcvd" 	0.038333333333333
+scalar Test_rip2.R1.eth[2].mac 	"bits/sec sent" 	70.853333333333
+scalar Test_rip2.R1.eth[2].mac 	"bits/sec rcvd" 	69.12
+scalar Test_rip2.R1.eth[2].mac 	"rx channel idle (%)" 	99.999928426667
+scalar Test_rip2.R1.eth[2].mac 	"rx channel utilization (%)" 	7.1573333333333e-005
+scalar Test_rip2.R1.eth[2].mac 	rxPkFromHL:count 	24
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.R1.eth[2].mac 	rxPkFromHL:sum(packetBytes) 	5314
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.R1.eth[2].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.R1.eth[2].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.R1.eth[2].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.R1.eth[2].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.R1.eth[2].mac 	txPk:count 	24
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.R1.eth[2].mac 	txPk:sum(packetBytes) 	5314
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.R1.eth[2].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.R1.eth[2].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.R1.eth[2].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R1.eth[2].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R1.eth[2].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.R1.eth[2].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.R1.eth[2].mac 	rxPkOk:count 	23
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.R1.eth[2].mac 	rxPkOk:sum(packetBytes) 	5184
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.R1.eth[2].mac 	passedUpPk:count 	23
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R1.eth[2].mac 	passedUpPk:sum(packetBytes) 	5184
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R1.eth[2].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.R1.eth[2].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.R1.eth[2].encap 	decapPk:count 	23
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.R1.eth[2].encap 	decapPk:sum(packetBytes) 	4752
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.R1.eth[2].encap 	encapPk:count 	24
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.R1.eth[2].encap 	encapPk:sum(packetBytes) 	4864
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R1.eth[3].mac 	"simulated time" 	600
+scalar Test_rip2.R1.eth[3].mac 	full-duplex 	1
+scalar Test_rip2.R1.eth[3].mac 	"frames/sec sent" 	0.04
+scalar Test_rip2.R1.eth[3].mac 	"frames/sec rcvd" 	0.038333333333333
+scalar Test_rip2.R1.eth[3].mac 	"bits/sec sent" 	70.853333333333
+scalar Test_rip2.R1.eth[3].mac 	"bits/sec rcvd" 	69.12
+scalar Test_rip2.R1.eth[3].mac 	"rx channel idle (%)" 	99.999928426667
+scalar Test_rip2.R1.eth[3].mac 	"rx channel utilization (%)" 	7.1573333333333e-005
+scalar Test_rip2.R1.eth[3].mac 	rxPkFromHL:count 	24
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.R1.eth[3].mac 	rxPkFromHL:sum(packetBytes) 	5314
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.R1.eth[3].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.R1.eth[3].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.R1.eth[3].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.R1.eth[3].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.R1.eth[3].mac 	txPk:count 	24
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.R1.eth[3].mac 	txPk:sum(packetBytes) 	5314
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.R1.eth[3].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.R1.eth[3].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.R1.eth[3].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R1.eth[3].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R1.eth[3].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.R1.eth[3].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.R1.eth[3].mac 	rxPkOk:count 	23
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.R1.eth[3].mac 	rxPkOk:sum(packetBytes) 	5184
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.R1.eth[3].mac 	passedUpPk:count 	23
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R1.eth[3].mac 	passedUpPk:sum(packetBytes) 	5184
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R1.eth[3].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.R1.eth[3].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.R1.eth[3].encap 	decapPk:count 	23
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.R1.eth[3].encap 	decapPk:sum(packetBytes) 	4752
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.R1.eth[3].encap 	encapPk:count 	24
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.R1.eth[3].encap 	encapPk:sum(packetBytes) 	4864
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R1.rip 	numRoutes:last 	10
+attr interpolationmode  none
+attr source  numRoutes
+attr title  "number of routes, last"
+scalar Test_rip2.R1.rip 	badResponse:count 	0
+attr interpolationmode  none
+attr source  badResponse
+attr title  "bad response received, count"
+scalar Test_rip2.R1.rip 	rcvdResponse:count 	64
+attr interpolationmode  none
+attr source  rcvdResponse
+attr title  "response received, count"
+scalar Test_rip2.R1.rip 	sentUpdate:count 	87
+attr interpolationmode  none
+attr source  sentUpdate
+attr title  "update sent, count"
+scalar Test_rip2.R1.rip 	sentRequest:count 	4
+attr interpolationmode  none
+attr source  sentRequest
+attr title  "request sent, count"
+scalar Test_rip2.R1.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar Test_rip2.R1.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar Test_rip2.R1.udp 	passedUpPk:count 	67
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar Test_rip2.R1.udp 	sentPk:count 	91
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Test_rip2.R1.udp 	sentPk:sum(packetBytes) 	17412
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar Test_rip2.R1.udp 	rcvdPk:count 	67
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Test_rip2.R1.udp 	rcvdPk:sum(packetBytes) 	12864
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar Test_rip2.R2.networkLayer.arp 	sentReply:count 	1
+attr title  "ARP replies sent, count"
+scalar Test_rip2.R2.networkLayer.arp 	sentReq:count 	2
+attr title  "ARP request sent, count"
+scalar Test_rip2.R2.networkLayer.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test_rip2.R2.networkLayer.arp 	completedARPResolution:count 	3
+attr title  "ARP completed resolutions, count"
+scalar Test_rip2.R2.networkLayer.arp 	initiatedARPResolution:count 	2
+attr title  "ARP initiated resolutions, count"
+scalar Test_rip2.R2.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R2.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R2.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test_rip2.R2.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test_rip2.R2.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R2.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R2.eth[0].mac 	"simulated time" 	600
+scalar Test_rip2.R2.eth[0].mac 	full-duplex 	1
+scalar Test_rip2.R2.eth[0].mac 	"frames/sec sent" 	0.04
+scalar Test_rip2.R2.eth[0].mac 	"frames/sec rcvd" 	0.04
+scalar Test_rip2.R2.eth[0].mac 	"bits/sec sent" 	69.786666666667
+scalar Test_rip2.R2.eth[0].mac 	"bits/sec rcvd" 	70.853333333333
+scalar Test_rip2.R2.eth[0].mac 	"rx channel idle (%)" 	99.999926586667
+scalar Test_rip2.R2.eth[0].mac 	"rx channel utilization (%)" 	7.3413333333333e-005
+scalar Test_rip2.R2.eth[0].mac 	rxPkFromHL:count 	24
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.R2.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	5234
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.R2.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.R2.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.R2.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.R2.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.R2.eth[0].mac 	txPk:count 	24
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.R2.eth[0].mac 	txPk:sum(packetBytes) 	5234
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.R2.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.R2.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.R2.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R2.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R2.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.R2.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.R2.eth[0].mac 	rxPkOk:count 	24
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.R2.eth[0].mac 	rxPkOk:sum(packetBytes) 	5314
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.R2.eth[0].mac 	passedUpPk:count 	24
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R2.eth[0].mac 	passedUpPk:sum(packetBytes) 	5314
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R2.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.R2.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.R2.eth[0].encap 	decapPk:count 	24
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.R2.eth[0].encap 	decapPk:sum(packetBytes) 	4864
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.R2.eth[0].encap 	encapPk:count 	24
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.R2.eth[0].encap 	encapPk:sum(packetBytes) 	4784
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R2.eth[1].mac 	"simulated time" 	600
+scalar Test_rip2.R2.eth[1].mac 	full-duplex 	1
+scalar Test_rip2.R2.eth[1].mac 	"frames/sec sent" 	0.041666666666667
+scalar Test_rip2.R2.eth[1].mac 	"frames/sec rcvd" 	0.038333333333333
+scalar Test_rip2.R2.eth[1].mac 	"bits/sec sent" 	72.053333333333
+scalar Test_rip2.R2.eth[1].mac 	"bits/sec rcvd" 	69.12
+scalar Test_rip2.R2.eth[1].mac 	"rx channel idle (%)" 	99.999928426667
+scalar Test_rip2.R2.eth[1].mac 	"rx channel utilization (%)" 	7.1573333333333e-005
+scalar Test_rip2.R2.eth[1].mac 	rxPkFromHL:count 	25
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.R2.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	5404
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.R2.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.R2.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.R2.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.R2.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.R2.eth[1].mac 	txPk:count 	25
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.R2.eth[1].mac 	txPk:sum(packetBytes) 	5404
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.R2.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.R2.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.R2.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R2.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R2.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.R2.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.R2.eth[1].mac 	rxPkOk:count 	23
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.R2.eth[1].mac 	rxPkOk:sum(packetBytes) 	5184
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.R2.eth[1].mac 	passedUpPk:count 	23
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R2.eth[1].mac 	passedUpPk:sum(packetBytes) 	5184
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R2.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.R2.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.R2.eth[1].encap 	decapPk:count 	23
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.R2.eth[1].encap 	decapPk:sum(packetBytes) 	4752
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.R2.eth[1].encap 	encapPk:count 	25
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.R2.eth[1].encap 	encapPk:sum(packetBytes) 	4936
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R2.eth[2].mac 	"simulated time" 	600
+scalar Test_rip2.R2.eth[2].mac 	full-duplex 	1
+scalar Test_rip2.R2.eth[2].mac 	"frames/sec sent" 	0.041666666666667
+scalar Test_rip2.R2.eth[2].mac 	"frames/sec rcvd" 	0.04
+scalar Test_rip2.R2.eth[2].mac 	"bits/sec sent" 	72.053333333333
+scalar Test_rip2.R2.eth[2].mac 	"bits/sec rcvd" 	69.786666666667
+scalar Test_rip2.R2.eth[2].mac 	"rx channel idle (%)" 	99.999927653333
+scalar Test_rip2.R2.eth[2].mac 	"rx channel utilization (%)" 	7.2346666666667e-005
+scalar Test_rip2.R2.eth[2].mac 	rxPkFromHL:count 	25
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.R2.eth[2].mac 	rxPkFromHL:sum(packetBytes) 	5404
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.R2.eth[2].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.R2.eth[2].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.R2.eth[2].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.R2.eth[2].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.R2.eth[2].mac 	txPk:count 	25
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.R2.eth[2].mac 	txPk:sum(packetBytes) 	5404
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.R2.eth[2].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.R2.eth[2].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.R2.eth[2].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R2.eth[2].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R2.eth[2].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.R2.eth[2].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.R2.eth[2].mac 	rxPkOk:count 	24
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.R2.eth[2].mac 	rxPkOk:sum(packetBytes) 	5234
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.R2.eth[2].mac 	passedUpPk:count 	24
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R2.eth[2].mac 	passedUpPk:sum(packetBytes) 	5234
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R2.eth[2].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.R2.eth[2].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.R2.eth[2].encap 	decapPk:count 	24
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.R2.eth[2].encap 	decapPk:sum(packetBytes) 	4784
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.R2.eth[2].encap 	encapPk:count 	25
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.R2.eth[2].encap 	encapPk:sum(packetBytes) 	4936
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R2.rip 	numRoutes:last 	10
+attr interpolationmode  none
+attr source  numRoutes
+attr title  "number of routes, last"
+scalar Test_rip2.R2.rip 	badResponse:count 	0
+attr interpolationmode  none
+attr source  badResponse
+attr title  "bad response received, count"
+scalar Test_rip2.R2.rip 	rcvdResponse:count 	65
+attr interpolationmode  none
+attr source  rcvdResponse
+attr title  "response received, count"
+scalar Test_rip2.R2.rip 	sentUpdate:count 	68
+attr interpolationmode  none
+attr source  sentUpdate
+attr title  "update sent, count"
+scalar Test_rip2.R2.rip 	sentRequest:count 	3
+attr interpolationmode  none
+attr source  sentRequest
+attr title  "request sent, count"
+scalar Test_rip2.R2.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar Test_rip2.R2.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar Test_rip2.R2.udp 	passedUpPk:count 	67
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar Test_rip2.R2.udp 	sentPk:count 	71
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Test_rip2.R2.udp 	sentPk:sum(packetBytes) 	13152
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar Test_rip2.R2.udp 	rcvdPk:count 	67
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Test_rip2.R2.udp 	rcvdPk:sum(packetBytes) 	12924
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar Test_rip2.R3.networkLayer.arp 	sentReply:count 	1
+attr title  "ARP replies sent, count"
+scalar Test_rip2.R3.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar Test_rip2.R3.networkLayer.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test_rip2.R3.networkLayer.arp 	completedARPResolution:count 	1
+attr title  "ARP completed resolutions, count"
+scalar Test_rip2.R3.networkLayer.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar Test_rip2.R3.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R3.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R3.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test_rip2.R3.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test_rip2.R3.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R3.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R3.eth[0].mac 	"simulated time" 	600
+scalar Test_rip2.R3.eth[0].mac 	full-duplex 	1
+scalar Test_rip2.R3.eth[0].mac 	"frames/sec sent" 	0.038333333333333
+scalar Test_rip2.R3.eth[0].mac 	"frames/sec rcvd" 	0
+scalar Test_rip2.R3.eth[0].mac 	"bits/sec sent" 	68.933333333333
+scalar Test_rip2.R3.eth[0].mac 	"bits/sec rcvd" 	0
+scalar Test_rip2.R3.eth[0].mac 	"rx channel idle (%)" 	100
+scalar Test_rip2.R3.eth[0].mac 	"rx channel utilization (%)" 	0
+scalar Test_rip2.R3.eth[0].mac 	rxPkFromHL:count 	23
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.R3.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	5170
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.R3.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.R3.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.R3.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.R3.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.R3.eth[0].mac 	txPk:count 	23
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.R3.eth[0].mac 	txPk:sum(packetBytes) 	5170
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.R3.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.R3.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.R3.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R3.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R3.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.R3.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.R3.eth[0].mac 	rxPkOk:count 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.R3.eth[0].mac 	rxPkOk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.R3.eth[0].mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R3.eth[0].mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R3.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.R3.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.R3.eth[0].encap 	decapPk:count 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.R3.eth[0].encap 	decapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.R3.eth[0].encap 	encapPk:count 	23
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.R3.eth[0].encap 	encapPk:sum(packetBytes) 	4756
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R3.eth[1].mac 	"simulated time" 	600
+scalar Test_rip2.R3.eth[1].mac 	full-duplex 	1
+scalar Test_rip2.R3.eth[1].mac 	"frames/sec sent" 	0.04
+scalar Test_rip2.R3.eth[1].mac 	"frames/sec rcvd" 	0.041666666666667
+scalar Test_rip2.R3.eth[1].mac 	"bits/sec sent" 	69.786666666667
+scalar Test_rip2.R3.eth[1].mac 	"bits/sec rcvd" 	72.053333333333
+scalar Test_rip2.R3.eth[1].mac 	"rx channel idle (%)" 	99.99992528
+scalar Test_rip2.R3.eth[1].mac 	"rx channel utilization (%)" 	7.472e-005
+scalar Test_rip2.R3.eth[1].mac 	rxPkFromHL:count 	24
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.R3.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	5234
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.R3.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.R3.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.R3.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.R3.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.R3.eth[1].mac 	txPk:count 	24
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.R3.eth[1].mac 	txPk:sum(packetBytes) 	5234
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.R3.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.R3.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.R3.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R3.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R3.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.R3.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.R3.eth[1].mac 	rxPkOk:count 	25
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.R3.eth[1].mac 	rxPkOk:sum(packetBytes) 	5404
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.R3.eth[1].mac 	passedUpPk:count 	25
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R3.eth[1].mac 	passedUpPk:sum(packetBytes) 	5404
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R3.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.R3.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.R3.eth[1].encap 	decapPk:count 	25
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.R3.eth[1].encap 	decapPk:sum(packetBytes) 	4936
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.R3.eth[1].encap 	encapPk:count 	24
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.R3.eth[1].encap 	encapPk:sum(packetBytes) 	4784
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R3.rip 	numRoutes:last 	10
+attr interpolationmode  none
+attr source  numRoutes
+attr title  "number of routes, last"
+scalar Test_rip2.R3.rip 	badResponse:count 	0
+attr interpolationmode  none
+attr source  badResponse
+attr title  "bad response received, count"
+scalar Test_rip2.R3.rip 	rcvdResponse:count 	23
+attr interpolationmode  none
+attr source  rcvdResponse
+attr title  "response received, count"
+scalar Test_rip2.R3.rip 	sentUpdate:count 	44
+attr interpolationmode  none
+attr source  sentUpdate
+attr title  "update sent, count"
+scalar Test_rip2.R3.rip 	sentRequest:count 	2
+attr interpolationmode  none
+attr source  sentRequest
+attr title  "request sent, count"
+scalar Test_rip2.R3.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar Test_rip2.R3.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar Test_rip2.R3.udp 	passedUpPk:count 	23
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar Test_rip2.R3.udp 	sentPk:count 	46
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Test_rip2.R3.udp 	sentPk:sum(packetBytes) 	8592
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar Test_rip2.R3.udp 	rcvdPk:count 	23
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Test_rip2.R3.udp 	rcvdPk:sum(packetBytes) 	4396
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar Test_rip2.R4.networkLayer.arp 	sentReply:count 	2
+attr title  "ARP replies sent, count"
+scalar Test_rip2.R4.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar Test_rip2.R4.networkLayer.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test_rip2.R4.networkLayer.arp 	completedARPResolution:count 	2
+attr title  "ARP completed resolutions, count"
+scalar Test_rip2.R4.networkLayer.arp 	initiatedARPResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar Test_rip2.R4.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R4.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R4.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test_rip2.R4.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test_rip2.R4.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R4.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R4.eth[0].mac 	"simulated time" 	600
+scalar Test_rip2.R4.eth[0].mac 	full-duplex 	1
+scalar Test_rip2.R4.eth[0].mac 	"frames/sec sent" 	0.036666666666667
+scalar Test_rip2.R4.eth[0].mac 	"frames/sec rcvd" 	0
+scalar Test_rip2.R4.eth[0].mac 	"bits/sec sent" 	68.266666666667
+scalar Test_rip2.R4.eth[0].mac 	"bits/sec rcvd" 	0
+scalar Test_rip2.R4.eth[0].mac 	"rx channel idle (%)" 	100
+scalar Test_rip2.R4.eth[0].mac 	"rx channel utilization (%)" 	0
+scalar Test_rip2.R4.eth[0].mac 	rxPkFromHL:count 	22
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.R4.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	5120
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.R4.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.R4.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.R4.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.R4.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.R4.eth[0].mac 	txPk:count 	22
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.R4.eth[0].mac 	txPk:sum(packetBytes) 	5120
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.R4.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.R4.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.R4.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R4.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R4.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.R4.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.R4.eth[0].mac 	rxPkOk:count 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.R4.eth[0].mac 	rxPkOk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.R4.eth[0].mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R4.eth[0].mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R4.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.R4.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.R4.eth[0].encap 	decapPk:count 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.R4.eth[0].encap 	decapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.R4.eth[0].encap 	encapPk:count 	22
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.R4.eth[0].encap 	encapPk:sum(packetBytes) 	4724
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R4.eth[1].mac 	"simulated time" 	600
+scalar Test_rip2.R4.eth[1].mac 	full-duplex 	1
+scalar Test_rip2.R4.eth[1].mac 	"frames/sec sent" 	0.038333333333333
+scalar Test_rip2.R4.eth[1].mac 	"frames/sec rcvd" 	0.04
+scalar Test_rip2.R4.eth[1].mac 	"bits/sec sent" 	69.12
+scalar Test_rip2.R4.eth[1].mac 	"bits/sec rcvd" 	71.92
+scalar Test_rip2.R4.eth[1].mac 	"rx channel idle (%)" 	99.99992552
+scalar Test_rip2.R4.eth[1].mac 	"rx channel utilization (%)" 	7.448e-005
+scalar Test_rip2.R4.eth[1].mac 	rxPkFromHL:count 	23
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.R4.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	5184
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.R4.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.R4.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.R4.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.R4.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.R4.eth[1].mac 	txPk:count 	23
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.R4.eth[1].mac 	txPk:sum(packetBytes) 	5184
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.R4.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.R4.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.R4.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R4.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R4.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.R4.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.R4.eth[1].mac 	rxPkOk:count 	24
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.R4.eth[1].mac 	rxPkOk:sum(packetBytes) 	5394
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.R4.eth[1].mac 	passedUpPk:count 	24
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R4.eth[1].mac 	passedUpPk:sum(packetBytes) 	5394
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R4.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.R4.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.R4.eth[1].encap 	decapPk:count 	24
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.R4.eth[1].encap 	decapPk:sum(packetBytes) 	4944
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.R4.eth[1].encap 	encapPk:count 	23
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.R4.eth[1].encap 	encapPk:sum(packetBytes) 	4752
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R4.eth[2].mac 	"simulated time" 	600
+scalar Test_rip2.R4.eth[2].mac 	full-duplex 	1
+scalar Test_rip2.R4.eth[2].mac 	"frames/sec sent" 	0.038333333333333
+scalar Test_rip2.R4.eth[2].mac 	"frames/sec rcvd" 	0.04
+scalar Test_rip2.R4.eth[2].mac 	"bits/sec sent" 	69.12
+scalar Test_rip2.R4.eth[2].mac 	"bits/sec rcvd" 	70.853333333333
+scalar Test_rip2.R4.eth[2].mac 	"rx channel idle (%)" 	99.999926586667
+scalar Test_rip2.R4.eth[2].mac 	"rx channel utilization (%)" 	7.3413333333333e-005
+scalar Test_rip2.R4.eth[2].mac 	rxPkFromHL:count 	23
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.R4.eth[2].mac 	rxPkFromHL:sum(packetBytes) 	5184
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.R4.eth[2].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.R4.eth[2].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.R4.eth[2].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.R4.eth[2].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.R4.eth[2].mac 	txPk:count 	23
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.R4.eth[2].mac 	txPk:sum(packetBytes) 	5184
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.R4.eth[2].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.R4.eth[2].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.R4.eth[2].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R4.eth[2].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R4.eth[2].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.R4.eth[2].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.R4.eth[2].mac 	rxPkOk:count 	24
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.R4.eth[2].mac 	rxPkOk:sum(packetBytes) 	5314
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.R4.eth[2].mac 	passedUpPk:count 	24
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R4.eth[2].mac 	passedUpPk:sum(packetBytes) 	5314
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R4.eth[2].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.R4.eth[2].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.R4.eth[2].encap 	decapPk:count 	24
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.R4.eth[2].encap 	decapPk:sum(packetBytes) 	4864
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.R4.eth[2].encap 	encapPk:count 	23
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.R4.eth[2].encap 	encapPk:sum(packetBytes) 	4752
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R4.rip 	numRoutes:last 	10
+attr interpolationmode  none
+attr source  numRoutes
+attr title  "number of routes, last"
+scalar Test_rip2.R4.rip 	badResponse:count 	0
+attr interpolationmode  none
+attr source  badResponse
+attr title  "bad response received, count"
+scalar Test_rip2.R4.rip 	rcvdResponse:count 	44
+attr interpolationmode  none
+attr source  rcvdResponse
+attr title  "response received, count"
+scalar Test_rip2.R4.rip 	sentUpdate:count 	63
+attr interpolationmode  none
+attr source  sentUpdate
+attr title  "update sent, count"
+scalar Test_rip2.R4.rip 	sentRequest:count 	3
+attr interpolationmode  none
+attr source  sentRequest
+attr title  "request sent, count"
+scalar Test_rip2.R4.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar Test_rip2.R4.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar Test_rip2.R4.udp 	passedUpPk:count 	44
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar Test_rip2.R4.udp 	sentPk:count 	66
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Test_rip2.R4.udp 	sentPk:sum(packetBytes) 	12852
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar Test_rip2.R4.udp 	rcvdPk:count 	44
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Test_rip2.R4.udp 	rcvdPk:sum(packetBytes) 	8768
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar Test_rip2.R5.networkLayer.arp 	sentReply:count 	2
+attr title  "ARP replies sent, count"
+scalar Test_rip2.R5.networkLayer.arp 	sentReq:count 	1
+attr title  "ARP request sent, count"
+scalar Test_rip2.R5.networkLayer.arp 	failedARPResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar Test_rip2.R5.networkLayer.arp 	completedARPResolution:count 	3
+attr title  "ARP completed resolutions, count"
+scalar Test_rip2.R5.networkLayer.arp 	initiatedARPResolution:count 	1
+attr title  "ARP initiated resolutions, count"
+scalar Test_rip2.R5.lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R5.lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R5.lo0.lo 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar Test_rip2.R5.lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar Test_rip2.R5.lo0.lo 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R5.lo0.lo 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R5.eth[0].mac 	"simulated time" 	600
+scalar Test_rip2.R5.eth[0].mac 	full-duplex 	1
+scalar Test_rip2.R5.eth[0].mac 	"frames/sec sent" 	0.036666666666667
+scalar Test_rip2.R5.eth[0].mac 	"frames/sec rcvd" 	0
+scalar Test_rip2.R5.eth[0].mac 	"bits/sec sent" 	68.266666666667
+scalar Test_rip2.R5.eth[0].mac 	"bits/sec rcvd" 	0
+scalar Test_rip2.R5.eth[0].mac 	"rx channel idle (%)" 	100
+scalar Test_rip2.R5.eth[0].mac 	"rx channel utilization (%)" 	0
+scalar Test_rip2.R5.eth[0].mac 	rxPkFromHL:count 	22
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.R5.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	5120
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.R5.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.R5.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.R5.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.R5.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.R5.eth[0].mac 	txPk:count 	22
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.R5.eth[0].mac 	txPk:sum(packetBytes) 	5120
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.R5.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.R5.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.R5.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R5.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R5.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.R5.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.R5.eth[0].mac 	rxPkOk:count 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.R5.eth[0].mac 	rxPkOk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.R5.eth[0].mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R5.eth[0].mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R5.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.R5.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.R5.eth[0].encap 	decapPk:count 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.R5.eth[0].encap 	decapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.R5.eth[0].encap 	encapPk:count 	22
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.R5.eth[0].encap 	encapPk:sum(packetBytes) 	4724
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R5.eth[1].mac 	"simulated time" 	600
+scalar Test_rip2.R5.eth[1].mac 	full-duplex 	1
+scalar Test_rip2.R5.eth[1].mac 	"frames/sec sent" 	0.04
+scalar Test_rip2.R5.eth[1].mac 	"frames/sec rcvd" 	0.038333333333333
+scalar Test_rip2.R5.eth[1].mac 	"bits/sec sent" 	71.92
+scalar Test_rip2.R5.eth[1].mac 	"bits/sec rcvd" 	69.12
+scalar Test_rip2.R5.eth[1].mac 	"rx channel idle (%)" 	99.999928426667
+scalar Test_rip2.R5.eth[1].mac 	"rx channel utilization (%)" 	7.1573333333333e-005
+scalar Test_rip2.R5.eth[1].mac 	rxPkFromHL:count 	24
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.R5.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	5394
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.R5.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.R5.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.R5.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.R5.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.R5.eth[1].mac 	txPk:count 	24
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.R5.eth[1].mac 	txPk:sum(packetBytes) 	5394
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.R5.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.R5.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.R5.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R5.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R5.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.R5.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.R5.eth[1].mac 	rxPkOk:count 	23
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.R5.eth[1].mac 	rxPkOk:sum(packetBytes) 	5184
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.R5.eth[1].mac 	passedUpPk:count 	23
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R5.eth[1].mac 	passedUpPk:sum(packetBytes) 	5184
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R5.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.R5.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.R5.eth[1].encap 	decapPk:count 	23
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.R5.eth[1].encap 	decapPk:sum(packetBytes) 	4752
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.R5.eth[1].encap 	encapPk:count 	24
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.R5.eth[1].encap 	encapPk:sum(packetBytes) 	4944
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R5.eth[2].mac 	"simulated time" 	600
+scalar Test_rip2.R5.eth[2].mac 	full-duplex 	1
+scalar Test_rip2.R5.eth[2].mac 	"frames/sec sent" 	0.038333333333333
+scalar Test_rip2.R5.eth[2].mac 	"frames/sec rcvd" 	0.041666666666667
+scalar Test_rip2.R5.eth[2].mac 	"bits/sec sent" 	69.12
+scalar Test_rip2.R5.eth[2].mac 	"bits/sec rcvd" 	72.053333333333
+scalar Test_rip2.R5.eth[2].mac 	"rx channel idle (%)" 	99.99992528
+scalar Test_rip2.R5.eth[2].mac 	"rx channel utilization (%)" 	7.472e-005
+scalar Test_rip2.R5.eth[2].mac 	rxPkFromHL:count 	23
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.R5.eth[2].mac 	rxPkFromHL:sum(packetBytes) 	5184
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.R5.eth[2].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.R5.eth[2].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.R5.eth[2].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.R5.eth[2].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.R5.eth[2].mac 	txPk:count 	23
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.R5.eth[2].mac 	txPk:sum(packetBytes) 	5184
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.R5.eth[2].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.R5.eth[2].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.R5.eth[2].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R5.eth[2].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R5.eth[2].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.R5.eth[2].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.R5.eth[2].mac 	rxPkOk:count 	25
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.R5.eth[2].mac 	rxPkOk:sum(packetBytes) 	5404
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.R5.eth[2].mac 	passedUpPk:count 	25
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R5.eth[2].mac 	passedUpPk:sum(packetBytes) 	5404
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R5.eth[2].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.R5.eth[2].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.R5.eth[2].encap 	decapPk:count 	25
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.R5.eth[2].encap 	decapPk:sum(packetBytes) 	4936
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.R5.eth[2].encap 	encapPk:count 	23
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.R5.eth[2].encap 	encapPk:sum(packetBytes) 	4752
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R5.eth[3].mac 	"simulated time" 	600
+scalar Test_rip2.R5.eth[3].mac 	full-duplex 	1
+scalar Test_rip2.R5.eth[3].mac 	"frames/sec sent" 	0.038333333333333
+scalar Test_rip2.R5.eth[3].mac 	"frames/sec rcvd" 	0.04
+scalar Test_rip2.R5.eth[3].mac 	"bits/sec sent" 	69.12
+scalar Test_rip2.R5.eth[3].mac 	"bits/sec rcvd" 	70.853333333333
+scalar Test_rip2.R5.eth[3].mac 	"rx channel idle (%)" 	99.999926586667
+scalar Test_rip2.R5.eth[3].mac 	"rx channel utilization (%)" 	7.3413333333333e-005
+scalar Test_rip2.R5.eth[3].mac 	rxPkFromHL:count 	23
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar Test_rip2.R5.eth[3].mac 	rxPkFromHL:sum(packetBytes) 	5184
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar Test_rip2.R5.eth[3].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar Test_rip2.R5.eth[3].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar Test_rip2.R5.eth[3].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar Test_rip2.R5.eth[3].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar Test_rip2.R5.eth[3].mac 	txPk:count 	23
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar Test_rip2.R5.eth[3].mac 	txPk:sum(packetBytes) 	5184
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar Test_rip2.R5.eth[3].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar Test_rip2.R5.eth[3].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar Test_rip2.R5.eth[3].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar Test_rip2.R5.eth[3].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar Test_rip2.R5.eth[3].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar Test_rip2.R5.eth[3].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar Test_rip2.R5.eth[3].mac 	rxPkOk:count 	24
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar Test_rip2.R5.eth[3].mac 	rxPkOk:sum(packetBytes) 	5314
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar Test_rip2.R5.eth[3].mac 	passedUpPk:count 	24
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar Test_rip2.R5.eth[3].mac 	passedUpPk:sum(packetBytes) 	5314
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar Test_rip2.R5.eth[3].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar Test_rip2.R5.eth[3].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar Test_rip2.R5.eth[3].encap 	decapPk:count 	24
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar Test_rip2.R5.eth[3].encap 	decapPk:sum(packetBytes) 	4864
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar Test_rip2.R5.eth[3].encap 	encapPk:count 	23
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar Test_rip2.R5.eth[3].encap 	encapPk:sum(packetBytes) 	4752
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar Test_rip2.R5.rip 	numRoutes:last 	10
+attr interpolationmode  none
+attr source  numRoutes
+attr title  "number of routes, last"
+scalar Test_rip2.R5.rip 	badResponse:count 	0
+attr interpolationmode  none
+attr source  badResponse
+attr title  "bad response received, count"
+scalar Test_rip2.R5.rip 	rcvdResponse:count 	66
+attr interpolationmode  none
+attr source  rcvdResponse
+attr title  "response received, count"
+scalar Test_rip2.R5.rip 	sentUpdate:count 	85
+attr interpolationmode  none
+attr source  sentUpdate
+attr title  "update sent, count"
+scalar Test_rip2.R5.rip 	sentRequest:count 	4
+attr interpolationmode  none
+attr source  sentRequest
+attr title  "request sent, count"
+scalar Test_rip2.R5.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar Test_rip2.R5.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar Test_rip2.R5.udp 	passedUpPk:count 	67
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar Test_rip2.R5.udp 	sentPk:count 	89
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Test_rip2.R5.udp 	sentPk:sum(packetBytes) 	17308
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar Test_rip2.R5.udp 	rcvdPk:count 	67
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Test_rip2.R5.udp 	rcvdPk:sum(packetBytes) 	13024
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"

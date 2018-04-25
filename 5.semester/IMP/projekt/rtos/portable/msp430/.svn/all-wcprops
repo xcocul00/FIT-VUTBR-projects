@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/FITkit/!svn/ver/402/trunk/apps/demo_msp/free_rtos/rtos/portable/msp430
+END
+port.c
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/FITkit/!svn/ver/402/trunk/apps/demo_msp/free_rtos/rtos/portable/msp430/port.c
+END
+portmacro.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/FITkit/!svn/ver/402/trunk/apps/demo_msp/free_rtos/rtos/portable/msp430/portmacro.h
+END

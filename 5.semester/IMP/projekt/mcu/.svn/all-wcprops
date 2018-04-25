@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/FITkit/!svn/ver/408/trunk/apps/demo_msp/free_rtos/mcu
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/FITkit/!svn/ver/408/trunk/apps/demo_msp/free_rtos/mcu/main.c
+END
+FreeRTOSConfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/FITkit/!svn/ver/402/trunk/apps/demo_msp/free_rtos/mcu/FreeRTOSConfig.h
+END

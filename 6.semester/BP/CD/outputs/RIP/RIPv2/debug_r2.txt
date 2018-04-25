@@ -1,0 +1,36 @@
+****************** R2 ****************************
+*Apr 30 13:14:50.994: %LINK-3-UPDOWN: Interface Ethernet0/1, changed state to up
+
+*Apr 30 13:14:51.999: RIP: sending request on Ethernet0/1 to 224.0.0.9
+
+
+*Apr 30 13:14:54.006: RIP: sending v2 flash update to 224.0.0.9 via Ethernet0/1 (192.168.5.10)
+*Apr 30 13:14:54.006: RIP: build flash update entries - suppressing null update
+
+*Apr 30 13:14:55.701: RIP: received v2 update from 192.168.5.9 on Ethernet0/1
+*Apr 30 13:14:55.701:      192.168.1.0/24 via 0.0.0.0 in 1 hops
+*Apr 30 13:14:55.702:      192.168.2.0/24 via 0.0.0.0 in 2 hops
+*Apr 30 13:14:55.702:      192.168.3.0/24 via 0.0.0.0 in 2 hops
+*Apr 30 13:14:55.702:      192.168.4.0/24 via 0.0.0.0 in 4 hops
+*Apr 30 13:14:55.702:      192.168.5.0/30 via 0.0.0.0 in 1 hops
+*Apr 30 13:14:55.702:      192.168.5.4/30 via 0.0.0.0 in 1 hops
+*Apr 30 13:14:55.702:      192.168.5.12/30 via 0.0.0.0 in 2 hops
+*Apr 30 13:14:55.702:      192.168.5.16/30 via 0.0.0.0 in 3 hops
+*Apr 30 13:14:55.702:      192.168.5.20/30 via 0.0.0.0 in 2 hops
+
+*Apr 30 13:15:19.415: RIP: sending v2 update to 224.0.0.9 via Ethernet0/1 (192.168.5.10)
+*Apr 30 13:15:19.415: RIP: build update entries
+*Apr 30 13:15:19.415:   192.168.3.0/24 via 0.0.0.0, metric 2, tag 0
+*Apr 30 13:15:19.415:   192.168.4.0/24 via 0.0.0.0, metric 2, tag 0
+*Apr 30 13:15:19.415:   192.168.5.12/30 via 0.0.0.0, metric 1, tag 0
+*Apr 30 13:15:19.415:   192.168.5.16/30 via 0.0.0.0, metric 1, tag 0
+*Apr 30 13:15:19.415:   192.168.5.20/30 via 0.0.0.0, metric 2, tag 0
+
+*Apr 30 13:15:24.073: RIP: received v2 update from 192.168.5.9 on Ethernet0/1
+*Apr 30 13:15:24.073:      192.168.1.0/24 via 0.0.0.0 in 1 hops
+*Apr 30 13:15:24.073:      192.168.2.0/24 via 0.0.0.0 in 2 hops
+*Apr 30 13:15:24.073:      192.168.3.0/24 via 0.0.0.0 in 2 hops
+*Apr 30 13:15:24.073:      192.168.5.0/30 via 0.0.0.0 in 1 hops
+*Apr 30 13:15:24.073:      192.168.5.4/30 via 0.0.0.0 in 1 hops
+*Apr 30 13:15:24.073:      192.168.5.20/30 via 0.0.0.0 in 2 hops
+

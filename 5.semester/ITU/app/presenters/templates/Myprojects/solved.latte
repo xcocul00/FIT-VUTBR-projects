@@ -1,0 +1,46 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+<div class="global_menu2">
+	<ul class="menu2 menu">
+		<a n:href="Myprojects:default"><li id="menu_item4">Vytvorené projekty</li></a>
+		<a n:href="Myprojects:solved"><li id="menu_item5">Riešené projekty</li></a>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	$('#menu_item1').css("background-color","#A8B3C8");
+	$('#menu_item5').css("text-decoration","underline");
+</script>
+
+<style>
+th {
+    text-align: left;
+}
+</style>
+
+<div class="global_container">
+	<div class="container">
+		<div class="pshow_info"><br>
+			<div><h1>Všetky riešené projekty:</h1></div>
+		</div>
+
+		<table class="tabulka">
+		  <tr class="table_header">
+		    <th class="table_row">Názov projektu</th>
+		    <th class="table_row">Popis</th>
+		    <th>Dátum založenia</th>
+		    <th></th>
+		  </tr>
+		  {foreach $projects_own as $info}	
+		  		<tr class="table_data">
+		  		<th class="table_row "><a href="{link Project:show $info->ID_project}">{$info->Name}</a></th>
+ 				<th class="table_row ">{$info['Description']}</th>
+ 				<th>{$info->Date}</th>
+ 				<th><a href="{link Myprojects:Edit $info->ID_project}">Zmeniť</a></th>
+ 				</tr>
+ 		  {/foreach}
+		</table>  
+	</div>
+</div>

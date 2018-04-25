@@ -1,0 +1,71 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+<script>
+	$('#menu2_item1').addClass('clicked');
+</script>
+
+<div class="global_menu">
+	<ul class="menu3 menu">
+		<a href="{link Employee:createAccomNew1}"><li id="menu3_item1">Nové ubytovanie</li></a>
+		<a href="{link Employee:createAccomReservation1}"><li id="menu3_item1">Vyvoriť z rezervácie</li></a>
+	</ul>
+</div>
+
+<script>
+  $('#menu3_item1').addClass('selected');
+</script>
+
+<div class="global_container">
+	<div class="container">
+	<div class="main">
+
+  {if isset($msg)}
+    <div style="padding:10px;">{$msg}</div>
+  {/if}
+
+    <div class="heading" style="margin-bottom:1px">
+      <h1 class="show_register" ">Nový užívateľ</h1>
+  	</div>
+      
+      <div class="register_user">
+        <div class="create_guest">
+      		{control registerForm}
+        </div>	
+    	</div>
+
+    <div class="heading">
+  		<h1>Vyberte hosťa:</h1>
+    </div>
+      <div class="host">
+        <h2>Filter:</h2>
+      </div>
+
+        <div class="host_filter">
+          {control hostFilter}
+    		</div>
+        
+        <div class="host">
+        <h2>Hostia</h2>
+
+        {foreach $flashes as $flash}
+          <div>{$flash->message}</div>
+        {/foreach}
+        </div>
+
+    		{foreach $guests as $guest}
+    			<div class="hotel_guest">
+            <div>
+      				Meno: <p>{$guest->Meno} {$guest->Priezvisko}</p><br>
+      				e-mail: <p>{$guest->email}</p> Číslo OP: <p>{$guest->Cislo_dokladu_totoznosti}</p><br>
+      				Login: <p>{$guest->Login}</p><br>
+            </div>
+    				<a href="{link Employee:createAccomNew2 $guest->Host_id}">Vybrať</a><br>
+    				<br>
+    			</div>
+    		{/foreach}
+      
+    </div>
+ 	</div>
+</div>

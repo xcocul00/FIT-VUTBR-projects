@@ -1,0 +1,19 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+<script type="text/javascript">
+	$('#menu_item3').css("background-color","#A8B3C8");
+</script>
+
+<div class="global_container">
+	<div class="container">
+			<div class="create_commit">
+			{foreach $flashes as $flash}
+				<div class="flash">{$flash->message}</div>
+			{/foreach}
+			<h1>Vytvorenie nového projektu</h1>
+			{control createForm}
+			</div>
+	</div>
+</div>

@@ -1,0 +1,22 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+
+<div class="global_container">
+	<div class="container">
+	<div class="main">
+		<div class="heading">
+				<h1>Zmazanie izby</h1>
+			</div>
+	{foreach $room as $info}
+				<div><h1 class="table_head" style="padding-left:390px">Číslo izby : <p style="font-size:20px">{$info->Cislo_izby}</h1></div>
+				<div><h1 class="table_head" style="padding-left:390px">Poschodie : <p style="font-size:20px">{$info->Poschodie}</h1></div>
+	{/foreach}
+
+	<div class="create_service" style="padding-left:400px">
+	{control remove_room}
+	</div>
+	</div>
+ 	</div>
+</div>

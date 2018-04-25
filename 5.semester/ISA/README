@@ -1,0 +1,31 @@
+FTP client
+
+Autor: Maroš Cocuľa (xcocul00), xcocul00@stud.fit.vutbr.cz
+Dátum: 20.11.2016
+
+Popis: Program slúži na prenos súborov medzi klientom a FTP serverom. Program implementuje 
+len klientsku stranu s tým že je testovaný na servri vsftpd, ktorý beži na operačnom systéme
+Linux Ubuntu 14.04.3 LTS. Na iných systémoch testovaný nebol. Program umožnuje upload,download 
+alebo mazanie súboru. Ďalej podporuje aktívny aj pasívny mód prenosu. Bližšie informácie sú v
+súbore manual.pdf.
+
+Zoznam odovzdaných súborov:
+	Makefile - súbor na preklad
+	manual.pdf - dokumentacia
+	Readme - súbor so stručným popisom
+	fclient.cpp - zdrojový kód
+	fclient.h - hlavičkový súbor
+
+Makefile:
+	$ make - preklad programu
+	$ clean - odstraní program a jeho súčasti
+
+Preklad:
+g++ -std=c++11 -Wextra -Wall -pedantic -g -pthread -Wl,-rpath´/usr/local/lib/gcc49/  fclient.cpp -o fclient
+
+Príklad spustenia:
+./fclient -s 192.168.1.1 -c login.txt -p -d test.txt -P /home/FTP/
+./fclient -s 192.168.1.1 -c login.txt -a 3762 -u test.txt
+./fclient -s 192.168.1.1 -c login.txt
+./fclient -s 192.168.1.1 -c login.txt -d test.txt
+./fclient -h  -> Nápoveda k programu, zadáva sa iba s jedným parametrom a to -h

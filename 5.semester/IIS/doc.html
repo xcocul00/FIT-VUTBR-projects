@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-2">
+    <title>Projekt IIS</title>
+    <style type="text/css">
+    	table { border-collapse: collapse; }
+    	td, th { border: 1px solid black; padding: 0.3em 0.5em; text-align: left; }
+    	dt { font-weight: bold; margin-top: 0.5em; }
+    </style>
+</head>
+<body>
+
+<h1>Hotel</h1> 
+
+<dl>
+	<dt>Autori</dt>
+	<dd>David Prexta 
+	    <a href="mailto:xprext00@stud.fit.vutbr.cz">xprext00@stud.fit.vutbr.cz</a> - 
+	    Implementácia Homepage presentera, Employee presentera, GUI, sprístupnenie projektu na hostingu , riadenie tímu
+		
+	</dd>
+	<dd>Maroš Cocuľa 
+	    <a href="mailto:xcocul00@stud.fit.vutbr.cz">xcocul00@stud.fit.vutbr.cz</a> - 
+	    Implementácia Adminp presentera, Guest presentera, dokumentácia 
+		
+	</dd>
+	<dt>URL aplikácie</dt>
+	<dd><a href="http://davidprexta.8u.cz/IIS/www/sign/in">http://davidprexta.8u.cz/IIS/www/sign/in</a></dd>
+</dl>
+
+<h2>Užívatelia systému pre testovanie</h2>
+<table>
+<tbody><tr><th>Login</th><th>Heslo</th><th>Rola</th></tr>
+<tr><td>Admin</td><td>aaa</td><td>Administrátor</td></tr>
+<tr><td>Prexta</td><td>aaa</td><td>Recepčný</td></tr>
+<tr><td>Cocula</td><td>aaa</td><td>Hosť</td></tr>
+</tbody></table>
+
+<h2>Implementácia</h2>
+<p>Use case diagram</p>
+<img src="model.png">
+
+<li><b>Nový užívateľ:</b></li>
+<li>Presenter: RegistrationPresenter</li>
+<li>Use case :</li> 
+<ul>
+<li>Registrácia - RegistrationPresenter::ActionDefault()</li>
+</ul>
+<li></li>
+
+
+<li><b>Hosť :</b></li>
+<li>Presenter: GuestPresenter, SignPresenter, HomepagePresenter</li>
+<li>Use case :</li>
+<ul>
+<li>Prihlásenie - SignPresenter::ActionIn()</li>
+<li>Odhlásenie - SignPresenter::ActionOut()</li>
+<li>Prehľad izieb hotela - HomepagePresenter::ActionRooms()</li>
+<li>Prehľad služieb hotela - HomepagePresenter::ActionServices()</li>
+<li>Prehľad voľných izieb - HomepagePresenter::ActionFreeRooms()</li>
+<li>Prehľad ubytovaní - GuestPresenter::ActionAccom()</li>
+<li>Správa rezervácií : 
+<ul>
+			<li>Správa rezervácií a vytvorenie rezervácie- GuestPresenter::Reservations()</li>
+			<li>Zrušenie rezervácie - GuestPresenter::CancelReservation()</li>
+</ul></li>
+</ul>
+<li></li>
+
+<li><b>Zamestnanec :</b></li>
+<li>Presenter: EmployeePresenter, SignPresenter, HomepagePresenter</li>
+<li>Use case :</li>
+<ul>
+<li>Vytvorenie ubytovania :
+<ul>
+		<li>Pridanie nového uživateľa - EmployeePresenter::CreateAccomNew1</li>
+		<li>Prehľad ubytovaní podľa uživateľa - EmployeePresenter::CreateAccomNew1</li>
+		<li>Vytvorenie ubytovania z rezervácie - EmployeePresenter::Reservations</li>
+		<li>Úprava rezervácie, zrušenie rezervácie - EmployeePresenter::EditReservation</li>
+		<li>Vytvorenie ubytovania bez rezervácie - EmployeePresenter::CreateAccomNew1</li>
+</ul></li>
+<li>Prehľad ubytovaní :
+<ul>
+		<li>Prehľad ubytovaní podľa uživateľa - EmployeePresenter::Accomodations</li>
+		<li>Zobrazenie detailov ubytovania (obsahuje aj faktúru) - EmployeePresenter::AccomodationShow</li>
+</ul></li>
+<li>Správa rezervácií :
+<ul>
+		<li>Prehľad rezervácií podľa uživateľa - EmployeePresenter::Reservations</li>
+		<li>Úprava rezervácií - EmployeePresenter::EditReservation</li>
+</ul></li>
+</ul>
+
+<li><b>Administrátor :</b></li>
+<li>Presenter: AdminpPresenter, SignPresenter, HomepagePresenter</li>
+<li>Use case :</li>
+<ul>
+<li>Prihlásenie - SignPresenter::ActionIn()</li>
+<li>Odhlásenie - SignPresenter::ActionOut()</li>
+<li>Prehľad izieb hotela - HomepagePresenter::ActionRooms()</li>
+<li>Prehľad služieb hotela - HomepagePresenter::ActionServices()</li>
+<li>Prehľad voľných izieb - HomepagePresenter::ActionFreeRooms()</li>
+<li>Správa izieb : 
+<ul>
+		<li>Prehľad všetkých izieb - AdminpPresenter::ActionRooms()</li>
+		<li>Pridanie izby - AdminpPresenter::CreateRoom()</li>
+		<li>Zmena ceny izby - AdminpPresenter::ChangePrice()</li>
+		<li>Odstránenie izby - AdminpPresenter::RemoveRoom()</li>
+</ul></li>
+<li>Správa služieb : 
+<ul>
+		<li>Prehľad všetkých služieb - AdminpPresenter::ActionServices()</li>
+		<li>Pridanie služby - AdminpPresenter::CreateService()</li>
+		<li>Zmena služby - AdminpPresenter::ChangeService()</li>
+		<li>Odstránenie služby - AdminpPresenter::RemoveService()</li>
+</ul></li>
+<li>Správa zamestnancov :
+<ul> 
+		<li>Prehľad všetkých zamestnancov - AdminpPresenter::ActionWorkers()</li>
+		<li>Pridanie zamestnanca - AdminpPresenter::CreateWorker()</li>
+		<li>Zmena pracovnej pozície - AdminpPresenter::ChangeWorker()</li>
+		<li>Odstránenie zamestnanca - AdminpPresenter::RemoveWorker()</li>		
+</ul></li>
+</ul>
+<li></li>
+
+
+
+
+
+<h2>Inštalácia</h2>
+<ul>
+<li>Všetky súbory prekopírujeme na server</li>
+<li>Pomocou phpMyAdmin importujeme databázu iis.sql na server</li>
+<li>Aplikácia vyžaduje verziu php 5.4 a verziu MySQL 5.0</li>
+</ul>
+
+<h2>Zmeny v zadaní</h2>
+<ul>
+<li>Do databázy sme museli pridať dátum začiatku a konca rezervácie/ubytovania, načo sme v predošom návrhu zabudli</li>
+<li>Odstránili sme tabuľku Ceny_služieb, ktorá sa v konečnom dôsledku stala nepotrebná, hodnotu ceny sme vložili priamo do tabuľky služby</li>
+<li>Do tabuliek host_hotela a zamestnanec sme pridali údaje login,password a rolu</li>
+</ul>
+
+</body></html>

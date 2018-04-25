@@ -1,0 +1,25 @@
+
+{block content}
+
+<script type="text/javascript">
+	$('.global_header').css("display","none");
+</script>
+
+<div class="global_container">
+	<div class="container">
+
+	<div class="welcome">Vítajte na stránke Správa projektov. Prosím pokračujte prihlásením.</div>
+	<div class="_logo_login"></div>
+	<h1 class="login_msg"> <? if($err_msg) echo $err_msg; ?> </h1>
+
+	<div class="login_form">
+
+	{control signInForm}
+
+		<p class="message">Nemate účet? <a n:href="Registration:">Vytvoriť účet</a></p>
+		
+	</div>	
+	
+	</div>
+</div>
+

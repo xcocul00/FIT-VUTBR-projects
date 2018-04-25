@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="{$basePath}/css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src="{$basePath}/js/core.js"></script>
+
+
+	<title>Hotel IIS</title>
+</head>
+
+<body>
+	
+
+	<div class="global_header">	
+
+		{if $user->loggedIn }
+		<div class="info_box">
+			<p>Prihlásený ako: {$user->getIdentity()->username}</p>
+			<a n:href="Sign:out">Odhlásiť</a>
+		</div>
+		{/if}
+		
+		
+		<div class="global_menu">
+			<ul class="menu1 menu">
+				<a n:href="Homepage:default"><li id="menu1_item1">Domov</li></a>
+				<a n:href="Homepage:rooms"><li id="menu1_item2">Izby</li></a>
+				<a n:href="Homepage:services"><li id="menu1_item3">Služby</li></a>
+				<a n:href="Homepage:freeRooms"><li id="menu1_item4">Obsadenie</li></a>
+			</ul>
+
+			{if $user->loggedIn }
+
+				{if $user->roles[0] == "admin" }
+				<ul class="menu2">
+					<a n:href="Adminp:rooms"><li id="menu2_item1">Spravovať izby</li></a>
+					<a n:href="Adminp:services"><li id="menu2_item2">Spravovať služby</li></a>
+					<a n:href="Adminp:workers"><li id="menu2_item3">Spravovať zamestnancov</li></a>
+				</ul>
+				{/if}
+
+				{if $user->roles[0] == "guest" }
+				<ul class="menu2">
+					<a n:href="Guest:accom"><li id="menu2_item1">Moje ubytovania</li></a>
+					<a n:href="Guest:reservations"><li id="menu2_item2">Moje Rezervácie</li></a>
+					<a n:href="Guest:createReservation"><li id="menu2_item3">Vytvoriť rezerváciu</li></a>
+				</ul>
+				{/if}
+
+				{if $user->roles[0] == "employee" }
+				<ul class="menu2">
+					<a n:href="Employee:createAccomNew1"><li id="menu2_item1">Vytvoriť ubytovania</li></a>
+					<a n:href="Employee:accomodations"><li id="menu2_item2">Prehľad ubytovaní</li></a>
+					<a n:href="Employee:reservations"><li id="menu2_item3">Správa rezervacií</li></a>
+				</ul>
+				{/if}
+
+			{/if}
+
+		</div>
+
+
+
+	</div>
+
+	{include content}
+
+	
+	<div class="global_footer">
+		<footer style="padding-left : 30px;">
+			<p>2016 © <a n:href="Homepage:default" title="Informačný systém hotela">Projekt IIS</a> Vytvorili: Maroš Cocuľa - <a href="mailto:xcocul00@stud.fit.vutbr.cz">xcocul00@stud.fit.vutbr.cz</a> a Dávid Prexta - <a href="mailto:xprext00@stud.fit.vutbr.cz">xprext00@stud.fit.vutbr.cz</a>, &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://davidprexta.8u.cz/doc.html">Dokumentácia </a></p>
+		</footer>
+	</div>
+
+
+	{block scripts}
+	<script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
+	{/block}
+</body>
+</html>

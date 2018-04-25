@@ -1,0 +1,283 @@
+/* CSS Document */
+
+*{
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+
+}
+
+body{
+    height: 100%;
+    width : 100%;
+    
+}
+
+a {
+        text-decoration: none;
+        color:black;
+}
+
+#page{
+    width: 85%;
+    margin:auto;
+    position:center;
+}
+
+
+
+#header{
+   background: url("images/head.png") no-repeat; 
+   background-size: 100% 100%;
+   height:120px;
+   margin-top:-20px;
+}
+
+#header h1{
+    float:left;
+    background: url("images/logo.png") no-repeat;
+    width:188px;
+    height:71px;
+    padding: 0px 25px 35px 25px;
+    margin-left: 30px;
+}
+#header h1 span{
+    opacity:0;
+}
+
+#header #topmenu .hidden{
+    display:none;
+}
+#header #topmenu .login{
+    float:right;
+    color:black;
+    position:relative;
+    top:35px;
+    right:65px;
+    text-transform: lowercase;
+}
+#header #topmenu .login:after{content: url("images/loginlink.png");}
+
+#header #sitemap a{
+    float:right;
+    position:relative;
+    color: black;
+    top:46px;
+    right:23px;
+    text-transform:lowercase;
+    
+}
+#header #sitemap a:after{content: url("images/loginlink.png");}
+
+#header #social span{
+    opacity:0;
+}
+#header #social{
+    float: right;
+    position:relative;
+    top: 50px;
+    left: 5px;
+}
+#header .twitter{
+       background: url("images/i_twitter.png") no-repeat;
+       background-size: 22px 22px;
+       width:22px;
+       height:22px;
+}
+#header .fb{
+       background: url("images/i_fb.png") no-repeat;
+       background-size: 22px 22px;
+       width:22px;
+       height:22px;
+       margin-left: -20px;
+       margin-right: -25px;
+}
+#header .linkedin{
+       background: url("images/i_linkedin.png") no-repeat;
+       background-size: 22px 22px;
+       width:22px;
+       height:22px;
+       margin-left:-20px;
+}   
+#menu ul { float:right;}
+#menu li { display: inline-block;
+            padding:0px 6px;
+            position:relative;
+            top:75px;
+            left:430px;
+            border-left:solid grey;
+            border-width:2px;
+}
+#header #menu .selected{
+    font-weight:bold;
+    background: url("images/sel.png") no-repeat scroll 50% 80% transparent;
+    padding-bottom: 15px;
+    border:none;
+}
+/* Zaciatok dalsieho bloku textu news */
+#topimg{
+    background: url("images/topimg.jpg") no-repeat;
+    width:auto;
+    height:350px;
+    background-size: 100% 350px;
+    
+}
+
+.cont{
+    color:white;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 45%;
+    padding: 0 0 0 10px ;
+    float: right;
+    margin-top:170px;
+    margin-right:80px;
+}
+#topimg .more a{
+    float:right;
+    margin:10px;
+    padding-right:14px;
+    padding-bottom:2px;
+    color:white;
+    background: url("images/moreb.png") no-repeat;
+    background-size: 10px 26px;
+    background-position: right;
+}
+#topimg .more a:hover{
+    text-decoration:underline;
+}
+/* dalsi blok feedback */
+#fpopup{
+    background: url("images/feedback_up.png") no-repeat;
+    background-size: 225px 100%;
+    background-position:right;
+    height: 32px;
+}
+#feedbacklink{
+    color:white;
+    position:relative;
+    left:980px;
+    top:12px;
+    text-transform:lowercase;
+}
+/* dalsi blok hlavny*/
+#contentbox{
+    background: url("images/bgcont.jpg") no-repeat;
+    background-size: 100% 100%;
+    margin-top: 0px;
+    height: 700px;
+    width: auto;
+}
+
+#news{
+    background:url("images/bgfootfull.jpg") no-repeat;
+    background-size: 100% 0.5%;
+    background-position:0px 250px;
+    top: 100px;
+}
+#news{
+    float: left;
+    width: 55%;
+    height:auto;
+    margin-left:50px;
+    font-style: normal;
+    color:black;
+    text-shadow: 1px 1px 0px #666;
+}
+#news a{
+    text-decoration:underline;
+}
+
+
+
+#references{
+    float:right;
+    width:300px;
+    height:170px;
+    padding:20px;
+    margin: 120px 80px 0 0; 
+    background: url("images/thumb_didyou.png") no-repeat;
+    background-size: 100% 100%;
+    
+}
+#didyouknow {
+    float:right;
+    width:300px;
+    height:170px;
+    padding:20px;
+    background: url("images/thumb_didyou.png") no-repeat;
+    background-size:100% 100%;
+    margin-right:80px;
+    margin-top:120px;
+    color: white;
+    text-decoration: none;
+}
+#rightcol h4{
+    color: black;
+    position:relative;
+    top:-100px;
+    background:url("images/bgfootfull.jpg") no-repeat;
+    background-size:100% 10%;
+}
+#rightcol q{
+    position:relative;
+    top:-50px;
+    color:white;
+    display:block;
+    text-indent: 20px; margin: 0px; 
+    background:url("images/quotl.png") no-repeat;
+    background-size: 15px 17px;
+}
+#rightcol q:after{content: url("images/quotr.png"); }
+
+#rightcol .sgn{
+    font-weight:bold;
+    color:white;
+    float: right;
+    position:relative;
+    top:-20px;
+    margin-top:0px;
+    margin-right:20px;
+}
+#rightcol .link{
+    color:white;
+    position:relative;
+    top:-72px;
+    left:250px;
+    padding-right:15px;
+    background:url("images/mores.png") no-repeat;
+    background-position:right;
+}
+ 
+#footer {
+    background:url("images/bgfootfull.jpg") no-repeat;
+    background-size: 100% 20px;
+    color: white;
+    font-size:12px;
+    width: auto;
+    height: 20px;
+    margin-top:-20px;
+    margin-bottom:-20px;
+}
+
+#footer .menu{
+    float:left;
+    margin-top:-6px;
+    margin-bottom:0px;
+    padding: 0 0 0 20px;
+}
+#footer a{
+    color:white;
+    background: url("images/bgfback.png") no-repeat;
+    background-size: 1px 25px;
+}
+.menu li{
+	display: inline-block;
+}
+
+.copy {
+    float:right;
+    margin-top: -4px;
+    padding-right:50px;
+
+}
+
+

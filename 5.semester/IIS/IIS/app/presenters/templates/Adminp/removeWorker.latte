@@ -1,0 +1,26 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+
+<div class="global_container">
+	<div class="container">
+	<div class="main">
+		<div class="heading">
+				<h1>Odstránenie zamestnanca</h1>
+			</div>
+	{foreach $worker as $info}
+		<div><h1 class="table_head" style="padding-left:20px">Meno: <p style="font-size:20px">{$info->Meno}</h1></div>
+		<div><h1 class="table_head" style="padding-left:20px">Priezvisko: <p style="font-size:20px">{$info->Priezvisko}</h1></div>
+		<div><h1 class="table_head" style="padding-left:20px">Rodné číslo: <p style="font-size:20px">{$info->Rodne_cislo}</h1></div>
+		<div><h1 class="table_head" style="padding-left:20px">Login: <p style="font-size:20px">{$info->Login}</h1></div>
+		<div><h1 class="table_head" style="padding-left:20px">Pozícia: <p style="font-size:20px">{$info->Pozicia}</h1></div>
+	{/foreach}
+
+	<div class="create_service" style="padding-left:400px">
+	{control remove_worker}
+	</div>
+	
+
+ 	</div>
+</div>

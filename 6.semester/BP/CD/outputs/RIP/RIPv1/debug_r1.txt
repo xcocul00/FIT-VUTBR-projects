@@ -1,0 +1,58 @@
+
+******************* R1 **************************************
+
+*Apr 30 12:07:43.154: RIP: sending v1 update to 255.255.255.255 via Ethernet0/1 (192.168.5.9)
+*Apr 30 12:07:43.154: RIP: build update entries
+*Apr 30 12:07:43.154:   network 192.168.1.0 metric 1
+*Apr 30 12:07:43.154:   network 192.168.2.0 metric 2
+*Apr 30 12:07:43.154:   network 192.168.3.0 metric 2
+*Apr 30 12:07:43.154:   network 192.168.4.0 metric 4
+*Apr 30 12:07:43.154:   subnet 192.168.5.0 metric 1
+*Apr 30 12:07:43.154:   subnet 192.168.5.4 metric 1
+*Apr 30 12:07:43.154:   subnet 192.168.5.12 metric 2
+*Apr 30 12:07:43.154:   subnet 192.168.5.16 metric 3
+*Apr 30 12:07:43.154:   subnet 192.168.5.20 metric 2
+
+*Apr 30 12:07:44.095: RIP: received v1 request from 192.168.5.10 on Ethernet0/1
+*Apr 30 12:07:44.095: RIP: sending v1 update to 192.168.5.10 via Ethernet0/1 (192.168.5.9)
+*Apr 30 12:07:44.095: RIP: build update entries
+*Apr 30 12:07:44.095:   network 192.168.1.0 metric 1
+*Apr 30 12:07:44.095:   network 192.168.2.0 metric 2
+*Apr 30 12:07:44.095:   network 192.168.3.0 metric 2
+*Apr 30 12:07:44.095:   network 192.168.4.0 metric 4
+*Apr 30 12:07:44.095:   subnet 192.168.5.0 metric 1
+*Apr 30 12:07:44.095:   subnet 192.168.5.4 metric 1
+*Apr 30 12:07:44.095:   subnet 192.168.5.12 metric 2
+*Apr 30 12:07:44.095:   subnet 192.168.5.16 metric 3
+*Apr 30 12:07:44.095:   subnet 192.168.5.20 metric 2
+
+*Apr 30 12:08:11.925: RIP: sending v1 update to 255.255.255.255 via Ethernet0/1 (192.168.5.9)
+*Apr 30 12:08:11.925: RIP: build update entries
+*Apr 30 12:08:11.925:   network 192.168.1.0 metric 1
+*Apr 30 12:08:11.925:   network 192.168.2.0 metric 2
+*Apr 30 12:08:11.925:   network 192.168.3.0 metric 2
+*Apr 30 12:08:11.925:   network 192.168.4.0 metric 4
+*Apr 30 12:08:11.925:   subnet 192.168.5.0 metric 1
+*Apr 30 12:08:11.925:   subnet 192.168.5.4 metric 1
+*Apr 30 12:08:11.925:   subnet 192.168.5.12 metric 2
+*Apr 30 12:08:11.925:   subnet 192.168.5.16 metric 3
+*Apr 30 12:08:11.925:   subnet 192.168.5.20 metric 2
+
+*Apr 30 12:08:12.927: RIP: received v1 update from 192.168.5.10 on Ethernet0/1
+*Apr 30 12:08:12.927:      192.168.3.0 in 2 hops
+*Apr 30 12:08:12.927:      192.168.4.0 in 2 hops
+*Apr 30 12:08:12.927:      192.168.5.12 in 1 hops
+*Apr 30 12:08:12.927:      192.168.5.16 in 1 hops
+*Apr 30 12:08:12.927:      192.168.5.20 in 2 hops
+
+*Apr 30 12:08:14.929: RIP: sending v1 flash update to 255.255.255.255 via Ethernet0/1 (192.168.5.9)
+*Apr 30 12:08:14.929: RIP: build flash update entries - suppressing null update
+
+*Apr 30 12:08:40.054: RIP: sending v1 update to 255.255.255.255 via Ethernet0/1 (192.168.5.9)
+*Apr 30 12:08:40.054: RIP: build update entries
+*Apr 30 12:08:40.054:   network 192.168.1.0 metric 1
+*Apr 30 12:08:40.054:   network 192.168.2.0 metric 2
+*Apr 30 12:08:40.054:   network 192.168.3.0 metric 2
+*Apr 30 12:08:40.054:   subnet 192.168.5.0 metric 1
+*Apr 30 12:08:40.054:   subnet 192.168.5.4 metric 1
+*Apr 30 12:08:40.054:   subnet 192.168.5.20 metric 2

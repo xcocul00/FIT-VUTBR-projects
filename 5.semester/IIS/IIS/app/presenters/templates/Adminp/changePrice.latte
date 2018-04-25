@@ -1,0 +1,27 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+
+<div class="global_container">
+	<div class="container">
+	<div class="main">
+			<div class="heading">
+				<h1>Izba</h1>
+			</div>
+	{foreach $room as $info}
+				<div><h1 class="table_head">Typ izby : <p style="font-size:20px">{$info->Typ_izby}</h1></div>
+				<div><h1 class="table_head">Cena (€): <p style="font-size:20px">{$info->Cena_izby}</h1></div>
+	{/foreach}
+	</div>
+	<div class="main" style="margin-top:-8px">
+			<div class="heading">
+				<h1>Zmena ceny izby</h1>
+			</div>
+	<div class="create_service">
+		{control change_price}
+	</div>
+
+	</div>
+ 	</div>
+</div>

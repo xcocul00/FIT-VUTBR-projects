@@ -1,0 +1,39 @@
+======================================================================
+ * author: Maros Cocula
+ * subject:  IPK
+ * project:  proj2 - Prenos suborov
+ * file: README
+======================================================================
+Program implementuje prenos súborov medzi klientom a serverom
+pomocou použitia rozhrania schránok (socket).
+
+Serverová časť naslúcha pokiaľ sa nepripojí nejaký klinet, 
+po pripojení vytvorí nové vlákno na ktorom daného klienta
+obsluži. Server je konkurentní, čiže dokáže obslužiť viacero 
+klientov naraz. 
+Riadi sa pomocou navrhnutého protokolu. Bližšie
+informácie o tomto protokole sú v súbore protokol.pdf. Server 
+ošetruje situáciu, kedy sa klient snaží prepísať zdrojové kódy 
+programu (client, server, client.h, client.cpp, server.h, server.cpp).
+Po skončení prenosu sa zatvorí dané vlákno a server prejde 
+do stavu čakania na klienta. Ukončenie servra je možné stlačením
+kláves ctrl+c (SIGINT).
+
+Príklad spustenia servra na porte 1. 
+./server -p 1
+
+Klient má dve možnosti práce so serverom, a to upload súbora na 
+server alebo jeho download. Rozlišuje sa to vstupným parametrom,
+pre upload -u a pre download to je -d. 
+Klient taktiež dodržuje protokol popísaný v súbore protokol.pdf.
+Ak klient požaduje download, server hľadá súbor v zložke kde je 
+spustený. Taktiež klient ukladá súbor do zložky kde sa nachádza.
+To isté platí aj pre upload. Pri chybe sa klient správa tak, že 
+vypíše chybu a skončí.
+
+Príklad spustenia klienta pre upload súbora test.txt na server 
+eva.fit.vutbr.cz s portom 1.
+./client -p 1 -h eva.fit.vutbr.cz -u test.txt
+
+Príklad pre download, ostatné parametre su rovnaké ako vyššie.
+./client -p 1 -h eva.fit.vutbr.cz -d test.txt

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="{$basePath}/css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+	<title>Správa projektov</title>
+</head>
+
+<body>
+	
+
+	<div class="global_header">
+		<div class="global_logo">
+			<div class = "logo">
+				<div class="_logo"></div>
+				{if $user->loggedIn }
+				<div class="info_box">
+					<p>Prihlásený ako: {$user->getIdentity()->username}</p>
+					<a n:href="Sign:out">Odhlásiť</a>
+				</div>
+				{/if}
+			</div>
+		</div>
+		
+		<div class="global_menu">
+			<ul class="menu1 menu">
+				<a n:href="Myprojects:default"><li id="menu_item1">Moje projekty</li></a>
+				<a n:href="Allprojects:default"><li id="menu_item2">Všetky projekty</li></a>
+				<a n:href="Project:create"><li id="menu_item3">Vytvoriť nový projekt</li></a>
+			</ul>
+		</div>
+
+	</div>
+
+	{include content}
+
+	
+	<div class="global_footer">
+		<footer>
+			<p>2016 © <a n:href="Myprojects:default" title="Správa projektov">Projekt ITU</a> Vytvorili: Maroš Cocuľa - <a href="mailto:xcocul00@stud.fit.vutbr.cz">xcocul00@stud.fit.vutbr.cz</a> a Dávid Prexta - <a href="mailto:xprext00@stud.fit.vutbr.cz">xprext00@stud.fit.vutbr.cz</a></p>
+		</footer>
+	</div>
+
+
+	{block scripts}
+	<script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
+	{/block}
+</body>
+</html>

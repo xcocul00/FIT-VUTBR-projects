@@ -1,0 +1,147 @@
+<Devices>
+	<!-- R1 -->
+	<Router id="0.0.0.1">
+        <Interfaces>
+            <Interface name="eth0">
+                <IPAddress>192.168.1.2</IPAddress>
+                <Mask>255.255.255.0</Mask>
+            </Interface>
+            <Interface name="eth1">
+                <IPAddress>192.168.5.9</IPAddress>
+                <Mask>255.255.255.252</Mask>
+            </Interface>
+            <Interface name="eth2">
+                <IPAddress>192.168.5.1</IPAddress>
+                <Mask>255.255.255.252</Mask>
+            </Interface>
+            <Interface name="eth3">
+                <IPAddress>192.168.5.5</IPAddress>
+                <Mask>255.255.255.252</Mask>
+            </Interface>         
+        </Interfaces>       
+        <Routing>
+        	<RIP>
+        	</RIP>
+        </Routing>         
+    </Router> 
+      
+    <!-- R2 -->
+    <Router id="0.0.0.2">
+        <Interfaces>
+            <Interface name="eth0">
+                <IPAddress>192.168.5.10</IPAddress>
+                <Mask>255.255.255.252</Mask>
+            </Interface>
+            <Interface name="eth1">
+                <IPAddress>192.168.5.13</IPAddress>
+                <Mask>255.255.255.252</Mask>
+            </Interface>
+            <Interface name="eth2">
+                <IPAddress>192.168.5.17</IPAddress>
+                <Mask>255.255.255.252</Mask>
+            </Interface>
+        </Interfaces>      
+        <Routing>     
+        </Routing>      
+    </Router>
+    
+    <!-- R3 -->
+    <Router id="0.0.0.3">
+        <Interfaces>
+            <Interface name="eth0">
+                <IPAddress>192.168.4.2</IPAddress>
+                <Mask>255.255.255.0</Mask>
+            </Interface>
+            <Interface name="eth1">
+                <IPAddress>192.168.5.18</IPAddress>
+                <Mask>255.255.255.252</Mask>
+            </Interface> 
+        </Interfaces>     
+        <Routing>
+        </Routing>
+    </Router>
+      
+    <!-- R4 -->
+    <Router id="0.0.0.4">
+        <Interfaces>
+            <Interface name="eth0">
+                <IPAddress>192.168.2.2</IPAddress>
+                <Mask>255.255.255.0</Mask>
+            </Interface>
+            <Interface name="eth1">
+                <IPAddress>192.168.5.21</IPAddress>
+                <Mask>255.255.255.252</Mask>
+            </Interface>
+            <Interface name="eth2">
+                <IPAddress>192.168.5.2</IPAddress>
+                <Mask>255.255.255.252</Mask>
+            </Interface>
+        </Interfaces>        
+        <Routing>
+        </Routing>
+    </Router>
+    
+    <!-- R5 -->
+    <Router id="0.0.0.5">
+        <Interfaces>
+            <Interface name="eth0">
+                <IPAddress>192.168.3.2</IPAddress>
+                <Mask>255.255.255.0</Mask>
+            </Interface>
+            <Interface name="eth1">
+                <IPAddress>192.168.5.22</IPAddress>
+                <Mask>255.255.255.252</Mask>
+            </Interface>
+            <Interface name="eth2">
+                <IPAddress>192.168.5.14</IPAddress>
+                <Mask>255.255.255.252</Mask>
+            </Interface>
+            <Interface name="eth3">
+                <IPAddress>192.168.5.6</IPAddress>
+                <Mask>255.255.255.252</Mask>
+            </Interface>
+        </Interfaces>      
+        <Routing>
+        </Routing>
+    </Router>
+	
+    <Host id="0.0.1.1">
+		<Interfaces>
+			<Interface name="eth0">
+				<IPAddress>192.168.1.1</IPAddress>
+                <Mask>255.255.255.0</Mask>
+			</Interface>
+		</Interfaces>
+		<DefaultRouter>192.168.1.2</DefaultRouter>
+	</Host>
+	
+	<Host id="0.0.1.2">
+		<Interfaces>
+			<Interface name="eth0">
+				<IPAddress>192.168.2.1</IPAddress>
+                <Mask>255.255.255.0</Mask>
+			</Interface>
+		</Interfaces>
+		<DefaultRouter>192.168.2.2</DefaultRouter>
+		
+	</Host>
+	    <Host id="0.0.1.3">
+		<Interfaces>
+			<Interface name="eth0">
+				<IPAddress>192.168.3.1</IPAddress>
+                <Mask>255.255.255.0</Mask>
+			</Interface>
+		</Interfaces>
+		<DefaultRouter>192.168.3.2</DefaultRouter>
+	</Host>
+	
+	<Host id="0.0.1.4">
+		<Interfaces>
+			<Interface name="eth0">
+				<IPAddress>192.168.4.1</IPAddress>
+                <Mask>255.255.255.0</Mask>
+			</Interface>
+		</Interfaces>
+		<DefaultRouter>192.168.4.2</DefaultRouter>
+	</Host>
+</Devices>

@@ -1,0 +1,27 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+<div class="global_menu2">
+	<ul class="menu2 menu">
+		<a href="{link Project:show $projId}"><li id="menu_item4">Informácie o projekte</li></a>
+		<a href="{link Project:showcommits $projId}"><li id="menu_item5">Všetky výkazy</li></a>
+		<a href="{link Commit:create $projId}"><li id="menu_item6">Pridať výkaz</li></a>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	$('#menu_item5').css("text-decoration","underline");
+</script>
+
+<div class="global_container">
+	<div class="container">
+
+ 	{foreach $commits as $commit}
+ 	<div class="pshow_worker pshow_commits">
+ 		<div><div id="t1">{$commit[1]->Name} {$commit[1]->Surname},{$commit[1]->Login}</div> <div id="t2">{$commit[0]->Date}</div> <div id="t3">{$commit[0]->Commit}</div> <div id="t4"><a href="{link Commit:show $commit[0]->ID_info, $projId, 2}">zobraziť výkaz</a></div></div>
+ 	</div>
+ 	{/foreach}
+
+	</div>
+</div>

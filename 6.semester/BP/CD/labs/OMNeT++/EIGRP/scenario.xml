@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<scenario>
+  	<!-- Change of delay on R1 to R2 -->
+	<at t="10">    	
+    	<disconnect src-module="R1" src-gate="ethg[1]"/>    	
+  	</at>
+  	<at t="15">
+    	<connect src-module="R1" src-gate="ethg[1]" dest-module="R2" dest-gate="ethg[0]"
+             channel-type="inet.node.ethernet.Eth100M"/>
+  	</at>  
+  
+</scenario>

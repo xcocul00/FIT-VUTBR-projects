@@ -1,0 +1,36 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+
+<div class="global_container">
+	<div class="container">
+ 	
+
+	<div class="pshow_bkg">
+	<div class="pshow_info"><br>
+		<div><h1>Projekt:</h1> {$commit['project']}  <h1>Dátum:</h1> {$commit['date']}</div>
+		<div><h1>Uživateľ: </h1>{$commit['owner']}</div>
+		<div><h1>Popis: </h1>{$commit['desc']}</div>
+	</div>
+
+	<div class="pshow_text">
+		<h1>Výkaz: </h1><div>{$commit['text']}</div>
+	</div>
+	</div>
+
+	<div class="create_commit crate_comment">
+	<h1>Diskusia:</h1>
+
+	{foreach $coments as $coment}
+	<div class="comment">
+		<div class="name"><div>Uživateľ: </div>{$coment['owner']}</div> <div class="date"><div>Dátum: </div>{$coment['date']}</div>
+		<div class="text">{$coment['text']}</div>
+	</div>
+	{/foreach}
+
+	
+	<h1>Pridať komentár:</h1>
+	{control comentForm}
+	</div>
+	</div>
+</div>
